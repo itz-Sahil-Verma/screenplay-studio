@@ -1,0 +1,6 @@
+{
+  "gurmukhi":   {"label": "Gurmukhi",   "ranges": [["0A00", "0A7F"]]},
+  "devanagari": {"label": "Devanagari", "ranges": [["0900", "097F"]]},
+  "shahmukhi":  {"label": "Shahmukhi (Perso-Arabic)", "ranges": [["0600", "06FF"], ["0750", "077F"]]},
+  "latin":      {"label": "Roman / Latin", "ranges": [["0041", "005A"], ["0061", "007A"]]}
+}

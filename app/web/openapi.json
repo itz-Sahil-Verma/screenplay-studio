@@ -1,0 +1,3643 @@
+{
+ "openapi": "3.1.0",
+ "info": {
+  "title": "Cultural Screenplay & Visual Adaptation Studio",
+  "version": "0.1.0"
+ },
+ "paths": {
+  "/api/packs": {
+   "get": {
+    "summary": "Packs",
+    "operationId": "packs_api_packs_get",
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/projects": {
+   "get": {
+    "summary": "List Projects",
+    "operationId": "list_projects_api_projects_get",
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "items": {
+          "$ref": "#/components/schemas/ProjectSummary"
+         },
+         "type": "array",
+         "title": "Response List Projects Api Projects Get"
+        }
+       }
+      }
+     }
+    }
+   },
+   "post": {
+    "summary": "Create Project",
+    "operationId": "create_project_api_projects_post",
+    "requestBody": {
+     "content": {
+      "multipart/form-data": {
+       "schema": {
+        "$ref": "#/components/schemas/Body_create_project_api_projects_post"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "201": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Created"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/projects/{pid}": {
+   "get": {
+    "summary": "Get Project",
+    "operationId": "get_project_api_projects__pid__get",
+    "parameters": [
+     {
+      "name": "pid",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Pid"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ProjectView"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/projects/{pid}/job": {
+   "get": {
+    "summary": "Get Job",
+    "operationId": "get_job_api_projects__pid__job_get",
+    "parameters": [
+     {
+      "name": "pid",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Pid"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "anyOf": [
+          {
+           "$ref": "#/components/schemas/JobInfo"
+          },
+          {
+           "type": "object",
+           "additionalProperties": true
+          }
+         ],
+         "title": "Response Get Job Api Projects  Pid  Job Get"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/projects/{pid}/run/{stage}": {
+   "post": {
+    "summary": "Run Stage",
+    "operationId": "run_stage_api_projects__pid__run__stage__post",
+    "parameters": [
+     {
+      "name": "pid",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Pid"
+      }
+     },
+     {
+      "name": "stage",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Stage"
+      }
+     },
+     {
+      "name": "force",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "boolean",
+       "default": false,
+       "title": "Force"
+      }
+     }
+    ],
+    "responses": {
+     "202": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/JobInfo"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/projects/{pid}/replan/scene/{scene_id}": {
+   "post": {
+    "summary": "Replan One Scene",
+    "operationId": "replan_one_scene_api_projects__pid__replan_scene__scene_id__post",
+    "parameters": [
+     {
+      "name": "pid",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Pid"
+      }
+     },
+     {
+      "name": "scene_id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Scene Id"
+      }
+     }
+    ],
+    "responses": {
+     "202": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/JobInfo"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/projects/{pid}/rewrite/scene/{scene_id}": {
+   "post": {
+    "summary": "Rewrite One Scene",
+    "description": "Regenerate one scene's rewrite, bypassing the cache (an explicit \"try again\").",
+    "operationId": "rewrite_one_scene_api_projects__pid__rewrite_scene__scene_id__post",
+    "parameters": [
+     {
+      "name": "pid",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Pid"
+      }
+     },
+     {
+      "name": "scene_id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Scene Id"
+      }
+     }
+    ],
+    "responses": {
+     "202": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/JobInfo"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/projects/{pid}/screenplay": {
+   "get": {
+    "summary": "Screenplay",
+    "operationId": "screenplay_api_projects__pid__screenplay_get",
+    "parameters": [
+     {
+      "name": "pid",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Pid"
+      }
+     },
+     {
+      "name": "gloss",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "boolean",
+       "default": false,
+       "title": "Gloss"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "text/plain": {
+        "schema": {
+         "type": "string"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/projects/{pid}/comparison": {
+   "get": {
+    "summary": "Comparison",
+    "description": "Source next to adapted, per scene, with the decisions that explain the changes.",
+    "operationId": "comparison_api_projects__pid__comparison_get",
+    "parameters": [
+     {
+      "name": "pid",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Pid"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "array",
+         "items": {
+          "$ref": "#/components/schemas/ComparisonScene"
+         },
+         "title": "Response Comparison Api Projects  Pid  Comparison Get"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/projects/{pid}/replan/entities": {
+   "post": {
+    "summary": "Replan All Entities",
+    "operationId": "replan_all_entities_api_projects__pid__replan_entities_post",
+    "parameters": [
+     {
+      "name": "pid",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Pid"
+      }
+     }
+    ],
+    "responses": {
+     "202": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/JobInfo"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/projects/{pid}/recheck": {
+   "post": {
+    "summary": "Recheck",
+    "operationId": "recheck_api_projects__pid__recheck_post",
+    "parameters": [
+     {
+      "name": "pid",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Pid"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ProjectView"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/projects/{pid}/characters/{cid}": {
+   "patch": {
+    "summary": "Edit Character",
+    "operationId": "edit_character_api_projects__pid__characters__cid__patch",
+    "parameters": [
+     {
+      "name": "pid",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Pid"
+      }
+     },
+     {
+      "name": "cid",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Cid"
+      }
+     }
+    ],
+    "requestBody": {
+     "required": true,
+     "content": {
+      "application/json": {
+       "schema": {
+        "type": "object",
+        "additionalProperties": true,
+        "title": "Fields"
+       }
+      }
+     }
+    },
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/AffectedScenes"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/projects/{pid}/merge": {
+   "post": {
+    "summary": "Merge",
+    "operationId": "merge_api_projects__pid__merge_post",
+    "parameters": [
+     {
+      "name": "pid",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Pid"
+      }
+     }
+    ],
+    "requestBody": {
+     "required": true,
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/MergeBody"
+       }
+      }
+     }
+    },
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/AffectedScenes"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/projects/{pid}/plan/{kind}/{eid}": {
+   "patch": {
+    "summary": "Edit Plan",
+    "operationId": "edit_plan_api_projects__pid__plan__kind___eid__patch",
+    "parameters": [
+     {
+      "name": "pid",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Pid"
+      }
+     },
+     {
+      "name": "kind",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Kind"
+      }
+     },
+     {
+      "name": "eid",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Eid"
+      }
+     }
+    ],
+    "requestBody": {
+     "required": true,
+     "content": {
+      "application/json": {
+       "schema": {
+        "type": "object",
+        "additionalProperties": true,
+        "title": "Fields"
+       }
+      }
+     }
+    },
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/AffectedScenes"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/projects/{pid}/plan/scenes/{scene_id}/keep": {
+   "post": {
+    "summary": "Keep Scene",
+    "operationId": "keep_scene_api_projects__pid__plan_scenes__scene_id__keep_post",
+    "parameters": [
+     {
+      "name": "pid",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Pid"
+      }
+     },
+     {
+      "name": "scene_id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Scene Id"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/projects/{pid}/decisions/{did}/review": {
+   "post": {
+    "summary": "Review Decision",
+    "operationId": "review_decision_api_projects__pid__decisions__did__review_post",
+    "parameters": [
+     {
+      "name": "pid",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Pid"
+      }
+     },
+     {
+      "name": "did",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Did"
+      }
+     }
+    ],
+    "requestBody": {
+     "required": true,
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/ReviewBody"
+       }
+      }
+     }
+    },
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/AdaptationDecision"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/projects/{pid}/warnings/acknowledge": {
+   "post": {
+    "summary": "Acknowledge",
+    "operationId": "acknowledge_api_projects__pid__warnings_acknowledge_post",
+    "parameters": [
+     {
+      "name": "pid",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Pid"
+      }
+     }
+    ],
+    "requestBody": {
+     "required": true,
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/AckBody"
+       }
+      }
+     }
+    },
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ApprovalResult"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/projects/{pid}/blockers/{what}": {
+   "get": {
+    "summary": "Get Blockers",
+    "operationId": "get_blockers_api_projects__pid__blockers__what__get",
+    "parameters": [
+     {
+      "name": "pid",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Pid"
+      }
+     },
+     {
+      "name": "what",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "What"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Blockers"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/projects/{pid}/approve/{what}": {
+   "post": {
+    "summary": "Approve",
+    "operationId": "approve_api_projects__pid__approve__what__post",
+    "parameters": [
+     {
+      "name": "pid",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Pid"
+      }
+     },
+     {
+      "name": "what",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "What"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ApprovalResult"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/projects/{pid}/unapprove": {
+   "post": {
+    "summary": "Unapprove",
+    "operationId": "unapprove_api_projects__pid__unapprove_post",
+    "parameters": [
+     {
+      "name": "pid",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Pid"
+      }
+     }
+    ],
+    "requestBody": {
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/UnapproveBody",
+        "default": {}
+       }
+      }
+     }
+    },
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/projects/{pid}/assets/{aid}/regenerate": {
+   "post": {
+    "summary": "Regenerate",
+    "description": "A new image for the same spec. Images made from the old one become stale; only they are redone next time.",
+    "operationId": "regenerate_api_projects__pid__assets__aid__regenerate_post",
+    "parameters": [
+     {
+      "name": "pid",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Pid"
+      }
+     },
+     {
+      "name": "aid",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Aid"
+      }
+     }
+    ],
+    "responses": {
+     "202": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/JobInfo"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/projects/{pid}/assets/{aid}/file": {
+   "get": {
+    "summary": "Asset File",
+    "operationId": "asset_file_api_projects__pid__assets__aid__file_get",
+    "parameters": [
+     {
+      "name": "pid",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Pid"
+      }
+     },
+     {
+      "name": "aid",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Aid"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/projects/{pid}/export/status": {
+   "get": {
+    "summary": "Export Status",
+    "operationId": "export_status_api_projects__pid__export_status_get",
+    "parameters": [
+     {
+      "name": "pid",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Pid"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/projects/{pid}/export": {
+   "post": {
+    "summary": "Export",
+    "description": "Build the package. Refuses while images are missing, unless the reviewer explicitly accepts a partial pack.",
+    "operationId": "export_api_projects__pid__export_post",
+    "parameters": [
+     {
+      "name": "pid",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Pid"
+      }
+     },
+     {
+      "name": "allow_partial",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "boolean",
+       "default": false,
+       "title": "Allow Partial"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/projects/{pid}/export/download": {
+   "get": {
+    "summary": "Export Download",
+    "operationId": "export_download_api_projects__pid__export_download_get",
+    "parameters": [
+     {
+      "name": "pid",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Pid"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/health": {
+   "get": {
+    "summary": "Health",
+    "operationId": "health_health_get",
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "additionalProperties": true,
+         "type": "object",
+         "title": "Response Health Health Get"
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "components": {
+  "schemas": {
+   "AckBody": {
+    "properties": {
+     "warning_id": {
+      "type": "string",
+      "title": "Warning Id"
+     },
+     "acknowledged": {
+      "type": "boolean",
+      "title": "Acknowledged",
+      "default": true
+     },
+     "note": {
+      "type": "string",
+      "title": "Note",
+      "default": ""
+     }
+    },
+    "type": "object",
+    "required": [
+     "warning_id"
+    ],
+    "title": "AckBody"
+   },
+   "AdaptationDecision": {
+    "properties": {
+     "id": {
+      "type": "string",
+      "title": "Id"
+     },
+     "dimension": {
+      "$ref": "#/components/schemas/Dimension"
+     },
+     "source_scene_ids": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Source Scene Ids"
+     },
+     "entity_id": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Entity Id"
+     },
+     "original": {
+      "type": "string",
+      "title": "Original"
+     },
+     "adapted": {
+      "type": "string",
+      "title": "Adapted"
+     },
+     "reason": {
+      "type": "string",
+      "title": "Reason"
+     },
+     "basis": {
+      "type": "string",
+      "enum": [
+       "pack",
+       "judgment"
+      ],
+      "title": "Basis",
+      "default": "judgment"
+     },
+     "fact_ids": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Fact Ids"
+     },
+     "uncertain": {
+      "type": "boolean",
+      "title": "Uncertain",
+      "default": false
+     },
+     "uncertain_reason": {
+      "type": "string",
+      "title": "Uncertain Reason",
+      "default": ""
+     },
+     "status": {
+      "$ref": "#/components/schemas/ReviewStatus",
+      "default": "proposed"
+     },
+     "reviewer_note": {
+      "type": "string",
+      "title": "Reviewer Note",
+      "default": ""
+     }
+    },
+    "type": "object",
+    "required": [
+     "id",
+     "dimension",
+     "original",
+     "adapted",
+     "reason"
+    ],
+    "title": "AdaptationDecision",
+    "description": "One explained cultural choice. The plan is a list of these."
+   },
+   "AdaptationPlan": {
+    "properties": {
+     "model": {
+      "type": "string",
+      "title": "Model",
+      "default": ""
+     },
+     "entities": {
+      "anyOf": [
+       {
+        "$ref": "#/components/schemas/EntityPlan"
+       },
+       {
+        "type": "null"
+       }
+      ]
+     },
+     "scenes": {
+      "additionalProperties": {
+       "$ref": "#/components/schemas/ScenePlan"
+      },
+      "type": "object",
+      "title": "Scenes"
+     },
+     "failed_scenes": {
+      "additionalProperties": {
+       "type": "string"
+      },
+      "type": "object",
+      "title": "Failed Scenes"
+     },
+     "problems": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Problems"
+     },
+     "stale_scenes": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Stale Scenes"
+     }
+    },
+    "type": "object",
+    "title": "AdaptationPlan",
+    "description": "What the project stores. `problems` and `failed_scenes` are shown on the review screen."
+   },
+   "AdaptedLine": {
+    "properties": {
+     "source_scene_id": {
+      "type": "string",
+      "title": "Source Scene Id"
+     },
+     "decision_ids": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Decision Ids"
+     },
+     "character_id": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Character Id"
+     },
+     "kind": {
+      "$ref": "#/components/schemas/LineKind",
+      "default": "dialogue"
+     },
+     "text": {
+      "type": "string",
+      "title": "Text"
+     },
+     "gloss": {
+      "type": "string",
+      "title": "Gloss",
+      "default": ""
+     },
+     "source_line": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Source Line"
+     },
+     "event_ids": {
+      "items": {
+       "type": "integer"
+      },
+      "type": "array",
+      "title": "Event Ids"
+     },
+     "uncertain": {
+      "type": "boolean",
+      "title": "Uncertain",
+      "default": false
+     },
+     "note": {
+      "type": "string",
+      "title": "Note",
+      "default": ""
+     }
+    },
+    "type": "object",
+    "required": [
+     "source_scene_id",
+     "text"
+    ],
+    "title": "AdaptedLine"
+   },
+   "AdaptedScene": {
+    "properties": {
+     "source_scene_id": {
+      "type": "string",
+      "title": "Source Scene Id"
+     },
+     "heading": {
+      "type": "string",
+      "title": "Heading",
+      "default": ""
+     },
+     "lines": {
+      "items": {
+       "$ref": "#/components/schemas/AdaptedLine"
+      },
+      "type": "array",
+      "title": "Lines"
+     },
+     "problems": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Problems"
+     }
+    },
+    "type": "object",
+    "required": [
+     "source_scene_id"
+    ],
+    "title": "AdaptedScene"
+   },
+   "AffectedScenes": {
+    "properties": {
+     "affected_scenes": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Affected Scenes"
+     }
+    },
+    "type": "object",
+    "required": [
+     "affected_scenes"
+    ],
+    "title": "AffectedScenes"
+   },
+   "Approval": {
+    "properties": {
+     "characters": {
+      "type": "boolean",
+      "title": "Characters",
+      "default": false
+     },
+     "plan": {
+      "type": "boolean",
+      "title": "Plan",
+      "default": false
+     },
+     "costumes": {
+      "type": "boolean",
+      "title": "Costumes",
+      "default": false
+     }
+    },
+    "type": "object",
+    "title": "Approval"
+   },
+   "ApprovalResult": {
+    "properties": {
+     "approved": {
+      "type": "boolean",
+      "title": "Approved"
+     },
+     "status": {
+      "type": "string",
+      "title": "Status",
+      "default": ""
+     },
+     "waiting_for": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Waiting For",
+      "default": []
+     },
+     "blocked_by": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Blocked By"
+     }
+    },
+    "type": "object",
+    "required": [
+     "approved"
+    ],
+    "title": "ApprovalResult"
+   },
+   "Asset": {
+    "properties": {
+     "id": {
+      "type": "string",
+      "title": "Id"
+     },
+     "kind": {
+      "$ref": "#/components/schemas/AssetKind"
+     },
+     "entity_id": {
+      "type": "string",
+      "title": "Entity Id"
+     },
+     "status": {
+      "$ref": "#/components/schemas/AssetStatus",
+      "default": "pending"
+     },
+     "model": {
+      "type": "string",
+      "title": "Model",
+      "default": ""
+     },
+     "prompt": {
+      "type": "string",
+      "title": "Prompt",
+      "default": ""
+     },
+     "spec": {
+      "additionalProperties": true,
+      "type": "object",
+      "title": "Spec"
+     },
+     "spec_hash": {
+      "type": "string",
+      "title": "Spec Hash",
+      "default": ""
+     },
+     "reference_asset_ids": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Reference Asset Ids"
+     },
+     "path": {
+      "type": "string",
+      "title": "Path",
+      "default": ""
+     },
+     "attempts": {
+      "type": "integer",
+      "title": "Attempts",
+      "default": 0
+     },
+     "error": {
+      "type": "string",
+      "title": "Error",
+      "default": ""
+     },
+     "problems": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Problems"
+     },
+     "seconds": {
+      "type": "number",
+      "title": "Seconds",
+      "default": 0.0
+     },
+     "size": {
+      "type": "string",
+      "title": "Size",
+      "default": ""
+     }
+    },
+    "type": "object",
+    "required": [
+     "id",
+     "kind",
+     "entity_id"
+    ],
+    "title": "Asset"
+   },
+   "AssetKind": {
+    "type": "string",
+    "enum": [
+     "character_ref",
+     "costume_sheet",
+     "scene_keyframe"
+    ],
+    "title": "AssetKind"
+   },
+   "AssetStatus": {
+    "type": "string",
+    "enum": [
+     "pending",
+     "generated",
+     "failed",
+     "stale"
+    ],
+    "title": "AssetStatus"
+   },
+   "Blockers": {
+    "properties": {
+     "what": {
+      "type": "string",
+      "title": "What"
+     },
+     "blockers": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Blockers"
+     }
+    },
+    "type": "object",
+    "required": [
+     "what",
+     "blockers"
+    ],
+    "title": "Blockers"
+   },
+   "Body_create_project_api_projects_post": {
+    "properties": {
+     "pack_id": {
+      "type": "string",
+      "title": "Pack Id"
+     },
+     "region": {
+      "type": "string",
+      "title": "Region"
+     },
+     "setting": {
+      "type": "string",
+      "title": "Setting"
+     },
+     "output_script": {
+      "type": "string",
+      "title": "Output Script"
+     },
+     "text": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Text"
+     },
+     "file": {
+      "anyOf": [
+       {
+        "type": "string",
+        "contentMediaType": "application/octet-stream"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "File"
+     }
+    },
+    "type": "object",
+    "required": [
+     "pack_id",
+     "region",
+     "setting",
+     "output_script"
+    ],
+    "title": "Body_create_project_api_projects_post"
+   },
+   "Character": {
+    "properties": {
+     "id": {
+      "type": "string",
+      "title": "Id"
+     },
+     "name": {
+      "type": "string",
+      "title": "Name"
+     },
+     "aliases": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Aliases"
+     },
+     "age": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Age"
+     },
+     "role": {
+      "type": "string",
+      "title": "Role",
+      "default": ""
+     },
+     "relationships": {
+      "items": {
+       "$ref": "#/components/schemas/Relationship"
+      },
+      "type": "array",
+      "title": "Relationships"
+     },
+     "relationship_notes": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Relationship Notes"
+     },
+     "personality": {
+      "type": "string",
+      "title": "Personality",
+      "default": ""
+     },
+     "dialect": {
+      "type": "string",
+      "title": "Dialect",
+      "default": ""
+     },
+     "emotional_state": {
+      "type": "string",
+      "title": "Emotional State",
+      "default": ""
+     },
+     "physical_description": {
+      "type": "string",
+      "title": "Physical Description",
+      "default": ""
+     },
+     "adapted_name": {
+      "type": "string",
+      "title": "Adapted Name",
+      "default": ""
+     },
+     "adapted_name_native": {
+      "type": "string",
+      "title": "Adapted Name Native",
+      "default": ""
+     },
+     "role_adapted": {
+      "type": "string",
+      "title": "Role Adapted",
+      "default": ""
+     },
+     "speech_register": {
+      "type": "string",
+      "title": "Speech Register",
+      "default": ""
+     },
+     "address_terms": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Address Terms"
+     },
+     "grooming": {
+      "type": "string",
+      "title": "Grooming",
+      "default": ""
+     },
+     "scene_ids": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Scene Ids"
+     },
+     "approved": {
+      "type": "boolean",
+      "title": "Approved",
+      "default": false
+     }
+    },
+    "type": "object",
+    "required": [
+     "id",
+     "name"
+    ],
+    "title": "Character"
+   },
+   "CharacterPlan": {
+    "properties": {
+     "character_id": {
+      "type": "string",
+      "title": "Character Id"
+     },
+     "name_roman": {
+      "type": "string",
+      "title": "Name Roman"
+     },
+     "name_native": {
+      "type": "string",
+      "title": "Name Native"
+     },
+     "role_adapted": {
+      "type": "string",
+      "title": "Role Adapted",
+      "default": ""
+     },
+     "speech_register": {
+      "type": "string",
+      "title": "Speech Register",
+      "default": ""
+     },
+     "appearance": {
+      "type": "string",
+      "title": "Appearance",
+      "default": ""
+     },
+     "grooming": {
+      "type": "string",
+      "title": "Grooming",
+      "default": ""
+     },
+     "address_terms": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Address Terms"
+     }
+    },
+    "type": "object",
+    "required": [
+     "character_id",
+     "name_roman",
+     "name_native"
+    ],
+    "title": "CharacterPlan"
+   },
+   "CharacterState": {
+    "properties": {
+     "costume_id": {
+      "type": "string",
+      "title": "Costume Id",
+      "default": ""
+     },
+     "carrying": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Carrying"
+     },
+     "injuries": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Injuries"
+     },
+     "knows": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Knows"
+     }
+    },
+    "type": "object",
+    "title": "CharacterState",
+    "description": "Derived (never hand-edited): a character's state at the END of a scene."
+   },
+   "ComparisonScene": {
+    "properties": {
+     "scene_id": {
+      "type": "string",
+      "title": "Scene Id"
+     },
+     "source_text": {
+      "type": "string",
+      "title": "Source Text"
+     },
+     "adapted": {
+      "anyOf": [
+       {
+        "$ref": "#/components/schemas/AdaptedScene"
+       },
+       {
+        "type": "null"
+       }
+      ]
+     },
+     "decisions": {
+      "items": {
+       "$ref": "#/components/schemas/AdaptationDecision"
+      },
+      "type": "array",
+      "title": "Decisions"
+     },
+     "failed": {
+      "type": "string",
+      "title": "Failed",
+      "default": ""
+     }
+    },
+    "type": "object",
+    "required": [
+     "scene_id",
+     "source_text",
+     "decisions"
+    ],
+    "title": "ComparisonScene"
+   },
+   "ContinuityWarning": {
+    "properties": {
+     "id": {
+      "type": "string",
+      "title": "Id",
+      "default": ""
+     },
+     "code": {
+      "type": "string",
+      "title": "Code"
+     },
+     "severity": {
+      "$ref": "#/components/schemas/Severity",
+      "default": "warning"
+     },
+     "message": {
+      "type": "string",
+      "title": "Message"
+     },
+     "entity_id": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Entity Id"
+     },
+     "affected_scene_ids": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Affected Scene Ids"
+     },
+     "acknowledged": {
+      "type": "boolean",
+      "title": "Acknowledged",
+      "default": false
+     },
+     "ack_note": {
+      "type": "string",
+      "title": "Ack Note",
+      "default": ""
+     }
+    },
+    "type": "object",
+    "required": [
+     "code",
+     "message"
+    ],
+    "title": "ContinuityWarning"
+   },
+   "Costume": {
+    "properties": {
+     "id": {
+      "type": "string",
+      "title": "Id"
+     },
+     "character_id": {
+      "type": "string",
+      "title": "Character Id"
+     },
+     "source_garments": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Source Garments"
+     },
+     "garments": {
+      "type": "string",
+      "title": "Garments",
+      "default": ""
+     },
+     "fabrics": {
+      "type": "string",
+      "title": "Fabrics",
+      "default": ""
+     },
+     "colours": {
+      "type": "string",
+      "title": "Colours",
+      "default": ""
+     },
+     "footwear": {
+      "type": "string",
+      "title": "Footwear",
+      "default": ""
+     },
+     "jewellery": {
+      "type": "string",
+      "title": "Jewellery",
+      "default": ""
+     },
+     "headwear": {
+      "type": "string",
+      "title": "Headwear",
+      "default": ""
+     },
+     "grooming": {
+      "type": "string",
+      "title": "Grooming",
+      "default": ""
+     },
+     "scene_ids": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Scene Ids"
+     },
+     "change_reason": {
+      "type": "string",
+      "title": "Change Reason",
+      "default": ""
+     },
+     "approved": {
+      "type": "boolean",
+      "title": "Approved",
+      "default": false
+     }
+    },
+    "type": "object",
+    "required": [
+     "id",
+     "character_id"
+    ],
+    "title": "Costume"
+   },
+   "CostumePlan": {
+    "properties": {
+     "costume_id": {
+      "type": "string",
+      "title": "Costume Id"
+     },
+     "garments": {
+      "type": "string",
+      "title": "Garments"
+     },
+     "fabrics": {
+      "type": "string",
+      "title": "Fabrics",
+      "default": ""
+     },
+     "colours": {
+      "type": "string",
+      "title": "Colours",
+      "default": ""
+     },
+     "footwear": {
+      "type": "string",
+      "title": "Footwear",
+      "default": ""
+     },
+     "jewellery": {
+      "type": "string",
+      "title": "Jewellery",
+      "default": ""
+     },
+     "headwear": {
+      "type": "string",
+      "title": "Headwear",
+      "default": ""
+     },
+     "grooming": {
+      "type": "string",
+      "title": "Grooming",
+      "default": ""
+     },
+     "change_reason": {
+      "type": "string",
+      "title": "Change Reason",
+      "default": ""
+     }
+    },
+    "type": "object",
+    "required": [
+     "costume_id",
+     "garments"
+    ],
+    "title": "CostumePlan"
+   },
+   "Created": {
+    "properties": {
+     "id": {
+      "type": "string",
+      "title": "Id"
+     },
+     "scenes": {
+      "type": "integer",
+      "title": "Scenes"
+     },
+     "problems": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Problems"
+     }
+    },
+    "type": "object",
+    "required": [
+     "id",
+     "scenes",
+     "problems"
+    ],
+    "title": "Created"
+   },
+   "CultureSelection": {
+    "properties": {
+     "pack_id": {
+      "type": "string",
+      "title": "Pack Id"
+     },
+     "region": {
+      "type": "string",
+      "title": "Region"
+     },
+     "setting": {
+      "$ref": "#/components/schemas/Setting"
+     },
+     "output_script": {
+      "type": "string",
+      "title": "Output Script"
+     }
+    },
+    "type": "object",
+    "required": [
+     "pack_id",
+     "region",
+     "setting",
+     "output_script"
+    ],
+    "title": "CultureSelection",
+    "description": "What the user picked. Every field is required: no baked-in defaults."
+   },
+   "DecisionDraft": {
+    "properties": {
+     "dimension": {
+      "type": "string",
+      "enum": [
+       "verbal",
+       "non_verbal",
+       "character",
+       "visual_world",
+       "story_world"
+      ],
+      "title": "Dimension"
+     },
+     "entity_id": {
+      "type": "string",
+      "title": "Entity Id",
+      "default": ""
+     },
+     "original": {
+      "type": "string",
+      "title": "Original"
+     },
+     "adapted": {
+      "type": "string",
+      "title": "Adapted"
+     },
+     "reason": {
+      "type": "string",
+      "title": "Reason"
+     },
+     "basis": {
+      "type": "string",
+      "enum": [
+       "pack",
+       "judgment"
+      ],
+      "title": "Basis"
+     },
+     "fact_ids": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Fact Ids"
+     },
+     "uncertain": {
+      "type": "boolean",
+      "title": "Uncertain",
+      "default": false
+     }
+    },
+    "type": "object",
+    "required": [
+     "dimension",
+     "original",
+     "adapted",
+     "reason",
+     "basis"
+    ],
+    "title": "DecisionDraft",
+    "description": "One explained cultural choice, exactly as the model wrote it."
+   },
+   "Dimension": {
+    "type": "string",
+    "enum": [
+     "verbal",
+     "non_verbal",
+     "character",
+     "visual_world",
+     "story_world"
+    ],
+    "title": "Dimension",
+    "description": "What an adaptation decision is about (mirrors the brief's table)."
+   },
+   "EntityPlan": {
+    "properties": {
+     "season_and_period": {
+      "type": "string",
+      "title": "Season And Period",
+      "default": ""
+     },
+     "characters": {
+      "items": {
+       "$ref": "#/components/schemas/CharacterPlan"
+      },
+      "type": "array",
+      "title": "Characters"
+     },
+     "costumes": {
+      "items": {
+       "$ref": "#/components/schemas/CostumePlan"
+      },
+      "type": "array",
+      "title": "Costumes"
+     },
+     "locations": {
+      "items": {
+       "$ref": "#/components/schemas/LocationPlan"
+      },
+      "type": "array",
+      "title": "Locations"
+     },
+     "props": {
+      "items": {
+       "$ref": "#/components/schemas/PropPlan"
+      },
+      "type": "array",
+      "title": "Props"
+     },
+     "decisions": {
+      "items": {
+       "$ref": "#/components/schemas/DecisionDraft"
+      },
+      "type": "array",
+      "title": "Decisions"
+     }
+    },
+    "type": "object",
+    "title": "EntityPlan"
+   },
+   "HTTPValidationError": {
+    "properties": {
+     "detail": {
+      "items": {
+       "$ref": "#/components/schemas/ValidationError"
+      },
+      "type": "array",
+      "title": "Detail"
+     }
+    },
+    "type": "object",
+    "title": "HTTPValidationError"
+   },
+   "IntExt": {
+    "type": "string",
+    "enum": [
+     "INT",
+     "EXT",
+     "INT/EXT"
+    ],
+    "title": "IntExt"
+   },
+   "JobInfo": {
+    "properties": {
+     "name": {
+      "type": "string",
+      "title": "Name"
+     },
+     "state": {
+      "type": "string",
+      "title": "State"
+     },
+     "error": {
+      "type": "string",
+      "title": "Error",
+      "default": ""
+     },
+     "started": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Started"
+     },
+     "finished": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Finished"
+     },
+     "progress": {
+      "type": "string",
+      "title": "Progress",
+      "default": ""
+     },
+     "done": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Done"
+     },
+     "total": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Total"
+     }
+    },
+    "type": "object",
+    "required": [
+     "name",
+     "state"
+    ],
+    "title": "JobInfo"
+   },
+   "LineKind": {
+    "type": "string",
+    "enum": [
+     "dialogue",
+     "action",
+     "gesture",
+     "sound"
+    ],
+    "title": "LineKind"
+   },
+   "Location": {
+    "properties": {
+     "id": {
+      "type": "string",
+      "title": "Id"
+     },
+     "name": {
+      "type": "string",
+      "title": "Name"
+     },
+     "adapted_name": {
+      "type": "string",
+      "title": "Adapted Name",
+      "default": ""
+     },
+     "adapted_name_native": {
+      "type": "string",
+      "title": "Adapted Name Native",
+      "default": ""
+     },
+     "sub_locations": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Sub Locations"
+     },
+     "description": {
+      "type": "string",
+      "title": "Description",
+      "default": ""
+     },
+     "scene_ids": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Scene Ids"
+     }
+    },
+    "type": "object",
+    "required": [
+     "id",
+     "name"
+    ],
+    "title": "Location"
+   },
+   "LocationPlan": {
+    "properties": {
+     "location_id": {
+      "type": "string",
+      "title": "Location Id"
+     },
+     "name_roman": {
+      "type": "string",
+      "title": "Name Roman",
+      "default": ""
+     },
+     "name_native": {
+      "type": "string",
+      "title": "Name Native",
+      "default": ""
+     },
+     "description": {
+      "type": "string",
+      "title": "Description"
+     }
+    },
+    "type": "object",
+    "required": [
+     "location_id",
+     "description"
+    ],
+    "title": "LocationPlan"
+   },
+   "MentionedCharacter": {
+    "properties": {
+     "name": {
+      "type": "string",
+      "title": "Name"
+     },
+     "other_names": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Other Names"
+     },
+     "age": {
+      "type": "string",
+      "title": "Age",
+      "default": ""
+     },
+     "role": {
+      "type": "string",
+      "title": "Role",
+      "default": ""
+     },
+     "relationships": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Relationships"
+     },
+     "personality": {
+      "type": "string",
+      "title": "Personality",
+      "default": ""
+     },
+     "costume": {
+      "type": "string",
+      "title": "Costume",
+      "default": ""
+     },
+     "emotional_state": {
+      "type": "string",
+      "title": "Emotional State",
+      "default": ""
+     },
+     "enters": {
+      "type": "boolean",
+      "title": "Enters",
+      "default": false
+     },
+     "exits": {
+      "type": "boolean",
+      "title": "Exits",
+      "default": false
+     }
+    },
+    "type": "object",
+    "required": [
+     "name"
+    ],
+    "title": "MentionedCharacter"
+   },
+   "MentionedProp": {
+    "properties": {
+     "name": {
+      "type": "string",
+      "title": "Name"
+     },
+     "description": {
+      "type": "string",
+      "title": "Description",
+      "default": ""
+     },
+     "holder_at_start": {
+      "type": "string",
+      "title": "Holder At Start",
+      "default": ""
+     },
+     "holder_at_end": {
+      "type": "string",
+      "title": "Holder At End",
+      "default": ""
+     },
+     "note": {
+      "type": "string",
+      "title": "Note",
+      "default": ""
+     }
+    },
+    "type": "object",
+    "required": [
+     "name"
+    ],
+    "title": "MentionedProp"
+   },
+   "MergeBody": {
+    "properties": {
+     "kind": {
+      "type": "string",
+      "title": "Kind"
+     },
+     "keep_id": {
+      "type": "string",
+      "title": "Keep Id"
+     },
+     "drop_id": {
+      "type": "string",
+      "title": "Drop Id"
+     }
+    },
+    "type": "object",
+    "required": [
+     "kind",
+     "keep_id",
+     "drop_id"
+    ],
+    "title": "MergeBody"
+   },
+   "ProductionElements": {
+    "properties": {
+     "set_dressing": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Set Dressing"
+     },
+     "food": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Food"
+     },
+     "vehicles": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Vehicles"
+     },
+     "animals": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Animals"
+     },
+     "extras": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Extras"
+     },
+     "rituals": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Rituals"
+     },
+     "gestures": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Gestures"
+     },
+     "sound_music": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Sound Music"
+     }
+    },
+    "type": "object",
+    "title": "ProductionElements",
+    "description": "Everything the art/sound departments need for a scene."
+   },
+   "ProjectStatus": {
+    "type": "string",
+    "enum": [
+     "created",
+     "extracted",
+     "normalized",
+     "plan_ready",
+     "approved",
+     "rewritten",
+     "generated",
+     "exported"
+    ],
+    "title": "ProjectStatus"
+   },
+   "ProjectSummary": {
+    "properties": {
+     "id": {
+      "type": "string",
+      "title": "Id"
+     },
+     "source_filename": {
+      "type": "string",
+      "title": "Source Filename"
+     },
+     "status": {
+      "type": "string",
+      "title": "Status"
+     },
+     "created_at": {
+      "type": "string",
+      "title": "Created At"
+     },
+     "culture": {
+      "type": "string",
+      "title": "Culture"
+     },
+     "region": {
+      "type": "string",
+      "title": "Region"
+     },
+     "scenes": {
+      "type": "integer",
+      "title": "Scenes"
+     },
+     "characters": {
+      "type": "integer",
+      "title": "Characters"
+     },
+     "decisions": {
+      "type": "integer",
+      "title": "Decisions"
+     },
+     "flagged_decisions": {
+      "type": "integer",
+      "title": "Flagged Decisions"
+     },
+     "job": {
+      "anyOf": [
+       {
+        "$ref": "#/components/schemas/JobInfo"
+       },
+       {
+        "type": "null"
+       }
+      ]
+     }
+    },
+    "type": "object",
+    "required": [
+     "id",
+     "source_filename",
+     "status",
+     "created_at",
+     "culture",
+     "region",
+     "scenes",
+     "characters",
+     "decisions",
+     "flagged_decisions"
+    ],
+    "title": "ProjectSummary"
+   },
+   "ProjectView": {
+    "properties": {
+     "id": {
+      "type": "string",
+      "title": "Id"
+     },
+     "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Created At"
+     },
+     "status": {
+      "$ref": "#/components/schemas/ProjectStatus",
+      "default": "created"
+     },
+     "source_filename": {
+      "type": "string",
+      "title": "Source Filename",
+      "default": ""
+     },
+     "source_text": {
+      "type": "string",
+      "title": "Source Text",
+      "default": ""
+     },
+     "extraction_problems": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Extraction Problems"
+     },
+     "source_scenes": {
+      "items": {
+       "$ref": "#/components/schemas/SourceScene"
+      },
+      "type": "array",
+      "title": "Source Scenes"
+     },
+     "selection": {
+      "anyOf": [
+       {
+        "$ref": "#/components/schemas/CultureSelection"
+       },
+       {
+        "type": "null"
+       }
+      ]
+     },
+     "scenes": {
+      "items": {
+       "$ref": "#/components/schemas/Scene"
+      },
+      "type": "array",
+      "title": "Scenes"
+     },
+     "characters": {
+      "items": {
+       "$ref": "#/components/schemas/Character"
+      },
+      "type": "array",
+      "title": "Characters"
+     },
+     "locations": {
+      "items": {
+       "$ref": "#/components/schemas/Location"
+      },
+      "type": "array",
+      "title": "Locations"
+     },
+     "props": {
+      "items": {
+       "$ref": "#/components/schemas/Prop"
+      },
+      "type": "array",
+      "title": "Props"
+     },
+     "costumes": {
+      "items": {
+       "$ref": "#/components/schemas/Costume"
+      },
+      "type": "array",
+      "title": "Costumes"
+     },
+     "user_edits": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "User Edits"
+     },
+     "normalization_log": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Normalization Log"
+     },
+     "warnings": {
+      "items": {
+       "$ref": "#/components/schemas/ContinuityWarning"
+      },
+      "type": "array",
+      "title": "Warnings"
+     },
+     "continuity_checked": {
+      "type": "boolean",
+      "title": "Continuity Checked",
+      "default": false
+     },
+     "plan": {
+      "anyOf": [
+       {
+        "$ref": "#/components/schemas/AdaptationPlan"
+       },
+       {
+        "type": "null"
+       }
+      ]
+     },
+     "decisions": {
+      "items": {
+       "$ref": "#/components/schemas/AdaptationDecision"
+      },
+      "type": "array",
+      "title": "Decisions"
+     },
+     "adapted_scenes": {
+      "items": {
+       "$ref": "#/components/schemas/AdaptedScene"
+      },
+      "type": "array",
+      "title": "Adapted Scenes"
+     },
+     "rewrite_failed": {
+      "additionalProperties": {
+       "type": "string"
+      },
+      "type": "object",
+      "title": "Rewrite Failed"
+     },
+     "assets": {
+      "items": {
+       "$ref": "#/components/schemas/Asset"
+      },
+      "type": "array",
+      "title": "Assets"
+     },
+     "approval": {
+      "$ref": "#/components/schemas/Approval"
+     },
+     "job": {
+      "anyOf": [
+       {
+        "$ref": "#/components/schemas/JobInfo"
+       },
+       {
+        "type": "null"
+       }
+      ]
+     },
+     "blocking_warning_ids": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Blocking Warning Ids",
+      "default": []
+     },
+     "review_problems": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Review Problems",
+      "default": []
+     }
+    },
+    "type": "object",
+    "title": "ProjectView",
+    "description": "The whole project plus what the UI needs to render it."
+   },
+   "Prop": {
+    "properties": {
+     "id": {
+      "type": "string",
+      "title": "Id"
+     },
+     "name": {
+      "type": "string",
+      "title": "Name"
+     },
+     "adapted_name": {
+      "type": "string",
+      "title": "Adapted Name",
+      "default": ""
+     },
+     "adapted_name_native": {
+      "type": "string",
+      "title": "Adapted Name Native",
+      "default": ""
+     },
+     "aliases": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Aliases"
+     },
+     "description": {
+      "type": "string",
+      "title": "Description",
+      "default": ""
+     },
+     "scene_ids": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Scene Ids"
+     }
+    },
+    "type": "object",
+    "required": [
+     "id",
+     "name"
+    ],
+    "title": "Prop"
+   },
+   "PropPlan": {
+    "properties": {
+     "prop_id": {
+      "type": "string",
+      "title": "Prop Id"
+     },
+     "name_roman": {
+      "type": "string",
+      "title": "Name Roman"
+     },
+     "name_native": {
+      "type": "string",
+      "title": "Name Native"
+     },
+     "description": {
+      "type": "string",
+      "title": "Description",
+      "default": ""
+     }
+    },
+    "type": "object",
+    "required": [
+     "prop_id",
+     "name_roman",
+     "name_native"
+    ],
+    "title": "PropPlan"
+   },
+   "Relationship": {
+    "properties": {
+     "other_id": {
+      "type": "string",
+      "title": "Other Id"
+     },
+     "relation": {
+      "type": "string",
+      "title": "Relation"
+     }
+    },
+    "type": "object",
+    "required": [
+     "other_id",
+     "relation"
+    ],
+    "title": "Relationship"
+   },
+   "ReviewBody": {
+    "properties": {
+     "status": {
+      "type": "string",
+      "title": "Status"
+     },
+     "adapted": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Adapted"
+     },
+     "note": {
+      "type": "string",
+      "title": "Note",
+      "default": ""
+     }
+    },
+    "type": "object",
+    "required": [
+     "status"
+    ],
+    "title": "ReviewBody"
+   },
+   "ReviewStatus": {
+    "type": "string",
+    "enum": [
+     "proposed",
+     "accepted",
+     "edited",
+     "rejected"
+    ],
+    "title": "ReviewStatus"
+   },
+   "Scene": {
+    "properties": {
+     "scene_id": {
+      "type": "string",
+      "title": "Scene Id"
+     },
+     "number": {
+      "type": "integer",
+      "title": "Number"
+     },
+     "int_ext": {
+      "$ref": "#/components/schemas/IntExt",
+      "default": "INT"
+     },
+     "location_id": {
+      "type": "string",
+      "title": "Location Id",
+      "default": ""
+     },
+     "sub_location": {
+      "type": "string",
+      "title": "Sub Location",
+      "default": ""
+     },
+     "time": {
+      "type": "string",
+      "title": "Time",
+      "default": ""
+     },
+     "day": {
+      "type": "string",
+      "title": "Day",
+      "default": ""
+     },
+     "weather": {
+      "type": "string",
+      "title": "Weather",
+      "default": ""
+     },
+     "mood": {
+      "type": "string",
+      "title": "Mood",
+      "default": ""
+     },
+     "summary": {
+      "type": "string",
+      "title": "Summary",
+      "default": ""
+     },
+     "dramatic_purpose": {
+      "type": "string",
+      "title": "Dramatic Purpose",
+      "default": ""
+     },
+     "source_text": {
+      "type": "string",
+      "title": "Source Text",
+      "default": ""
+     },
+     "characters": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Characters"
+     },
+     "entrances": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Entrances"
+     },
+     "exits": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Exits"
+     },
+     "costumes": {
+      "additionalProperties": {
+       "type": "string"
+      },
+      "type": "object",
+      "title": "Costumes"
+     },
+     "props_in": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Props In"
+     },
+     "props_out": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Props Out"
+     },
+     "prop_holder_start": {
+      "additionalProperties": {
+       "type": "string"
+      },
+      "type": "object",
+      "title": "Prop Holder Start"
+     },
+     "prop_holder_end": {
+      "additionalProperties": {
+       "type": "string"
+      },
+      "type": "object",
+      "title": "Prop Holder End"
+     },
+     "state_changes": {
+      "items": {
+       "$ref": "#/components/schemas/StateChange"
+      },
+      "type": "array",
+      "title": "State Changes"
+     },
+     "production": {
+      "$ref": "#/components/schemas/ProductionElements"
+     },
+     "emotional_change": {
+      "type": "string",
+      "title": "Emotional Change",
+      "default": ""
+     },
+     "continuity_warnings": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Continuity Warnings"
+     },
+     "states": {
+      "additionalProperties": {
+       "$ref": "#/components/schemas/CharacterState"
+      },
+      "type": "object",
+      "title": "States"
+     }
+    },
+    "type": "object",
+    "required": [
+     "scene_id",
+     "number"
+    ],
+    "title": "Scene"
+   },
+   "SceneExtraction": {
+    "properties": {
+     "scene_number": {
+      "type": "integer",
+      "title": "Scene Number"
+     },
+     "int_ext": {
+      "type": "string",
+      "title": "Int Ext",
+      "default": ""
+     },
+     "location": {
+      "type": "string",
+      "title": "Location",
+      "default": ""
+     },
+     "sub_location": {
+      "type": "string",
+      "title": "Sub Location",
+      "default": ""
+     },
+     "time": {
+      "type": "string",
+      "title": "Time",
+      "default": ""
+     },
+     "day": {
+      "type": "string",
+      "title": "Day",
+      "default": ""
+     },
+     "weather": {
+      "type": "string",
+      "title": "Weather",
+      "default": ""
+     },
+     "mood": {
+      "type": "string",
+      "title": "Mood",
+      "default": ""
+     },
+     "summary": {
+      "type": "string",
+      "title": "Summary",
+      "default": ""
+     },
+     "dramatic_purpose": {
+      "type": "string",
+      "title": "Dramatic Purpose",
+      "default": ""
+     },
+     "emotional_change": {
+      "type": "string",
+      "title": "Emotional Change",
+      "default": ""
+     },
+     "characters": {
+      "items": {
+       "$ref": "#/components/schemas/MentionedCharacter"
+      },
+      "type": "array",
+      "title": "Characters"
+     },
+     "props": {
+      "items": {
+       "$ref": "#/components/schemas/MentionedProp"
+      },
+      "type": "array",
+      "title": "Props"
+     },
+     "events": {
+      "items": {
+       "$ref": "#/components/schemas/StateEvent"
+      },
+      "type": "array",
+      "title": "Events"
+     },
+     "set_dressing": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Set Dressing"
+     },
+     "food": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Food"
+     },
+     "vehicles": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Vehicles"
+     },
+     "animals": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Animals"
+     },
+     "extras": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Extras"
+     },
+     "rituals": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Rituals"
+     },
+     "gestures": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Gestures"
+     },
+     "sound_music": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Sound Music"
+     }
+    },
+    "type": "object",
+    "required": [
+     "scene_number"
+    ],
+    "title": "SceneExtraction"
+   },
+   "ScenePlan": {
+    "properties": {
+     "scene_id": {
+      "type": "string",
+      "title": "Scene Id"
+     },
+     "setting_notes": {
+      "type": "string",
+      "title": "Setting Notes",
+      "default": ""
+     },
+     "dialogue_notes": {
+      "type": "string",
+      "title": "Dialogue Notes",
+      "default": ""
+     },
+     "gestures": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Gestures"
+     },
+     "food": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Food"
+     },
+     "sound_music": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Sound Music"
+     },
+     "rituals": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Rituals"
+     },
+     "decisions": {
+      "items": {
+       "$ref": "#/components/schemas/DecisionDraft"
+      },
+      "type": "array",
+      "title": "Decisions"
+     }
+    },
+    "type": "object",
+    "required": [
+     "scene_id"
+    ],
+    "title": "ScenePlan"
+   },
+   "Setting": {
+    "type": "string",
+    "enum": [
+     "rural",
+     "urban"
+    ],
+    "title": "Setting"
+   },
+   "Severity": {
+    "type": "string",
+    "enum": [
+     "info",
+     "warning",
+     "error"
+    ],
+    "title": "Severity"
+   },
+   "SourceScene": {
+    "properties": {
+     "number": {
+      "type": "integer",
+      "title": "Number"
+     },
+     "heading": {
+      "type": "string",
+      "title": "Heading",
+      "default": ""
+     },
+     "text": {
+      "type": "string",
+      "title": "Text"
+     },
+     "extraction": {
+      "anyOf": [
+       {
+        "$ref": "#/components/schemas/SceneExtraction"
+       },
+       {
+        "type": "null"
+       }
+      ]
+     },
+     "error": {
+      "type": "string",
+      "title": "Error",
+      "default": ""
+     },
+     "problems": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Problems"
+     }
+    },
+    "type": "object",
+    "required": [
+     "number",
+     "text"
+    ],
+    "title": "SourceScene",
+    "description": "One scene of the source screenplay plus what was extracted from it."
+   },
+   "StateChange": {
+    "properties": {
+     "kind": {
+      "$ref": "#/components/schemas/StateChangeKind"
+     },
+     "character_id": {
+      "type": "string",
+      "title": "Character Id"
+     },
+     "item": {
+      "type": "string",
+      "title": "Item",
+      "default": ""
+     },
+     "to_character_id": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "To Character Id"
+     },
+     "note": {
+      "type": "string",
+      "title": "Note",
+      "default": ""
+     }
+    },
+    "type": "object",
+    "required": [
+     "kind",
+     "character_id"
+    ],
+    "title": "StateChange",
+    "description": "Something that changes for a character or prop during a scene."
+   },
+   "StateChangeKind": {
+    "type": "string",
+    "enum": [
+     "prop_gain",
+     "prop_loss",
+     "prop_transfer",
+     "injury_gain",
+     "injury_heal",
+     "knowledge_gain",
+     "costume_change",
+     "relationship_change"
+    ],
+    "title": "StateChangeKind"
+   },
+   "StateEvent": {
+    "properties": {
+     "kind": {
+      "type": "string",
+      "title": "Kind"
+     },
+     "character": {
+      "type": "string",
+      "title": "Character"
+     },
+     "item": {
+      "type": "string",
+      "title": "Item",
+      "default": ""
+     },
+     "to_character": {
+      "type": "string",
+      "title": "To Character",
+      "default": ""
+     },
+     "note": {
+      "type": "string",
+      "title": "Note",
+      "default": ""
+     }
+    },
+    "type": "object",
+    "required": [
+     "kind",
+     "character"
+    ],
+    "title": "StateEvent"
+   },
+   "UnapproveBody": {
+    "properties": {
+     "what": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "What"
+     }
+    },
+    "type": "object",
+    "title": "UnapproveBody"
+   },
+   "ValidationError": {
+    "properties": {
+     "loc": {
+      "items": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "integer"
+        }
+       ]
+      },
+      "type": "array",
+      "title": "Location"
+     },
+     "msg": {
+      "type": "string",
+      "title": "Message"
+     },
+     "type": {
+      "type": "string",
+      "title": "Error Type"
+     },
+     "input": {
+      "title": "Input"
+     },
+     "ctx": {
+      "type": "object",
+      "title": "Context"
+     }
+    },
+    "type": "object",
+    "required": [
+     "loc",
+     "msg",
+     "type"
+    ],
+    "title": "ValidationError"
+   }
+  }
+ }
+}

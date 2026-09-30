@@ -1,0 +1,1453 @@
+{
+  "id": "majhi_punjabi",
+  "culture": "Majhi Punjabi",
+  "language_family": "Punjabi",
+  "regions": [
+    "Amritsar",
+    "Gurdaspur",
+    "Tarn Taran",
+    "Pathankot"
+  ],
+  "settings": [
+    "rural",
+    "urban"
+  ],
+  "supported_scripts": [
+    "gurmukhi",
+    "latin",
+    "devanagari"
+  ],
+  "default_script": "gurmukhi",
+  "avoid_mixing_with": [
+    "Malwai",
+    "Doabi",
+    "Pothohari",
+    "Haryanvi",
+    "Rajasthani"
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "title": "Majhi dialect (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Majhi_dialect"
+    },
+    {
+      "id": "S2",
+      "title": "Majha (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Majha"
+    },
+    {
+      "id": "S3",
+      "title": "A Guide to the Dialects of Punjabi (learnpunjabi.net)",
+      "url": "https://learnpunjabi.net/guides/punjabi-dialects.html"
+    },
+    {
+      "id": "S4",
+      "title": "Punjabi Family Terms (learnpunjabi.net)",
+      "url": "https://learnpunjabi.net/family.html"
+    },
+    {
+      "id": "S5",
+      "title": "Family Words in Punjabi (Punjabi Charm)",
+      "url": "https://punjabicharm.com/blog/family-words-in-punjabi/"
+    },
+    {
+      "id": "S6",
+      "title": "Punjabi Etiquette (Ling)",
+      "url": "https://ling-app.com/blog/punjabi-etiquette/"
+    },
+    {
+      "id": "S7",
+      "title": "Punjabi Greetings: Sat Sri Akal & Saying Hello (learnpunjabi.net)",
+      "url": "https://learnpunjabi.net/punjabi-greetings.html"
+    },
+    {
+      "id": "S8",
+      "title": "Sat Sri Akal - Namaste (SikhNet)",
+      "url": "https://sikhnet.com/news/sat-sri-akal-namaste"
+    },
+    {
+      "id": "S9",
+      "title": "House Design in Punjab with Traditional and Modern Touch (HomeLane)",
+      "url": "https://www.homelane.com/design-ideas/home-interior-design/home-designs-in-punjab/"
+    },
+    {
+      "id": "S10",
+      "title": "Punjabi clothing (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Punjabi_clothing"
+    },
+    {
+      "id": "S11",
+      "title": "Food Stories: Sarson ka saag / Makki ki roti (Dawn)",
+      "url": "https://www.dawn.com/news/1088069/food-stories-sarson-ka-saag-makki-ki-roti"
+    },
+    {
+      "id": "S12",
+      "title": "Makki ki roti (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Makki_ki_roti"
+    },
+    {
+      "id": "S13",
+      "title": "Majha, Malwa, Doaba: Punjab's Three Regions (Punjabiyat)",
+      "url": "https://punjabiyat.co/majha-malwa-doaba-punjabs-three-regions/"
+    },
+    {
+      "id": "S14",
+      "title": "Malwai dialect (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Malwai_dialect"
+    },
+    {
+      "id": "S15",
+      "title": "Doabi dialect (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Doabi_dialect"
+    },
+    {
+      "id": "S17",
+      "title": "Vibrant Traditional Attire of Punjab (Rangla Punjab)",
+      "url": "https://ranglapunjab.blog/vibrant-traditional-attire-of-punjab"
+    }
+  ],
+  "facts": [
+    {
+      "id": "F001",
+      "category": "region",
+      "text": "The Majha region covers the districts of Amritsar, Tarn Taran, Gurdaspur and Pathankot in Indian Punjab, from the Beas up to the Ravi.",
+      "term": "",
+      "roman": "",
+      "source_ids": [
+        "S2"
+      ],
+      "basis": "page_read",
+      "confidence": "high",
+      "uncertain": false,
+      "note": "",
+      "crosschecks": [
+        {
+          "model": "azure:gpt-5",
+          "verdict": "agree",
+          "note": ""
+        },
+        {
+          "model": "gemini:gemini-3.5-flash",
+          "verdict": "agree",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "F002",
+      "category": "dialect",
+      "text": "Majhi is the basis of the standard register of Punjabi, used in textbooks, formal writing and broadcasting.",
+      "term": "",
+      "roman": "",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "basis": "page_read",
+      "confidence": "high",
+      "uncertain": false,
+      "note": "Standard literary Punjabi is therefore a reasonable base register. Spoken village Majhi has additional local features.",
+      "crosschecks": [
+        {
+          "model": "azure:gpt-5",
+          "verdict": "agree",
+          "note": ""
+        },
+        {
+          "model": "gemini:gemini-3.5-flash",
+          "verdict": "agree",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "F003",
+      "category": "dialect",
+      "text": "Majhi is transitional between the Eastern and Western Punjabi dialects.",
+      "term": "",
+      "roman": "",
+      "source_ids": [
+        "S1"
+      ],
+      "basis": "search_summary",
+      "confidence": "medium",
+      "uncertain": false,
+      "note": "",
+      "crosschecks": [
+        {
+          "model": "azure:gpt-5",
+          "verdict": "unsure",
+          "note": "Majhi is central/standard in Eastern Punjabi; “transitional” is debated."
+        },
+        {
+          "model": "gemini:gemini-3.5-flash",
+          "verdict": "agree",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "F004",
+      "category": "dialect",
+      "text": "'How?' is kivẽ / kiṉj in Majhi; Doabi uses kiddā̃. 'Like this' is ēvẽ / ēṉj in Majhi and ēdā̃ in Doabi.",
+      "term": "ਕਿਵੇਂ",
+      "roman": "kivẽ",
+      "source_ids": [
+        "S1"
+      ],
+      "basis": "page_read",
+      "confidence": "medium",
+      "uncertain": true,
+      "note": "From a linguistic table. Everyday Punjabi commonly uses both kivẽ and kiddā̃, so do not treat kiddā̃ as an error. Weak marker only.",
+      "crosschecks": [
+        {
+          "model": "azure:gpt-5",
+          "verdict": "agree",
+          "note": "ਕਿਵੇਂ (kivẽ) spelling and meaning correct."
+        },
+        {
+          "model": "gemini:gemini-3.5-flash",
+          "verdict": "agree",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "F005",
+      "category": "dialect",
+      "text": "In Majhi the third-person plural 'are' can be ne (ਨੇ), e.g. 'oh sōṉde ne' (they sleep).",
+      "term": "ਨੇ",
+      "roman": "ne",
+      "source_ids": [
+        "S1"
+      ],
+      "basis": "page_read",
+      "confidence": "medium",
+      "uncertain": true,
+      "note": "Single linguistic source; ne is also widely used outside Majha.",
+      "crosschecks": [
+        {
+          "model": "azure:gpt-5",
+          "verdict": "agree",
+          "note": "ਨੇ (ne) form is standard Indian Punjabi."
+        },
+        {
+          "model": "gemini:gemini-3.5-flash",
+          "verdict": "agree",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "F006",
+      "category": "dialect",
+      "text": "Other regional varieties are Malwai (Malwa region) and Doabi (Doaba region). Vocabulary differs between them, and blending them is the unintended mixing to avoid.",
+      "term": "",
+      "roman": "",
+      "source_ids": [
+        "S3",
+        "S13",
+        "S14",
+        "S15"
+      ],
+      "basis": "page_read",
+      "confidence": "high",
+      "uncertain": false,
+      "note": "",
+      "crosschecks": [
+        {
+          "model": "azure:gpt-5",
+          "verdict": "agree",
+          "note": "Malwai/Doabi noted; vocabulary differs."
+        },
+        {
+          "model": "gemini:gemini-3.5-flash",
+          "verdict": "agree",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "F007",
+      "category": "dialect",
+      "text": "Speakers from different regions sound noticeably different in accent, rhythm and choice of words.",
+      "term": "",
+      "roman": "",
+      "source_ids": [
+        "S3"
+      ],
+      "basis": "page_read",
+      "confidence": "high",
+      "uncertain": false,
+      "note": "",
+      "crosschecks": [
+        {
+          "model": "azure:gpt-5",
+          "verdict": "agree",
+          "note": ""
+        },
+        {
+          "model": "gemini:gemini-3.5-flash",
+          "verdict": "agree",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "F010",
+      "category": "greeting",
+      "text": "Sat Sri Akal is the everyday greeting, said on both arriving and leaving, usually with palms pressed together.",
+      "term": "ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ",
+      "roman": "Sat Sri Akal",
+      "source_ids": [
+        "S7",
+        "S8"
+      ],
+      "basis": "search_summary",
+      "confidence": "high",
+      "uncertain": false,
+      "note": "Sources show the spellings ਸਤ and ਸਤਿ; ਸਤਿ is the fuller form.",
+      "crosschecks": [
+        {
+          "model": "azure:gpt-5",
+          "verdict": "agree",
+          "note": "ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ spelling correct."
+        },
+        {
+          "model": "gemini:gemini-3.5-flash",
+          "verdict": "agree",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "F011",
+      "category": "greeting",
+      "text": "Sasrikal is the relaxed, run-together casual form of Sat Sri Akal.",
+      "term": "",
+      "roman": "Sasrikal",
+      "source_ids": [
+        "S7"
+      ],
+      "basis": "search_summary",
+      "confidence": "high",
+      "uncertain": false,
+      "note": "",
+      "crosschecks": [
+        {
+          "model": "azure:gpt-5",
+          "verdict": "agree",
+          "note": "Colloquial ‘Sasrikal’ is common."
+        },
+        {
+          "model": "gemini:gemini-3.5-flash",
+          "verdict": "agree",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "F012",
+      "category": "honorific",
+      "text": "Adding 'ji' after a name or relationship term shows respect, especially to elders or people met for the first time.",
+      "term": "ਜੀ",
+      "roman": "ji",
+      "source_ids": [
+        "S6",
+        "S7"
+      ],
+      "basis": "search_summary",
+      "confidence": "high",
+      "uncertain": false,
+      "note": "",
+      "crosschecks": [
+        {
+          "model": "azure:gpt-5",
+          "verdict": "agree",
+          "note": "ਜੀ usage correct."
+        },
+        {
+          "model": "gemini:gemini-3.5-flash",
+          "verdict": "agree",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "F013",
+      "category": "gesture",
+      "text": "Younger males touch the feet or knees of elders as a mark of respect when relatives of different generations meet.",
+      "term": "",
+      "roman": "",
+      "source_ids": [
+        "S6"
+      ],
+      "basis": "search_summary",
+      "confidence": "medium",
+      "uncertain": false,
+      "note": "",
+      "crosschecks": [
+        {
+          "model": "azure:gpt-5",
+          "verdict": "agree",
+          "note": "Touching feet is customary respect."
+        },
+        {
+          "model": "gemini:gemini-3.5-flash",
+          "verdict": "agree",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "F014",
+      "category": "gesture",
+      "text": "Give and receive things with both hands as a sign of respect.",
+      "term": "",
+      "roman": "",
+      "source_ids": [
+        "S6"
+      ],
+      "basis": "search_summary",
+      "confidence": "medium",
+      "uncertain": false,
+      "note": "",
+      "crosschecks": [
+        {
+          "model": "azure:gpt-5",
+          "verdict": "agree",
+          "note": ""
+        },
+        {
+          "model": "gemini:gemini-3.5-flash",
+          "verdict": "agree",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "F015",
+      "category": "gesture",
+      "text": "Avoid direct, prolonged eye contact with an elder.",
+      "term": "",
+      "roman": "",
+      "source_ids": [
+        "S6"
+      ],
+      "basis": "search_summary",
+      "confidence": "low",
+      "uncertain": true,
+      "note": "One language-learning blog; a generalisation that may not hold for every family.",
+      "crosschecks": [
+        {
+          "model": "azure:gpt-5",
+          "verdict": "unsure",
+          "note": "Prolonged eye contact norms vary; not distinctly Majhi-specific."
+        },
+        {
+          "model": "gemini:gemini-3.5-flash",
+          "verdict": "agree",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "F016",
+      "category": "honorific",
+      "text": "Elders are addressed by a relationship term or designation plus 'ji', not by first name.",
+      "term": "",
+      "roman": "",
+      "source_ids": [
+        "S6"
+      ],
+      "basis": "search_summary",
+      "confidence": "high",
+      "uncertain": false,
+      "note": "",
+      "crosschecks": [
+        {
+          "model": "azure:gpt-5",
+          "verdict": "agree",
+          "note": ""
+        },
+        {
+          "model": "gemini:gemini-3.5-flash",
+          "verdict": "agree",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "F017",
+      "category": "gesture",
+      "text": "On leaving, respect for elders is shown by standing, joining hands and a slight bow.",
+      "term": "",
+      "roman": "",
+      "source_ids": [
+        "S6"
+      ],
+      "basis": "search_summary",
+      "confidence": "medium",
+      "uncertain": false,
+      "note": "",
+      "crosschecks": [
+        {
+          "model": "azure:gpt-5",
+          "verdict": "agree",
+          "note": ""
+        },
+        {
+          "model": "gemini:gemini-3.5-flash",
+          "verdict": "agree",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "F020",
+      "category": "kinship",
+      "text": "Dada / Dadi are the paternal grandfather / grandmother; Nana / Nani are the maternal grandfather / grandmother.",
+      "term": "ਦਾਦਾ / ਦਾਦੀ / ਨਾਨਾ / ਨਾਨੀ",
+      "roman": "Dada / Dadi / Nana / Nani",
+      "source_ids": [
+        "S4",
+        "S5"
+      ],
+      "basis": "search_summary",
+      "confidence": "high",
+      "uncertain": false,
+      "note": "",
+      "crosschecks": [
+        {
+          "model": "azure:gpt-5",
+          "verdict": "agree",
+          "note": "Terms and spellings correct."
+        },
+        {
+          "model": "gemini:gemini-3.5-flash",
+          "verdict": "agree",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "F021",
+      "category": "kinship",
+      "text": "Chacha is the father's younger brother, Taya the father's elder brother, Bua the father's sister.",
+      "term": "ਚਾਚਾ / ਤਾਇਆ / ਭੂਆ",
+      "roman": "Chacha / Taya / Bua",
+      "source_ids": [
+        "S4"
+      ],
+      "basis": "search_summary",
+      "confidence": "high",
+      "uncertain": false,
+      "note": "",
+      "crosschecks": [
+        {
+          "model": "azure:gpt-5",
+          "verdict": "agree",
+          "note": "Meanings correct; spelling for Bua varies (ਬੂਆ/ਭੂਆ)."
+        },
+        {
+          "model": "gemini:gemini-3.5-flash",
+          "verdict": "agree",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "F022",
+      "category": "kinship",
+      "text": "Mama is the mother's brother, Mami his wife, Masi the mother's sister.",
+      "term": "ਮਾਮਾ / ਮਾਮੀ / ਮਾਸੀ",
+      "roman": "Mama / Mami / Masi",
+      "source_ids": [
+        "S4"
+      ],
+      "basis": "search_summary",
+      "confidence": "high",
+      "uncertain": false,
+      "note": "",
+      "crosschecks": [
+        {
+          "model": "azure:gpt-5",
+          "verdict": "agree",
+          "note": "Terms/spellings correct."
+        },
+        {
+          "model": "gemini:gemini-3.5-flash",
+          "verdict": "agree",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "F023",
+      "category": "kinship",
+      "text": "Punjabi distinguishes paternal from maternal relatives, so use the specific term rather than a generic 'uncle' or 'aunt'.",
+      "term": "",
+      "roman": "",
+      "source_ids": [
+        "S4",
+        "S5"
+      ],
+      "basis": "search_summary",
+      "confidence": "high",
+      "uncertain": false,
+      "note": "",
+      "crosschecks": [
+        {
+          "model": "azure:gpt-5",
+          "verdict": "agree",
+          "note": ""
+        },
+        {
+          "model": "gemini:gemini-3.5-flash",
+          "verdict": "agree",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "F024",
+      "category": "kinship",
+      "text": "'Bebe ji' is used for one's mother, and often also for a grandmother.",
+      "term": "ਬੇਬੇ ਜੀ",
+      "roman": "Bebe ji",
+      "source_ids": [
+        "S5"
+      ],
+      "basis": "search_summary",
+      "confidence": "medium",
+      "uncertain": true,
+      "note": "The source confirms 'mother' only; the grandmother usage and family variation are unverified.",
+      "crosschecks": [
+        {
+          "model": "azure:gpt-5",
+          "verdict": "agree",
+          "note": "ਬੇਬੇ ਜੀ usage correct."
+        },
+        {
+          "model": "gemini:gemini-3.5-flash",
+          "verdict": "agree",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "F025",
+      "category": "kinship",
+      "text": "'Bapu ji' is commonly used for one's father, and sometimes for a grandfather.",
+      "term": "ਬਾਪੂ ਜੀ",
+      "roman": "Bapu ji",
+      "source_ids": [],
+      "basis": "model_knowledge",
+      "confidence": "medium",
+      "uncertain": true,
+      "note": "",
+      "crosschecks": [
+        {
+          "model": "azure:gpt-5",
+          "verdict": "agree",
+          "note": "ਬਾਪੂ ਜੀ usage correct."
+        },
+        {
+          "model": "gemini:gemini-3.5-flash",
+          "verdict": "agree",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "F026",
+      "category": "kinship",
+      "text": "Elder brother: Veer ji; elder sister: Bhen ji.",
+      "term": "ਵੀਰ ਜੀ / ਭੈਣ ਜੀ",
+      "roman": "Veer ji / Bhen ji",
+      "source_ids": [],
+      "basis": "model_knowledge",
+      "confidence": "medium",
+      "uncertain": true,
+      "note": "The draft also listed 'Bhaji' for elder brother. Reviewer azure:gpt-5 objected that Bhaji (ਭਾਜੀ) means a vegetable snack, and Gemini agreed with it; the draft's own doubt is unresolved, so 'Bhaji' was removed and the fact re-flagged. Other common address forms (e.g. Paaji) are not claimed here. Needs a native speaker.",
+      "crosschecks": []
+    },
+    {
+      "id": "F027",
+      "category": "address",
+      "text": "'Putt' is an affectionate address to a son or any young person.",
+      "term": "ਪੁੱਤ",
+      "roman": "putt",
+      "source_ids": [],
+      "basis": "model_knowledge",
+      "confidence": "medium",
+      "uncertain": true,
+      "note": "",
+      "crosschecks": [
+        {
+          "model": "azure:gpt-5",
+          "verdict": "agree",
+          "note": "ਪੁੱਤ spelling correct."
+        },
+        {
+          "model": "gemini:gemini-3.5-flash",
+          "verdict": "agree",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "F028",
+      "category": "address",
+      "text": "'Tusī̃' is the respectful 'you' for elders and strangers; 'tū̃' is for peers, younger people and close intimacy.",
+      "term": "ਤੁਸੀਂ / ਤੂੰ",
+      "roman": "tusī̃ / tū̃",
+      "source_ids": [],
+      "basis": "model_knowledge",
+      "confidence": "high",
+      "uncertain": true,
+      "note": "",
+      "crosschecks": [
+        {
+          "model": "azure:gpt-5",
+          "verdict": "agree",
+          "note": "ਤੁਸੀਂ/ਤੂੰ spellings correct."
+        },
+        {
+          "model": "gemini:gemini-3.5-flash",
+          "verdict": "agree",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "F030",
+      "category": "architecture",
+      "text": "Traditional Punjabi homes are built around a central courtyard that is the common living space and the centre of family gatherings; it also keeps the house cooler in summer.",
+      "term": "ਵਿਹੜਾ",
+      "roman": "vehra",
+      "source_ids": [
+        "S9"
+      ],
+      "basis": "search_summary",
+      "confidence": "high",
+      "uncertain": false,
+      "note": "",
+      "crosschecks": [
+        {
+          "model": "azure:gpt-5",
+          "verdict": "agree",
+          "note": "ਵਿਹੜਾ spelling correct."
+        },
+        {
+          "model": "gemini:gemini-3.5-flash",
+          "verdict": "agree",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "F031",
+      "category": "architecture",
+      "text": "Typical materials in village houses: bricks, lime, mud, surkhi (powdered brick) and timber.",
+      "term": "",
+      "roman": "",
+      "source_ids": [
+        "S9"
+      ],
+      "basis": "search_summary",
+      "confidence": "medium",
+      "uncertain": false,
+      "note": "",
+      "crosschecks": [
+        {
+          "model": "azure:gpt-5",
+          "verdict": "agree",
+          "note": ""
+        },
+        {
+          "model": "gemini:gemini-3.5-flash",
+          "verdict": "agree",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "F032",
+      "category": "architecture",
+      "text": "Grander kothi/haveli-style homes have arches, carved wooden doors and jharokhas (overhanging enclosed balconies).",
+      "term": "",
+      "roman": "",
+      "source_ids": [
+        "S9"
+      ],
+      "basis": "search_summary",
+      "confidence": "medium",
+      "uncertain": true,
+      "note": "Describes wealthier houses; a modest village home may have none of these.",
+      "crosschecks": [
+        {
+          "model": "azure:gpt-5",
+          "verdict": "agree",
+          "note": ""
+        },
+        {
+          "model": "gemini:gemini-3.5-flash",
+          "verdict": "agree",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "F033",
+      "category": "interior",
+      "text": "The charpai, a woven bed frame, is used for sleeping and also for sitting and socialising, indoors or in the courtyard.",
+      "term": "ਮੰਜਾ",
+      "roman": "manja / charpai",
+      "source_ids": [
+        "S9"
+      ],
+      "basis": "search_summary",
+      "confidence": "high",
+      "uncertain": false,
+      "note": "",
+      "crosschecks": [
+        {
+          "model": "azure:gpt-5",
+          "verdict": "agree",
+          "note": "ਮੰਜਾ term correct."
+        },
+        {
+          "model": "gemini:gemini-3.5-flash",
+          "verdict": "agree",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "F034",
+      "category": "interior",
+      "text": "A clay stove (chulha) is used for cooking in rural kitchens and courtyards.",
+      "term": "ਚੁੱਲ੍ਹਾ",
+      "roman": "chulha",
+      "source_ids": [],
+      "basis": "model_knowledge",
+      "confidence": "medium",
+      "uncertain": true,
+      "note": "",
+      "crosschecks": [
+        {
+          "model": "azure:gpt-5",
+          "verdict": "agree",
+          "note": "ਚੁੱਲ੍ਹਾ spelling correct."
+        },
+        {
+          "model": "gemini:gemini-3.5-flash",
+          "verdict": "agree",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "F040",
+      "category": "clothing_men",
+      "text": "Men's everyday dress is a kurta with a pajama; in rural areas a chadra/chadar (waist wrap) is traditional and a thin-cloth pagri (turban) is worn.",
+      "term": "ਕੁੜਤਾ / ਪਜਾਮਾ / ਚਾਦਰਾ / ਪੱਗ",
+      "roman": "kurta / pajama / chadra / pagri",
+      "source_ids": [
+        "S10"
+      ],
+      "basis": "search_summary",
+      "confidence": "high",
+      "uncertain": false,
+      "note": "",
+      "crosschecks": [
+        {
+          "model": "azure:gpt-5",
+          "verdict": "agree",
+          "note": "Terms acceptable; ਪੱਗ common."
+        },
+        {
+          "model": "gemini:gemini-3.5-flash",
+          "verdict": "agree",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "F041",
+      "category": "caution",
+      "text": "The turban is central to Sikh male identity, but the Majha region and the Majhi dialect do not imply anyone's religion. Do not assume a religion or religious dress unless the adaptation plan chooses it and records that as a decision.",
+      "term": "",
+      "roman": "",
+      "source_ids": [
+        "S10",
+        "S17"
+      ],
+      "basis": "search_summary",
+      "confidence": "high",
+      "uncertain": false,
+      "note": "",
+      "crosschecks": [
+        {
+          "model": "azure:gpt-5",
+          "verdict": "agree",
+          "note": ""
+        },
+        {
+          "model": "gemini:gemini-3.5-flash",
+          "verdict": "agree",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "F042",
+      "category": "clothing_women",
+      "text": "Women's dress is the salwar kameez with a dupatta worn over the head or around the neck.",
+      "term": "ਸਲਵਾਰ ਕਮੀਜ਼ / ਦੁਪੱਟਾ",
+      "roman": "salwar kameez / dupatta",
+      "source_ids": [
+        "S10"
+      ],
+      "basis": "search_summary",
+      "confidence": "high",
+      "uncertain": false,
+      "note": "",
+      "crosschecks": [
+        {
+          "model": "azure:gpt-5",
+          "verdict": "agree",
+          "note": "Spellings correct."
+        },
+        {
+          "model": "gemini:gemini-3.5-flash",
+          "verdict": "agree",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "F043",
+      "category": "clothing_women",
+      "text": "Phulkari ('flower work') embroidered dupattas and shawls are a traditional Punjabi textile.",
+      "term": "ਫੁਲਕਾਰੀ",
+      "roman": "phulkari",
+      "source_ids": [
+        "S10"
+      ],
+      "basis": "search_summary",
+      "confidence": "high",
+      "uncertain": false,
+      "note": "",
+      "crosschecks": [
+        {
+          "model": "azure:gpt-5",
+          "verdict": "agree",
+          "note": "ਫੁਲਕਾਰੀ spelling correct."
+        },
+        {
+          "model": "gemini:gemini-3.5-flash",
+          "verdict": "agree",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "F044",
+      "category": "accessories",
+      "text": "A paranda is a coloured silk-thread tassel woven into a braid.",
+      "term": "ਪਰਾਂਦਾ",
+      "roman": "paranda",
+      "source_ids": [
+        "S10"
+      ],
+      "basis": "search_summary",
+      "confidence": "high",
+      "uncertain": false,
+      "note": "",
+      "crosschecks": [
+        {
+          "model": "azure:gpt-5",
+          "verdict": "agree",
+          "note": "ਪਰਾਂਦਾ spelling correct."
+        },
+        {
+          "model": "gemini:gemini-3.5-flash",
+          "verdict": "agree",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "F045",
+      "category": "footwear",
+      "text": "Jutti is handcrafted embroidered leather footwear, worn by men and women.",
+      "term": "ਜੁੱਤੀ",
+      "roman": "jutti",
+      "source_ids": [
+        "S10"
+      ],
+      "basis": "search_summary",
+      "confidence": "high",
+      "uncertain": false,
+      "note": "",
+      "crosschecks": [
+        {
+          "model": "azure:gpt-5",
+          "verdict": "agree",
+          "note": "ਜੁੱਤੀ spelling correct."
+        },
+        {
+          "model": "gemini:gemini-3.5-flash",
+          "verdict": "agree",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "F050",
+      "category": "food",
+      "text": "Sarson da saag (mustard greens) with makki di roti (cornmeal flatbread), topped with white butter and often served with jaggery, is the iconic winter meal.",
+      "term": "ਸਰੋਂ ਦਾ ਸਾਗ / ਮੱਕੀ ਦੀ ਰੋਟੀ",
+      "roman": "sarson da saag / makki di roti",
+      "source_ids": [
+        "S11",
+        "S12"
+      ],
+      "basis": "search_summary",
+      "confidence": "high",
+      "uncertain": false,
+      "note": "",
+      "crosschecks": [
+        {
+          "model": "azure:gpt-5",
+          "verdict": "agree",
+          "note": "Spellings correct."
+        },
+        {
+          "model": "gemini:gemini-3.5-flash",
+          "verdict": "agree",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "F051",
+      "category": "food",
+      "text": "Lassi accompanies heavy meals; in Punjabi homes it is mildly sweet or plain.",
+      "term": "ਲੱਸੀ",
+      "roman": "lassi",
+      "source_ids": [
+        "S11"
+      ],
+      "basis": "search_summary",
+      "confidence": "high",
+      "uncertain": false,
+      "note": "",
+      "crosschecks": [
+        {
+          "model": "azure:gpt-5",
+          "verdict": "agree",
+          "note": "ਲੱਸੀ spelling correct."
+        },
+        {
+          "model": "gemini:gemini-3.5-flash",
+          "verdict": "agree",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "F052",
+      "category": "food",
+      "text": "Sarson ka saag was historically the food of rural people, suited to hard farm work.",
+      "term": "",
+      "roman": "",
+      "source_ids": [
+        "S11"
+      ],
+      "basis": "search_summary",
+      "confidence": "medium",
+      "uncertain": false,
+      "note": "",
+      "crosschecks": [
+        {
+          "model": "azure:gpt-5",
+          "verdict": "agree",
+          "note": ""
+        },
+        {
+          "model": "gemini:gemini-3.5-flash",
+          "verdict": "agree",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "F053",
+      "category": "food",
+      "text": "Amritsari kulcha and thick lassi are famous in the Majha region.",
+      "term": "ਕੁਲਚਾ",
+      "roman": "kulcha",
+      "source_ids": [
+        "S13"
+      ],
+      "basis": "search_summary",
+      "confidence": "medium",
+      "uncertain": false,
+      "note": "",
+      "crosschecks": [
+        {
+          "model": "azure:gpt-5",
+          "verdict": "agree",
+          "note": "ਕੁਲਚਾ spelling correct."
+        },
+        {
+          "model": "gemini:gemini-3.5-flash",
+          "verdict": "agree",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "F054",
+      "category": "food",
+      "text": "Saag and makki roti are a winter dish (roughly November to February), so avoid them in a summer scene.",
+      "term": "",
+      "roman": "",
+      "source_ids": [
+        "S11"
+      ],
+      "basis": "search_summary",
+      "confidence": "medium",
+      "uncertain": true,
+      "note": "The source says 'winter staple'; the month range is approximate.",
+      "crosschecks": [
+        {
+          "model": "azure:gpt-5",
+          "verdict": "agree",
+          "note": ""
+        },
+        {
+          "model": "gemini:gemini-3.5-flash",
+          "verdict": "agree",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "F055",
+      "category": "food",
+      "text": "Tea (chah) is offered to visitors as a basic gesture of hospitality.",
+      "term": "ਚਾਹ",
+      "roman": "chah",
+      "source_ids": [],
+      "basis": "model_knowledge",
+      "confidence": "medium",
+      "uncertain": true,
+      "note": "",
+      "crosschecks": [
+        {
+          "model": "azure:gpt-5",
+          "verdict": "agree",
+          "note": "ਚਾਹ spelling correct."
+        },
+        {
+          "model": "gemini:gemini-3.5-flash",
+          "verdict": "agree",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "F060",
+      "category": "speech",
+      "text": "Everyday Punjabi speech mixes in English and Hindi-Urdu words freely (code-switching), for example for phone, sorry or bill.",
+      "term": "",
+      "roman": "",
+      "source_ids": [],
+      "basis": "model_knowledge",
+      "confidence": "medium",
+      "uncertain": true,
+      "note": "",
+      "crosschecks": [
+        {
+          "model": "azure:gpt-5",
+          "verdict": "agree",
+          "note": ""
+        },
+        {
+          "model": "gemini:gemini-3.5-flash",
+          "verdict": "agree",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "F061",
+      "category": "speech",
+      "text": "Teasing and light humour are typical among peers and siblings; speech to elders is more restrained.",
+      "term": "",
+      "roman": "",
+      "source_ids": [],
+      "basis": "model_knowledge",
+      "confidence": "low",
+      "uncertain": true,
+      "note": "",
+      "crosschecks": [
+        {
+          "model": "azure:gpt-5",
+          "verdict": "agree",
+          "note": ""
+        },
+        {
+          "model": "gemini:gemini-3.5-flash",
+          "verdict": "agree",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "F062",
+      "category": "behaviour",
+      "text": "Visitors are offered water, tea or food at once and are urged to eat more.",
+      "term": "",
+      "roman": "",
+      "source_ids": [],
+      "basis": "model_knowledge",
+      "confidence": "medium",
+      "uncertain": true,
+      "note": "",
+      "crosschecks": [
+        {
+          "model": "azure:gpt-5",
+          "verdict": "agree",
+          "note": ""
+        },
+        {
+          "model": "gemini:gemini-3.5-flash",
+          "verdict": "agree",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "F063",
+      "category": "gesture",
+      "text": "Women often draw the dupatta over the head in front of elders.",
+      "term": "",
+      "roman": "",
+      "source_ids": [
+        "S10"
+      ],
+      "basis": "search_summary",
+      "confidence": "medium",
+      "uncertain": true,
+      "note": "S10 says the dupatta is worn over the head or neck; the elder-respect context is not in the source.",
+      "crosschecks": [
+        {
+          "model": "azure:gpt-5",
+          "verdict": "agree",
+          "note": ""
+        },
+        {
+          "model": "gemini:gemini-3.5-flash",
+          "verdict": "agree",
+          "note": ""
+        }
+      ]
+    }
+  ],
+  "style_rules": [
+    {
+      "id": "R1",
+      "text": "Write in the selected output script. Use standard literary Punjabi as the base register, because Majhi is its basis. Do not introduce markers of Malwai, Doabi, Haryanvi or Rajasthani speech.",
+      "fact_ids": [
+        "F002",
+        "F006"
+      ]
+    },
+    {
+      "id": "R2",
+      "text": "Address elders by a relationship term plus 'ji', never by first name. Use the respectful 'tusi' for elders and strangers and 'tu' only for peers, younger people and intimacy.",
+      "fact_ids": [
+        "F012",
+        "F016",
+        "F028"
+      ]
+    },
+    {
+      "id": "R3",
+      "text": "Use the specific paternal or maternal kinship term (Chacha, Taya, Mama, Masi...), not a generic 'uncle' or 'aunt'.",
+      "fact_ids": [
+        "F021",
+        "F022",
+        "F023"
+      ]
+    },
+    {
+      "id": "R4",
+      "text": "Do not assume the characters' religion from the region or dialect. Use religious dress or ritual only if the adaptation plan explicitly chooses it and records that as a decision.",
+      "fact_ids": [
+        "F041"
+      ]
+    },
+    {
+      "id": "R5",
+      "text": "Take clothing, houses, food and objects from this pack. Do not import items from unrelated regions.",
+      "fact_ids": [
+        "F006",
+        "F040",
+        "F042",
+        "F030",
+        "F050"
+      ]
+    },
+    {
+      "id": "R6",
+      "text": "If a decision rests on a fact marked UNCERTAIN, mark that decision uncertain in the plan.",
+      "fact_ids": []
+    }
+  ],
+  "provenance": "Drafted 2026-09-29. Only S1, S2 and S3 were opened and read in full. Every other source was seen only as a web-search-result summary and has NOT been opened (basis 'search_summary'). Gurmukhi spellings were written from model memory; the romanized forms come from the sources. Facts with basis 'model_knowledge' have no source. Cross-checks are by other AI models, which share training data with the drafter, so agreement is not proof. No native Majhi speaker has reviewed this pack. No source read gives a reliable list of Majhi-only everyday vocabulary or grammar rules, so the pack deliberately makes few claims about the dialect's own words.",
+  "identity_markers": [
+    {
+      "term": "Singh",
+      "marks": "Sikh religious identity (male)"
+    },
+    {
+      "term": "Kaur",
+      "marks": "Sikh religious identity (female)"
+    },
+    {
+      "term": "Sardar",
+      "marks": "Sikh identity, used as a title"
+    },
+    {
+      "term": "Sardarni",
+      "marks": "Sikh identity, used as a title"
+    },
+    {
+      "term": "Gurdwara",
+      "marks": "a Sikh place of worship"
+    },
+    {
+      "term": "Mandir",
+      "marks": "a Hindu place of worship"
+    },
+    {
+      "term": "Masjid",
+      "marks": "a Muslim place of worship"
+    },
+    {
+      "term": "Saini",
+      "marks": "caste / community surname"
+    },
+    {
+      "term": "Jatt",
+      "marks": "caste / community name"
+    },
+    {
+      "term": "Jat",
+      "marks": "caste / community name"
+    },
+    {
+      "term": "Sandhu",
+      "marks": "Jatt clan surname"
+    },
+    {
+      "term": "Gill",
+      "marks": "Jatt clan surname"
+    },
+    {
+      "term": "Dhillon",
+      "marks": "Jatt clan surname"
+    },
+    {
+      "term": "Sidhu",
+      "marks": "Jatt clan surname"
+    },
+    {
+      "term": "Randhawa",
+      "marks": "Jatt clan surname"
+    },
+    {
+      "term": "Bajwa",
+      "marks": "Jatt clan surname"
+    },
+    {
+      "term": "Aulakh",
+      "marks": "Jatt clan surname"
+    },
+    {
+      "term": "Arora",
+      "marks": "Khatri/Arora community surname"
+    },
+    {
+      "term": "Khanna",
+      "marks": "Khatri community surname"
+    },
+    {
+      "term": "Kapoor",
+      "marks": "Khatri community surname"
+    },
+    {
+      "term": "Mehra",
+      "marks": "Khatri community surname"
+    },
+    {
+      "term": "Ramgarhia",
+      "marks": "artisan community name"
+    },
+    {
+      "term": "Mazhabi",
+      "marks": "caste / community name"
+    }
+  ],
+  "avoid_terms": [
+    {
+      "term": "ਫ੍ਰਾਇਡੇ",
+      "prefer": "ਸ਼ੁੱਕਰਵਾਰ",
+      "note": "English 'Friday' spelled out"
+    },
+    {
+      "term": "ਫਰਾਈਡੇ",
+      "prefer": "ਸ਼ੁੱਕਰਵਾਰ",
+      "note": "English 'Friday' spelled out"
+    },
+    {
+      "term": "ਮੰਡੇ",
+      "prefer": "ਸੋਮਵਾਰ",
+      "note": "English 'Monday' spelled out"
+    },
+    {
+      "term": "ਸੰਡੇ",
+      "prefer": "ਐਤਵਾਰ",
+      "note": "English 'Sunday' spelled out"
+    },
+    {
+      "term": "ਬਾਇਰ",
+      "prefer": "ਗਾਹਕ",
+      "note": "English 'buyer' spelled out"
+    },
+    {
+      "term": "ਲੇਜਰ",
+      "prefer": "ਵਹੀ",
+      "note": "English 'ledger' spelled out"
+    },
+    {
+      "term": "ਪ੍ਰਵੇਸ਼",
+      "prefer": "ਅੰਦਰ ਆਉਂਦਾ",
+      "note": "Sanskritised Hindi register, not rural Majhi speech"
+    },
+    {
+      "term": "ਸਸ੍ਰੀਅਕਾਲ",
+      "prefer": "ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ",
+      "note": "misspelling of the greeting"
+    }
+  ],
+  "lists_note": "Both lists were drafted with an AI assistant from errors seen in real runs and are NOT reviewed by a native speaker. They do not forbid anything: an identity marker needs the source or a reviewed decision to justify it, and an avoid term sends the scene back to the model once with the preferred form."
+}

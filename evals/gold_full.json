@@ -1,0 +1,15 @@
+{
+  "name": "The Key (spec-sized: 5 scenes, 6 characters, ~760 words)",
+  "input": "tests/fixtures/sample_screenplay_full.pdf",
+  "scenes": 5,
+  "characters": ["Samir", "Arun", "Mira", "Leela", "Priya", "Desai"],
+  "props_must_include": ["key", "ledger"],
+  "costumes": {"Samir": ["grey cardigan", "blue shirt"]},
+  "injuries": {"Mira": "hand"},
+  "dialogue_lines_per_scene": [6, 6, 6, 7, 4],
+  "expected_findings": [
+    {"what": "the key is on a nail in scene 1 and on the lawyer's desk in scene 4 with no handover", "any_code": ["PROP_HOLDER_MISMATCH", "PROP_NOT_SHOWN"], "entity_contains": "key"},
+    {"what": "Samir's grey cardigan becomes a blue shirt with no reason", "any_code": ["COSTUME_CHANGE_NO_REASON"], "entity_contains": "samir"},
+    {"what": "Mira's cut hand must stay visible after scene 2", "any_code": ["INJURY_ACTIVE"], "entity_contains": "mira"}
+  ]
+}

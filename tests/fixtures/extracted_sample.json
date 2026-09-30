@@ -1,0 +1,517 @@
+{
+  "id": "386e7786ffe0",
+  "created_at": "2026-09-29T17:14:52.835691Z",
+  "status": "extracted",
+  "source_filename": "sample_screenplay.txt",
+  "source_text": "THE LETTER\n\nINT. FAMILY HOME - KITCHEN - EARLY MORNING\n\nA small kitchen. Steam rises from a pot. MEERA (58), practical, her hands never still, stirs lentils. She keeps glancing at the door.\n\nRAVI (32) stands in the doorway in a BLUE JACKET, a travel bag on his shoulder. He has not slept. His younger sister ANU (19) watches from the table, chewing her nail.\n\nMEERA\nYou are leaving today. You did not even tell me.\n\nRAVI\nI was going to tell you tonight, Ma.\n\nMEERA\nTonight is too late for telling.\n\nA knock. Ravi opens the door. A POSTMAN hands him a thick envelope. The name on it reads R. KUMAR. Ravi's face changes. He slips the LETTER into his jacket pocket before Meera can see it.\n\nANU\nWhat was that?\n\nRAVI\nNothing. Bills.\n\nThe elder son picks up his bag and leaves without eating.\n\nEXT. DUSTY ROAD OUTSIDE THE VILLAGE - MORNING\n\nRavi walks fast, head down. UNCLE HARI (65), a retired schoolteacher on an old bicycle, stops beside him.\n\nUNCLE HARI\nRunning away from breakfast, R. Kumar? Your mother will not forgive you.\n\nRAVI\nI need someone to read this. My eyes are tired.\n\nHe takes out the LETTER and hands it to Uncle Hari. The old man reads slowly, and his smile fades.\n\nUNCLE HARI\nThis is the offer you wanted. The city job. And you were going to hide it?\n\nRAVI\nShe will think I am abandoning her.\n\nUncle Hari folds the letter and keeps it in his shirt pocket. Ravi turns to go, stumbles on a loose stone and falls hard. He cuts his left palm on the gravel. Uncle Hari ties his handkerchief around the wound.\n\nUNCLE HARI\nGo home. Tell her yourself. A letter is only paper.\n\nRavi nods, unable to speak.\n\nINT. FAMILY HOME - LIVING ROOM - EVENING\n\nThe light is low. Ravi sits on the floor, now in a RED CHECKED SHIRT, the handkerchief still tied around his palm. Meera sits across from him, silent. Anu brings tea and puts a cup in front of each of them.\n\nMEERA\nYour father also left once. For work. He came back thin and quiet.\n\nRAVI\nI will come back, Ma.\n\nMEERA\nWill you? Or will the city keep you?\n\nAnu sits between them and takes both their hands. Nobody speaks. The tea goes cold.\n\nINT/EXT. FAMILY HOME - COURTYARD - NIGHT\n\nCrickets. A single lamp hangs from a nail. Meera sits alone on a cot. Ravi comes out and sits beside her. He is still in the red checked shirt.\n\nRAVI\nUncle Hari read me the letter today. They want me in two weeks.\n\nHe pulls the LETTER from his pocket and places it in Meera's hands. She cannot read it. She holds it against her chest.\n\nMEERA\nThen read it to me. Slowly. I want to hear what my son is worth.\n\nRavi begins to read. Anu appears at the door and listens in the dark.",
+  "extraction_problems": [
+    "text before the first scene heading was kept as a preamble on scene 1 (title page or notes?)"
+  ],
+  "source_scenes": [
+    {
+      "number": 1,
+      "heading": "INT. FAMILY HOME - KITCHEN - EARLY MORNING",
+      "text": "THE LETTER\n\nINT. FAMILY HOME - KITCHEN - EARLY MORNING\n\nA small kitchen. Steam rises from a pot. MEERA (58), practical, her hands never still, stirs lentils. She keeps glancing at the door.\n\nRAVI (32) stands in the doorway in a BLUE JACKET, a travel bag on his shoulder. He has not slept. His younger sister ANU (19) watches from the table, chewing her nail.\n\nMEERA\nYou are leaving today. You did not even tell me.\n\nRAVI\nI was going to tell you tonight, Ma.\n\nMEERA\nTonight is too late for telling.\n\nA knock. Ravi opens the door. A POSTMAN hands him a thick envelope. The name on it reads R. KUMAR. Ravi's face changes. He slips the LETTER into his jacket pocket before Meera can see it.\n\nANU\nWhat was that?\n\nRAVI\nNothing. Bills.\n\nThe elder son picks up his bag and leaves without eating.",
+      "extraction": {
+        "scene_number": 1,
+        "int_ext": "INT",
+        "location": "FAMILY HOME",
+        "sub_location": "KITCHEN",
+        "time": "EARLY MORNING",
+        "day": "",
+        "weather": "",
+        "mood": "",
+        "summary": "Ravi prepares to leave home early in the morning. Meera stirs lentils and expresses concern about Ravi leaving without telling her. A postman delivers a letter addressed to R. Kumar, which Ravi hides quickly. Ravi denies the letter's importance and leaves without eating.",
+        "dramatic_purpose": "Introduce family tension and hint at a significant letter affecting Ravi.",
+        "emotional_change": "Ravi's emotional state changes upon receiving the letter; Meera is worried.",
+        "characters": [
+          {
+            "name": "MEERA",
+            "other_names": [],
+            "age": "58",
+            "role": "",
+            "relationships": [],
+            "personality": "practical",
+            "costume": "",
+            "emotional_state": "worried",
+            "enters": true,
+            "exits": false
+          },
+          {
+            "name": "RAVI",
+            "other_names": [
+              "R. Kumar",
+              "the elder son"
+            ],
+            "age": "32",
+            "role": "",
+            "relationships": [],
+            "personality": "",
+            "costume": "BLUE JACKET",
+            "emotional_state": "tired, secretive",
+            "enters": true,
+            "exits": true
+          },
+          {
+            "name": "ANU",
+            "other_names": [
+              "younger sister"
+            ],
+            "age": "19",
+            "role": "",
+            "relationships": [],
+            "personality": "",
+            "costume": "",
+            "emotional_state": "anxious",
+            "enters": true,
+            "exits": false
+          },
+          {
+            "name": "POSTMAN",
+            "other_names": [],
+            "age": "",
+            "role": "",
+            "relationships": [],
+            "personality": "",
+            "costume": "",
+            "emotional_state": "",
+            "enters": true,
+            "exits": true
+          }
+        ],
+        "props": [
+          {
+            "name": "pot",
+            "description": "pot with lentils steaming",
+            "holder_at_start": "",
+            "holder_at_end": "",
+            "note": ""
+          },
+          {
+            "name": "travel bag",
+            "description": "Ravi's travel bag",
+            "holder_at_start": "RAVI",
+            "holder_at_end": "RAVI",
+            "note": "Ravi picks up the bag and leaves with it."
+          },
+          {
+            "name": "LETTER",
+            "description": "thick envelope addressed to R. Kumar",
+            "holder_at_start": "POSTMAN",
+            "holder_at_end": "RAVI",
+            "note": "Postman hands letter to Ravi; Ravi slips it into his jacket pocket before Meera can see it."
+          }
+        ],
+        "events": [
+          {
+            "kind": "prop_transfer",
+            "character": "POSTMAN",
+            "item": "LETTER",
+            "to_character": "RAVI",
+            "note": "Postman hands letter to Ravi."
+          },
+          {
+            "kind": "prop_gain",
+            "character": "RAVI",
+            "item": "LETTER",
+            "to_character": "",
+            "note": "Ravi slips the letter into his jacket pocket before Meera can see it."
+          },
+          {
+            "kind": "prop_loss",
+            "character": "POSTMAN",
+            "item": "LETTER",
+            "to_character": "",
+            "note": "Postman no longer holds the letter after handing it to Ravi."
+          }
+        ],
+        "set_dressing": [
+          "small kitchen",
+          "steam rising from pot"
+        ],
+        "food": [
+          "lentils"
+        ],
+        "vehicles": [],
+        "animals": [],
+        "extras": [],
+        "rituals": [],
+        "gestures": [
+          "Meera stirs lentils",
+          "Anu chewing her nail"
+        ],
+        "sound_music": []
+      },
+      "error": ""
+    },
+    {
+      "number": 2,
+      "heading": "EXT. DUSTY ROAD OUTSIDE THE VILLAGE - MORNING",
+      "text": "EXT. DUSTY ROAD OUTSIDE THE VILLAGE - MORNING\n\nRavi walks fast, head down. UNCLE HARI (65), a retired schoolteacher on an old bicycle, stops beside him.\n\nUNCLE HARI\nRunning away from breakfast, R. Kumar? Your mother will not forgive you.\n\nRAVI\nI need someone to read this. My eyes are tired.\n\nHe takes out the LETTER and hands it to Uncle Hari. The old man reads slowly, and his smile fades.\n\nUNCLE HARI\nThis is the offer you wanted. The city job. And you were going to hide it?\n\nRAVI\nShe will think I am abandoning her.\n\nUncle Hari folds the letter and keeps it in his shirt pocket. Ravi turns to go, stumbles on a loose stone and falls hard. He cuts his left palm on the gravel. Uncle Hari ties his handkerchief around the wound.\n\nUNCLE HARI\nGo home. Tell her yourself. A letter is only paper.\n\nRavi nods, unable to speak.",
+      "extraction": {
+        "scene_number": 2,
+        "int_ext": "EXT",
+        "location": "Dusty road outside the village",
+        "sub_location": "",
+        "time": "Morning",
+        "day": "",
+        "weather": "",
+        "mood": "",
+        "summary": "Ravi tries to avoid breakfast and hides a job offer letter from his mother. Uncle Hari reads the letter, understands the situation, and advises Ravi to tell his mother himself. Ravi falls and injures his left palm, which Uncle Hari tends to.",
+        "dramatic_purpose": "To reveal Ravi's secret about the job offer and his fear of telling his mother, and to show Uncle Hari's supportive role.",
+        "emotional_change": "Ravi goes from anxious and secretive to unable to speak; Uncle Hari's smile fades to concern.",
+        "characters": [
+          {
+            "name": "Ravi",
+            "other_names": [
+              "R. Kumar"
+            ],
+            "age": "",
+            "role": "",
+            "relationships": [],
+            "personality": "",
+            "costume": "",
+            "emotional_state": "unable to speak",
+            "enters": true,
+            "exits": false
+          },
+          {
+            "name": "Uncle Hari",
+            "other_names": [
+              "the old man"
+            ],
+            "age": "65",
+            "role": "retired schoolteacher",
+            "relationships": [],
+            "personality": "",
+            "costume": "",
+            "emotional_state": "smile fades",
+            "enters": true,
+            "exits": false
+          }
+        ],
+        "props": [
+          {
+            "name": "letter",
+            "description": "job offer letter",
+            "holder_at_start": "Ravi",
+            "holder_at_end": "Uncle Hari",
+            "note": "Ravi takes out the letter and hands it to Uncle Hari; Uncle Hari folds it and keeps it in his shirt pocket"
+          },
+          {
+            "name": "handkerchief",
+            "description": "used to tie wound on Ravi's left palm",
+            "holder_at_start": "Uncle Hari",
+            "holder_at_end": "Uncle Hari",
+            "note": "Uncle Hari ties the handkerchief around Ravi's wounded left palm"
+          },
+          {
+            "name": "old bicycle",
+            "description": "Uncle Hari's bicycle",
+            "holder_at_start": "Uncle Hari",
+            "holder_at_end": "Uncle Hari",
+            "note": ""
+          }
+        ],
+        "events": [
+          {
+            "kind": "prop_transfer",
+            "character": "Ravi",
+            "item": "letter",
+            "to_character": "Uncle Hari",
+            "note": "Ravi hands the letter to Uncle Hari"
+          },
+          {
+            "kind": "injury_gain",
+            "character": "Ravi",
+            "item": "cut on left palm",
+            "to_character": "",
+            "note": "Ravi falls and cuts his left palm on gravel"
+          },
+          {
+            "kind": "prop_gain",
+            "character": "Uncle Hari",
+            "item": "letter",
+            "to_character": "",
+            "note": "Uncle Hari keeps the letter in his shirt pocket"
+          },
+          {
+            "kind": "prop_gain",
+            "character": "Uncle Hari",
+            "item": "handkerchief",
+            "to_character": "",
+            "note": "Uncle Hari uses handkerchief to tie wound on Ravi's left palm"
+          },
+          {
+            "kind": "knowledge_gain",
+            "character": "Uncle Hari",
+            "item": "Ravi has a job offer in the city",
+            "to_character": "",
+            "note": "Uncle Hari reads the letter and understands it is a city job offer"
+          }
+        ],
+        "set_dressing": [
+          "loose stone",
+          "gravel"
+        ],
+        "food": [],
+        "vehicles": [
+          "old bicycle"
+        ],
+        "animals": [],
+        "extras": [],
+        "rituals": [],
+        "gestures": [
+          "Ravi nods"
+        ],
+        "sound_music": []
+      },
+      "error": ""
+    },
+    {
+      "number": 3,
+      "heading": "INT. FAMILY HOME - LIVING ROOM - EVENING",
+      "text": "INT. FAMILY HOME - LIVING ROOM - EVENING\n\nThe light is low. Ravi sits on the floor, now in a RED CHECKED SHIRT, the handkerchief still tied around his palm. Meera sits across from him, silent. Anu brings tea and puts a cup in front of each of them.\n\nMEERA\nYour father also left once. For work. He came back thin and quiet.\n\nRAVI\nI will come back, Ma.\n\nMEERA\nWill you? Or will the city keep you?\n\nAnu sits between them and takes both their hands. Nobody speaks. The tea goes cold.",
+      "extraction": {
+        "scene_number": 3,
+        "int_ext": "INT.",
+        "location": "FAMILY HOME",
+        "sub_location": "LIVING ROOM",
+        "time": "EVENING",
+        "day": "",
+        "weather": "",
+        "mood": "",
+        "summary": "Ravi, wearing a red checked shirt with a handkerchief tied around his palm, sits on the floor in the living room with Meera. Anu brings tea and places cups before them. Meera reflects on Ravi's father's departure and return, while Ravi promises to come back. Anu sits between them, holding their hands silently as the tea goes cold.",
+        "dramatic_purpose": "To reveal family dynamics and emotional tension about leaving and returning, highlighting Ravi's promise and Meera's doubts.",
+        "emotional_change": "The mood is somber and reflective, with silent tension among the characters.",
+        "characters": [
+          {
+            "name": "Ravi",
+            "other_names": [],
+            "age": "",
+            "role": "",
+            "relationships": [],
+            "personality": "",
+            "costume": "RED CHECKED SHIRT",
+            "emotional_state": "",
+            "enters": false,
+            "exits": false
+          },
+          {
+            "name": "Meera",
+            "other_names": [],
+            "age": "",
+            "role": "",
+            "relationships": [],
+            "personality": "",
+            "costume": "",
+            "emotional_state": "silent",
+            "enters": false,
+            "exits": false
+          },
+          {
+            "name": "Anu",
+            "other_names": [],
+            "age": "",
+            "role": "",
+            "relationships": [],
+            "personality": "",
+            "costume": "",
+            "emotional_state": "",
+            "enters": false,
+            "exits": false
+          }
+        ],
+        "props": [
+          {
+            "name": "handkerchief",
+            "description": "tied around Ravi's palm",
+            "holder_at_start": "Ravi",
+            "holder_at_end": "Ravi",
+            "note": ""
+          },
+          {
+            "name": "tea",
+            "description": "tea in cups",
+            "holder_at_start": "Anu",
+            "holder_at_end": "",
+            "note": "Anu brings tea and puts a cup in front of Ravi and Meera; tea goes cold"
+          },
+          {
+            "name": "cup",
+            "description": "cup of tea",
+            "holder_at_start": "Anu",
+            "holder_at_end": "",
+            "note": "Anu puts a cup in front of Ravi and Meera"
+          }
+        ],
+        "events": [
+          {
+            "kind": "costume_change",
+            "character": "Ravi",
+            "item": "RED CHECKED SHIRT",
+            "to_character": "",
+            "note": ""
+          },
+          {
+            "kind": "prop_gain",
+            "character": "Ravi",
+            "item": "handkerchief tied around his palm",
+            "to_character": "",
+            "note": ""
+          },
+          {
+            "kind": "prop_gain",
+            "character": "Ravi",
+            "item": "cup of tea",
+            "to_character": "",
+            "note": ""
+          },
+          {
+            "kind": "prop_gain",
+            "character": "Meera",
+            "item": "cup of tea",
+            "to_character": "",
+            "note": ""
+          }
+        ],
+        "set_dressing": [],
+        "food": [
+          "tea"
+        ],
+        "vehicles": [],
+        "animals": [],
+        "extras": [],
+        "rituals": [],
+        "gestures": [
+          "Anu sits between Ravi and Meera and takes both their hands"
+        ],
+        "sound_music": []
+      },
+      "error": ""
+    },
+    {
+      "number": 4,
+      "heading": "INT/EXT. FAMILY HOME - COURTYARD - NIGHT",
+      "text": "INT/EXT. FAMILY HOME - COURTYARD - NIGHT\n\nCrickets. A single lamp hangs from a nail. Meera sits alone on a cot. Ravi comes out and sits beside her. He is still in the red checked shirt.\n\nRAVI\nUncle Hari read me the letter today. They want me in two weeks.\n\nHe pulls the LETTER from his pocket and places it in Meera's hands. She cannot read it. She holds it against her chest.\n\nMEERA\nThen read it to me. Slowly. I want to hear what my son is worth.\n\nRavi begins to read. Anu appears at the door and listens in the dark.",
+      "extraction": {
+        "scene_number": 4,
+        "int_ext": "INT/EXT",
+        "location": "FAMILY HOME",
+        "sub_location": "COURTYARD",
+        "time": "NIGHT",
+        "day": "",
+        "weather": "",
+        "mood": "quiet, tense",
+        "summary": "Ravi tells Meera about a letter offering him a position in two weeks. He shows her the letter, which she cannot read, so he begins to read it aloud. Anu listens from the doorway in the dark.",
+        "dramatic_purpose": "Reveal Ravi's opportunity and Meera's emotional reaction; introduce Anu's presence and interest.",
+        "emotional_change": "Meera moves from uncertainty to hope or pride; Anu becomes aware of Ravi's opportunity.",
+        "characters": [
+          {
+            "name": "Meera",
+            "other_names": [],
+            "age": "",
+            "role": "",
+            "relationships": [
+              "Ravi's mother"
+            ],
+            "personality": "",
+            "costume": "",
+            "emotional_state": "anxious, hopeful",
+            "enters": false,
+            "exits": false
+          },
+          {
+            "name": "Ravi",
+            "other_names": [],
+            "age": "",
+            "role": "",
+            "relationships": [
+              "Meera's son"
+            ],
+            "personality": "",
+            "costume": "red checked shirt",
+            "emotional_state": "hopeful",
+            "enters": true,
+            "exits": false
+          },
+          {
+            "name": "Anu",
+            "other_names": [],
+            "age": "",
+            "role": "",
+            "relationships": [],
+            "personality": "",
+            "costume": "",
+            "emotional_state": "curious",
+            "enters": true,
+            "exits": false
+          }
+        ],
+        "props": [
+          {
+            "name": "LETTER",
+            "description": "A letter offering Ravi a position starting in two weeks",
+            "holder_at_start": "Ravi",
+            "holder_at_end": "Meera",
+            "note": "Ravi pulls the letter from his pocket and places it in Meera's hands"
+          }
+        ],
+        "events": [
+          {
+            "kind": "prop_transfer",
+            "character": "Ravi",
+            "item": "LETTER",
+            "to_character": "Meera",
+            "note": "Ravi pulls the letter from his pocket and places it in Meera's hands"
+          },
+          {
+            "kind": "knowledge_gain",
+            "character": "Meera",
+            "item": "Ravi has a job offer starting in two weeks",
+            "to_character": "",
+            "note": "Meera learns about the letter's content when Ravi reads it aloud"
+          },
+          {
+            "kind": "knowledge_gain",
+            "character": "Anu",
+            "item": "Ravi has a job offer starting in two weeks",
+            "to_character": "",
+            "note": "Anu overhears Ravi reading the letter from the doorway"
+          }
+        ],
+        "set_dressing": [
+          "single lamp hanging from a nail",
+          "cot"
+        ],
+        "food": [],
+        "vehicles": [],
+        "animals": [
+          "crickets"
+        ],
+        "extras": [],
+        "rituals": [],
+        "gestures": [],
+        "sound_music": [
+          "crickets"
+        ]
+      },
+      "error": ""
+    }
+  ],
+  "selection": null,
+  "scenes": [],
+  "characters": [],
+  "locations": [],
+  "props": [],
+  "costumes": [],
+  "warnings": [],
+  "decisions": [],
+  "adapted_scenes": [],
+  "assets": [],
+  "approval": {
+    "characters": false,
+    "plan": false,
+    "costumes": false
+  }
+}

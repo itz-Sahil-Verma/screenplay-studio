@@ -1,0 +1,15 @@
+{
+  "name": "The Letter (the original 4-scene sample)",
+  "input": "tests/fixtures/sample_screenplay.txt",
+  "scenes": 4,
+  "characters": ["Meera", "Ravi", "Anu", "Postman", "Uncle Hari"],
+  "props_must_include": ["letter"],
+  "costumes": {"Ravi": ["blue jacket", "red checked shirt"]},
+  "injuries": {"Ravi": "palm"},
+  "dialogue_lines_per_scene": [5, 5, 3, 2],
+  "expected_findings": [
+    {"what": "the letter ends scene 2 with Uncle Hari but starts scene 4 with Ravi", "any_code": ["PROP_HOLDER_MISMATCH"], "entity_contains": "letter"},
+    {"what": "Ravi's blue jacket becomes a red shirt with no reason", "any_code": ["COSTUME_CHANGE_NO_REASON"], "entity_contains": "ravi"},
+    {"what": "Ravi's cut palm must stay visible", "any_code": ["INJURY_ACTIVE"], "entity_contains": "ravi"}
+  ]
+}
