@@ -1,42 +1,46 @@
 # AI_USAGE
 
-## Where AI is used in the product
-| Step | Model | Role | What limits it |
+A plain account of where AI is used in the product, where it was used to build it, what it got wrong, and what has and has not been checked by a person.
+
+## 1. AI inside the product
+| Step | Model | What it does | What limits it |
 |---|---|---|---|
-| Extraction, alias proposals | gpt-4.1-mini (Azure Foundry) | reads a scene into structured records | schema, grounding in source text, code applies merges |
-| Adaptation plan, rewrite | gpt-5 | proposes cultural decisions with reasons; writes Gurmukhi | culture pack, verifiers, human approval |
-| Images | gpt-image-2 (Azure Foundry) | character/costume/keyframe images conditioned on references | deterministic spec, human review |
+| Reading each scene; proposing which names are the same person | gpt-4.1-mini (Azure Foundry) | Turns a scene into structured records | Names must appear in the scene; code decides whether a merge is applied |
+| Cultural plan; rewriting the screenplay | gpt-5 (Azure Foundry) | Proposes adaptation decisions with reasons; writes the Gurmukhi | The culture pack, checks in code, and a person's approval |
+| Character, costume and scene images | gpt-image-2 (Azure Foundry) | Generates images, later ones built on the approved reference image | A fixed specification per image, and a person's review |
 
-Not used for: continuity checking, gates, staleness, export (all plain code).
+AI is **not** used for: the continuity checks, the approval gates, deciding which images are out of date, or the export. Those are plain code.
 
-## Where AI was used to build it
-I built this with Claude Code (Claude) as a pair-programmer: scaffolding, models, pipeline, tests, UI, docs. I chose the
-culture, the architecture rules (no hardcoded culture, single provider switch, approval gates, light theme), and the
-priorities, and I reviewed and redirected the work.
+## 2. AI used to build the project
+Nearly all of the code, tests and documents were written by **Claude Code** (Claude Sonnet 5.5 and Opus 5.5), working from my instructions in one long session.
+What I decided: the assignment and the culture (Majhi Punjabi), that nothing culture-specific is hard-coded, that there is one model switch with no fallback, that a person approves before images are made, a light interface, trimming the interface to the required screens, and deploying the image model in Azure. I also asked for the slow run to be stopped and optimised, and for an approach like an AI engineer's (measure, test, enforce limits in code) and not just prompt calling.
+I have not read every line of the generated code line by line; correctness rests on the tests and checks in section 4.
 
-## What the AI got wrong (and how it was caught)
-- Assumed a free Gemini key could generate images. Measured: image quota was 0. Switched to an Azure deployment.
-- Said a live run had started when it had failed to import. Caught by checking the process; relaunched.
-- The first plan run returned Gurmukhi, mixed-script text and descriptive names → added English-only, mixed-script and name-shape checks.
-- The model invented entity ids that blocked approval → unknown ids are now unlinked and flagged instead.
-- PDF text extraction dropped blank lines, collapsing dialogue (2 lines instead of 6) → layout mode; found by the eval, not by eye.
-- A cue ("DESAI") was unresolved → found by the eval; fixed in speaker lookup.
-- The image endpoint returned 404 on a Foundry *project* URL (chat works there, images don't) → image client uses the resource root.
-- A concurrency test was flaky (~1 in 4) because it raised concurrency before building a scripted fixture → fixed and run 30×.
+## 3. What the AI got wrong, and how it was noticed
+| What went wrong | How it was noticed | What changed |
+|---|---|---|
+| Assumed a free Gemini key could make images | A test call returned quota 0 | Moved image generation to an Azure deployment |
+| Reported that a background run had started, when it had failed to start | Checking the running processes | Re-launched and checked before reporting |
+| The first cultural plan came back partly in Gurmukhi, with mixed scripts and descriptive "names" | Reading the output | Added checks for English-only fields, mixed scripts and name shape |
+| The model invented record IDs, which blocked approval | A real run | Unknown IDs are now detached and flagged, not treated as fatal |
+| PDF text reading dropped blank lines: a 6-line conversation read as 2 | The accuracy check on the sample PDF | Switched to a layout-preserving reader |
+| A speaker cue ("DESAI") was not matched to its character | The accuracy check on the sample PDF | Improved the speaker matching |
+| Image requests failed with "not found" on the Foundry project address | Probing the endpoints directly | Images are now sent to the resource address |
+| A test failed about 1 run in 4 (it set concurrency before building its test data) | Noticed in a full test run, then repeated 30 times | Fixed the test |
+| The plan kept most source names, and gave a shop and a lawyer religious or caste surnames the story never mentions | Reviewing the output, when Claude was asked to critique its own work (see section 4) | Added code checks for unchanged names and religion or caste words, using lists in the culture pack |
+| The rewrite wrote English words in Gurmukhi letters (Friday, buyer, ledger) | The same review | Added a list of words to avoid; every line is checked |
+| The costume folder held 1 image for 7 costumes (first looks reuse the character image) | The same review | The export now lists every costume and says which image shows it |
 
-- The first plan kept source names, and gave a shop and a lawyer religious / caste surnames the story never established → added
-  pack-driven checks for kept names and identity markers (found by a red-team review of the output, not by a test).
-- The rewrite spelled English words in Gurmukhi (ਫ੍ਰਾਇਡੇ for Friday) → an avoid list in the pack, checked on every line.
-- The costume bible folder held one image for seven costumes, because first looks reuse the character reference → the export now
-  writes every costume with its record and says which image shows it.
+## 4. How the AI's output was checked
+- **Automated tests:** 365 tests using a fake model and a fake image model, so they need no keys.
+- **An accuracy check on a hand-labelled screenplay:** scores scene, character, prop, dialogue and continuity results. **Limits:** the sample screenplay and its answer key were also written with AI help, it is a single 5-scene script, and characters scored 83%.
+- **Checks inside the pipeline:** names must appear in the text, no dialogue line may be lost, output must be in the right script, and continuity is calculated by code.
+- **Screenshots of most pages** in the recorded demo, checked by eye. The buttons and forms in live mode have not been click-tested in a browser.
+- **A self-review:** I gave Claude a prompt asking it to attack the work as a hostile reviewer. It found real gaps (listed in `KNOWN_LIMITATIONS.md`), but it is the same AI reviewing its own work, not an independent review.
+- **The culture pack:** its facts were drafted with AI and cross-checked by a second model, which is not proof.
 
-## How AI output was verified
-Not by reading it and trusting it: by tests (365, run with a fake model), by a gold-label eval that scores extraction, continuity,
-plan and rewrite, by deterministic checks inside the pipeline, by screenshots of every UI page, and by a separate red-team review
-prompt aimed at finding where the system only looks rigorous (its findings are in `KNOWN_LIMITATIONS.md`).
-
-## What was not human-verified (be honest)
-- Culture pack facts were drafted with AI and cross-checked by a second model; **no native-speaker review has happened**. 17 facts are marked flagged/uncertain.
-- The Gurmukhi rewrite has not been reviewed by a native reader; spelling errors are likely.
-- The approvals in the sample project were set by a script to exercise the pipeline, **not** by a human reviewing each decision.
-- Face/costume consistency in the sample images was judged by eye from contact sheets, not by an automated metric.
+## 5. What no person has verified
+- **No native speaker has reviewed** the culture facts or the Gurmukhi. 17 of the 45 facts are marked unverified, and spelling and word-choice mistakes are likely.
+- **Face and clothing consistency in the images** was judged by eye. No automatic measure exists.
+- **The current sample output** was produced with approvals set by a script, not by a person reviewing each decision. It will be replaced by a run that I review and approve myself.
+- **Model answers differ between runs.** The same screenplay can produce different names and wording, so the sample is one example, not a fixed result.
