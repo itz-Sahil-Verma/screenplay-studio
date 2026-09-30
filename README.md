@@ -7,6 +7,37 @@ with every cultural decision explained, checked and approved by a person before 
 > the Gurmukhi rewrite, the visual pack (character bible, costume bible, scene keyframes) and export. Known gaps are in
 > `KNOWN_LIMITATIONS.md`; how AI was used (and where it was wrong) is in `AI_USAGE.md`.
 
+## See the result in two minutes (no API keys, no backend)
+The recorded run that produced `sample_output/` is built into the app as a **read-only live demo**. It needs **only the frontend**:
+no Python, no `.env`, no model calls.
+
+```bash
+cd app/web
+npm install
+npm run dev
+# open http://localhost:3000/projects/demo     (or click "Live demo" in the top bar)
+```
+
+The demo holds the real data of the sample run (the screenplay is `tests/fixtures/sample_screenplay_deed.txt`: Majhi Punjabi, rural Amritsar, Gurmukhi).
+Every screen works, and buttons that would change or spend anything are switched off. Where to look:
+
+| Screen in the demo | What it shows | Matches in `sample_output/` |
+|---|---|---|
+| **Overview** | progress, counts, and what the system checked | |
+| **Extract** | cast, props, costumes, locations and scenes as canonical records (aliases merged) | `scene_breakdown.json` |
+| **Continuity** | who holds each prop and what each person wears, scene by scene; the contradictions found, with affected scenes | `continuity_report.pdf` |
+| **Adapt** | every cultural decision with its reason, the culture-pack facts behind it, and what was flagged | `scene_breakdown.json` |
+| **Approve** | the three approval gates, all passed | |
+| **Rewrite** | source and Gurmukhi side by side with English glosses; click a line to trace it to its source | `adapted_screenplay.pdf` |
+| **Visuals** | the character bible, costume bible and scene keyframes; click an image for its prompt, model and reference images | `character_bible/`, `costume_bible/`, `scene_keyframes/` |
+| **Trace** (top right) | one character from the script's aliases to the canonical record, decisions, Gurmukhi lines and images | |
+| **Export** | what the package contains | the whole folder |
+
+A person reviewed this run in the app (36 decisions accepted, 2 rejected, 2 continuity findings accepted with a reason). No native speaker has reviewed the Gurmukhi or the culture facts.
+The recorded walkthrough is `demo_video.mp4`.
+
+**To run the real pipeline** (upload your own screenplay, review, generate), you also need the backend and your keys: see Setup and Run below.
+
 ## How it works
 `extract` → `normalize` → `continuity check` → `adaptation plan` → **human approval** → `rewrite` → `visuals` → `export`
 
@@ -55,7 +86,7 @@ cd app/web && npm run dev
 ```
 If the API is on another address: `API_URL=http://host:port npm run dev`.
 
-**No API key? Open `http://localhost:3000/projects/demo`**: a recorded real run you can browse read-only (the UI is the only thing you need running).
+**No API key?** The read-only demo at `http://localhost:3000/projects/demo` needs only the frontend (see the top of this file).
 
 ## Tests
 ```bash
