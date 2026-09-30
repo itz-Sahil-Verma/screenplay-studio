@@ -50,7 +50,7 @@ export default function WorkspaceLayout({ children }: { children: React.ReactNod
           <div className="mb-5 flex items-start gap-3 rounded-2xl border border-info-line bg-info-soft p-4 text-sm text-info">
             <FlaskConical className="mt-0.5 size-5 shrink-0" aria-hidden />
             <p>
-              <strong>Recorded demo, read-only.</strong> This is a real run on a sample screenplay (GPT-5 through Azure), including its unresolved doubts. The approvals in it were made by a test script, not a person.
+              <strong>Recorded demo, read-only.</strong> This is a real run on the sample screenplay (GPT-5 and gpt-image-2 through Azure). A person reviewed it in the app: 36 decisions accepted, 2 rejected, 2 continuity findings accepted with a reason. No native speaker has reviewed the Gurmukhi or the culture facts.
               Everything here is browsable; to change anything, <Link href="/new" className="font-semibold underline underline-offset-2">start a new adaptation</Link>.
             </p>
           </div>

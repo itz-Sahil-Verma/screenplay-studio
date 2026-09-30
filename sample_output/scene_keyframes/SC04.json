@@ -1,0 +1,55 @@
+{
+  "scene_id": "SC04",
+  "image": {
+    "asset": "ASSET_KEYFRAME_SC04",
+    "model": "gpt-image-2",
+    "prompt": "Cinematic keyframe for a film scene, wide establishing composition. Place: Pind Mela Grounds. Seasonal fair with food stalls (jalebi, chaat), toy sellers, loudspeakers, ferris ride; dry grass underfoot. Time and light: Late afternoon, amber winter light; cool, dry breeze; clear sky; dry grass dusty underfoot; breath faintly visible in shade. Action: Amber winter sun with a cool breeze; dry grass kicks up dust; people in shawls and jackets near stalls; steam rises from kulchas and jalebi. Manveer and Rajinder step aside from the kulcha stall, standing shoulder-to-shoulder, keeping the way clear for others.. Props visible: brown folder. Culture: Majhi Punjabi culture, Amritsar, rural setting. Characters, each must look IDENTICAL to their reference image: reference image 1 is Manveer (Younger son returning from city with deed), wearing Wool-blend kurta, straight pajama, quilted sleeveless jacket, muffler; reference image 2 is Rajinder (Paternal younger uncle (Chacha), mediator), wearing Wool kurta-pajama with tweed waistcoat, light shawl. Style: photorealistic cinematic film still, natural light, muted realistic colour grade, 35mm lens, no text, no captions, no watermark.",
+    "spec": {
+      "kind": "scene_keyframe",
+      "entity_id": "SC04",
+      "size": "1536x1024",
+      "style": "photorealistic cinematic film still, natural light, muted realistic colour grade, 35mm lens, no text, no captions, no watermark",
+      "culture": "Majhi Punjabi culture, Amritsar, rural setting",
+      "place": {
+        "name": "Pind Mela Grounds",
+        "description": "Seasonal fair with food stalls (jalebi, chaat), toy sellers, loudspeakers, ferris ride; dry grass underfoot"
+      },
+      "time": "",
+      "atmosphere": "Late afternoon, amber winter light; cool, dry breeze; clear sky; dry grass dusty underfoot; breath faintly visible in shade.",
+      "blocking": "Amber winter sun with a cool breeze; dry grass kicks up dust; people in shawls and jackets near stalls; steam rises from kulchas and jalebi. Manveer and Rajinder step aside from the kulcha stall, standing shoulder-to-shoulder, keeping the way clear for others.",
+      "props": "brown folder",
+      "pictured": [
+        {
+          "name": "Manveer",
+          "role": "Younger son returning from city with deed",
+          "wearing": "Wool-blend kurta, straight pajama, quilted sleeveless jacket, muffler",
+          "image": 1
+        },
+        {
+          "name": "Rajinder",
+          "role": "Paternal younger uncle (Chacha), mediator",
+          "wearing": "Wool kurta-pajama with tweed waistcoat, light shawl",
+          "image": 2
+        }
+      ],
+      "others": [],
+      "refs": [
+        {
+          "asset": "ASSET_CHARREF_CHAR_MICHAEL",
+          "spec_hash": "0d62594f4caaaf10"
+        },
+        {
+          "asset": "ASSET_CHARREF_CHAR_ROBERT",
+          "spec_hash": "8cc1153e84484481"
+        }
+      ]
+    },
+    "spec_hash": "701569beeaa73c3b",
+    "references": [
+      "ASSET_CHARREF_CHAR_MICHAEL",
+      "ASSET_CHARREF_CHAR_ROBERT"
+    ],
+    "attempts": 1,
+    "seconds": 29.7
+  }
+}

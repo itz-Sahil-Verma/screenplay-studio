@@ -73,7 +73,7 @@ export default function Overview() {
         ].map((x) => (
           <li key={x.label}><Link href={base + x.href} className="block rounded-xl border bg-card p-4 shadow-card transition-colors hover:bg-muted/50">
             <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">{x.label}</p>
-            <p className={"tnum mt-1 font-heading text-3xl " + (x.tone === "danger" ? "text-danger" : x.tone === "warning" ? "text-warning" : x.tone === "success" ? "text-success" : "")}>{r >= 1 || x.label === "Scenes" ? x.value : "–"}</p>
+            <p className={"tnum mt-1 font-heading text-3xl " + (x.tone === "danger" ? "text-danger" : x.tone === "warning" ? "text-warning" : x.tone === "success" ? "text-success" : "")}>{r >= 1 ? x.value : "–"}</p>
           </Link></li>
         ))}
       </ul>
@@ -86,8 +86,8 @@ export default function Overview() {
             detail={r >= 2 ? `${plural(c.characters, "character")} after merging aliases; ${plural(p.costumes.length, "costume")}; ${plural(p.props.length, "prop")}.` : "Aliases become one character; duplicates are merged into one record."} />
           <LedgerRow icon={ShieldAlert} title="Continuity" href={`${base}/continuity`} tone={c.blocking ? "danger" : p.continuity_checked ? "success" : "neutral"} label={c.blocking ? `${c.blocking} blocking` : p.continuity_checked ? "Clear" : "Pending"}
             detail={p.continuity_checked ? `${plural(p.warnings.length, "finding")}. Contradictions are caught before anything is generated.` : "Props, costumes and injuries are tracked across scenes."} />
-          <LedgerRow icon={Flag} title="Cultural plan" href={`${base}/plan`} tone={c.flagged ? "warning" : p.plan ? "success" : "neutral"} label={c.flagged ? `${c.flagged} to review` : p.plan ? "Reviewed" : "Pending"}
-            detail={p.plan ? `${plural(c.decisions, "decision")}; decisions resting on unverified cultural facts are flagged.` : "Explained decisions, grounded in a sourced culture pack."} />
+          <LedgerRow icon={Flag} title="Cultural plan" href={`${base}/plan`} tone={c.unreviewed ? "warning" : p.plan ? "success" : "neutral"} label={c.unreviewed ? `${c.unreviewed} to review` : p.plan ? "Reviewed" : "Pending"}
+            detail={p.plan ? `${plural(c.decisions, "decision")}; ${c.flagged} flagged for extra care (unverified facts, story changes or model doubt).` : "Explained decisions, grounded in a sourced culture pack."} />
           <LedgerRow icon={BadgeCheck} title="Human approval" href={`${base}/approve`} tone={c.approvals === 3 ? "success" : "warning"} label={`${c.approvals} of 3`}
             detail="Characters, costumes and plan are approved separately. Nothing is generated before all three." />
           <LedgerRow icon={ScrollText} title="Rewrite" href={`${base}/rewrite`} tone={p.adapted_scenes.length ? "success" : "neutral"} label={p.adapted_scenes.length ? "Written" : "Pending"}

@@ -23,7 +23,7 @@ export function buildSteps(p: Project): Step[] {
   const r = rank(p);
   const running = p.job?.state === "running" ? jobStep(p.job.name, r) : null;
   const failed = p.job?.state === "failed" ? jobStep(p.job.name, r) : null;
-  const flagged = p.decisions.filter((d) => d.uncertain).length;
+  const unreviewed = p.decisions.filter((d) => d.status === "proposed").length;
   const errors = p.warnings.filter((w) => w.severity === "error" && !w.acknowledged).length;
   const imgs = p.assets ?? [];
   const made = imgs.filter((a) => a.status === "generated").length;
@@ -38,9 +38,9 @@ export function buildSteps(p: Project): Step[] {
   };
 
   return [
-    step("extract", "Extract", "/extract", 1, p.source_scenes.length ? `${p.source_scenes.length} scenes` : "Read the screenplay"),
-    step("continuity", "Continuity", "/continuity", 2, errors ? `${errors} blocking` : p.continuity_checked ? `${p.warnings.length} findings` : "Check for contradictions"),
-    step("plan", "Adapt", "/plan", 3, p.plan ? `${p.decisions.length} decisions${flagged ? ` · ${flagged} flagged` : ""}` : "Plan the changes"),
+    step("extract", "Extract", "/extract", 1, r >= 1 ? `${p.scenes.length || p.source_scenes.length} scenes` : "Read the screenplay"),
+    step("continuity", "Continuity", "/continuity", 2, errors ? `${errors} blocking: resolve` : p.continuity_checked ? `${p.warnings.length} findings` : "Check for contradictions"),
+    step("plan", "Adapt", "/plan", 3, p.plan ? `${p.decisions.length} decisions · ${unreviewed ? `${unreviewed} to review` : "all reviewed"}` : "Plan the changes"),
     step("approve", "Approve", "/approve", 4, `${approved}/3 approved`),
     step("rewrite", "Rewrite", "/rewrite", 5, p.adapted_scenes.length ? `${p.adapted_scenes.length} scenes` : "Write it"),
     { ...step("visuals", "Visuals", "/visuals", 6, imgs.length ? `${made}/${imgs.length} images` : r >= 4 ? "Unlocked" : "Unlocks after approval", 4), state: running === "visuals" ? "running" : failed === "visuals" ? "failed" : r >= 6 ? "done" : r >= 4 ? "todo" : "locked" },

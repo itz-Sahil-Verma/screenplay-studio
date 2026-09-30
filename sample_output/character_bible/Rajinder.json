@@ -1,0 +1,59 @@
+{
+  "character_id": "CHAR_ROBERT",
+  "name": "Rajinder",
+  "name_native": "ਰਜਿੰਦਰ",
+  "source_name": "Robert",
+  "aliases": [
+    "Uncle Robert"
+  ],
+  "age": null,
+  "role": "Paternal younger uncle (Chacha), mediator",
+  "physical_description": "Early 50s, lean, expressive eyes, quick stride",
+  "grooming": "Salt-pepper hair, trimmed moustache, clean hands",
+  "personality": "",
+  "speech_register": "Affectionate with nephew, firm with brother",
+  "address_terms": [
+    "Manveer",
+    "Jasbir",
+    "Bhen ji"
+  ],
+  "scenes": [
+    "SC02",
+    "SC04",
+    "SC05"
+  ],
+  "costumes": [
+    "COST_ROBERT_01"
+  ],
+  "image": {
+    "asset": "ASSET_CHARREF_CHAR_ROBERT",
+    "model": "gpt-image-2",
+    "prompt": "Full-body character reference image, head to toe, standing in a neutral relaxed pose facing the camera, plain light-grey studio background, soft even lighting. Subject: Rajinder, Paternal younger uncle (Chacha), mediator, Majhi Punjabi culture, Amritsar, rural setting. Appearance: Early 50s, lean, expressive eyes, quick stride. Grooming: Salt-pepper hair, trimmed moustache, clean hands. Wearing: Wool kurta-pajama with tweed waistcoat, light shawl. Fabrics: Wool-cotton kurta, tweed waistcoat, lambswool shawl. Colours: Taupe kurta, cream pajama, brown waistcoat, beige shawl. Footwear: Tan jutti. Style: photorealistic cinematic film still, natural light, muted realistic colour grade, 35mm lens, no text, no captions, no watermark.",
+    "spec": {
+      "kind": "character_ref",
+      "entity_id": "CHAR_ROBERT",
+      "size": "1024x1536",
+      "style": "photorealistic cinematic film still, natural light, muted realistic colour grade, 35mm lens, no text, no captions, no watermark",
+      "culture": "Majhi Punjabi culture, Amritsar, rural setting",
+      "refs": [],
+      "who": {
+        "name": "Rajinder",
+        "age": null,
+        "role": "Paternal younger uncle (Chacha), mediator",
+        "appearance": "Early 50s, lean, expressive eyes, quick stride",
+        "grooming": "Salt-pepper hair, trimmed moustache, clean hands"
+      },
+      "costume": {
+        "garments": "Wool kurta-pajama with tweed waistcoat, light shawl",
+        "fabrics": "Wool-cotton kurta, tweed waistcoat, lambswool shawl",
+        "colours": "Taupe kurta, cream pajama, brown waistcoat, beige shawl",
+        "footwear": "Tan jutti",
+        "grooming": "Trim moustache"
+      }
+    },
+    "spec_hash": "8cc1153e84484481",
+    "references": [],
+    "attempts": 1,
+    "seconds": 15.0
+  }
+}

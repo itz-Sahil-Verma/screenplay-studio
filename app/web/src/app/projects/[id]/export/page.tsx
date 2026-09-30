@@ -35,7 +35,7 @@ export default function ExportPage() {
 
   return (
     <>
-      <PageHeader eyebrow="Step 8" title="Export centre" description="Everything produced for this adaptation. The full package holds the PDFs, the structured breakdown and every image with the prompt that reproduces it." />
+      <PageHeader eyebrow="Step 7" title="Export centre" description="Everything produced for this adaptation. The full package holds the PDFs, the structured breakdown and every image with the prompt that reproduces it." />
       <section className="mb-6 rounded-2xl border bg-card p-4 shadow-card sm:p-5">
         <div className="flex flex-wrap items-center gap-4">
           <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-accent text-primary"><Package className="size-5" aria-hidden /></span>

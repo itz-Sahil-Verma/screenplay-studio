@@ -170,3 +170,11 @@ def test_real_story_lines_that_look_a_little_like_layout_are_kept():
     text = "INT. ROOM - DAY\n" + "word " * 60 + "\nHe says it is over.\nShe says: cut to the chase.\nThe fade in the paint is old.\n"
     out = read_document(text.encode(), "a.txt").text
     assert "cut to the chase" in out and "fade in the paint" in out
+
+
+def test_plain_language_scene_headings_split_the_script():
+    from app.ingestion.scenes import split_scenes
+    text = "Title: The Deed\n\nScene 1 – Bus Station\n\nMichael gets off a bus with a long brown folder in his hand today.\n\nSCENE 2: Family House\n\nHis father sits at the table and waits for him to arrive home now.\n\nscene 3. Community Hall\n\nA family meeting takes place in the big hall with many relatives present."
+    scenes, problems = split_scenes(text)
+    assert [s.heading for s in scenes] == ["Scene 1 – Bus Station", "SCENE 2: Family House", "scene 3. Community Hall"]
+    assert any("preamble" in m for m in problems) and not any("no scene headings" in m for m in problems)

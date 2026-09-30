@@ -55,9 +55,9 @@ export default function Dashboard() {
                     <p className="mt-1 text-sm text-muted-foreground">{p.culture || "Unknown culture"}{p.region ? ` · ${p.region}` : ""}</p>
                     <div className="mt-4"><Progress value={Math.round((Math.max(0, STATUS_ORDER.indexOf(p.status as (typeof STATUS_ORDER)[number])) / 7) * 100)} /></div>
                     <div className="mt-3 flex flex-wrap gap-1.5">
-                      <Pill>{plural(p.scenes, "scene")}</Pill>
-                      <Pill>{plural(p.characters, "character")}</Pill>
-                      {p.flagged_decisions > 0 && <Pill tone="warning">{p.flagged_decisions} to review</Pill>}
+                      {p.status !== "created" && <Pill>{plural(p.scenes, "scene")}</Pill>}
+                      {p.status !== "created" && <Pill>{plural(p.characters, "character")}</Pill>}
+                      {p.unreviewed_decisions > 0 && <Pill tone="warning">{p.unreviewed_decisions} to review</Pill>}
                     </div>
                     <span className="mt-4 flex items-center gap-1 text-sm font-medium text-primary">Open <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" aria-hidden /></span>
                   </div>

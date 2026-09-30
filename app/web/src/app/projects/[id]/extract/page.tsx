@@ -31,8 +31,14 @@ function SceneCard({ p, s }: { p: Project; s: Scene }) {
   const holder = (h: string) => (h.startsWith("@") ? h.slice(1) : name(h));
   const prod = s.production;
   const warns = p.warnings.filter((w) => s.continuity_warnings.includes(w.id));
+  const targeted = typeof window !== "undefined" && window.location.hash === `#scene-${s.scene_id}`;  // a link from a finding opens this scene
   return (
-    <details className="group rounded-2xl border bg-card shadow-card open:shadow-lift">
+    <details
+      id={`scene-${s.scene_id}`}
+      open={targeted || undefined}
+      ref={(el) => { if (el && targeted && !el.dataset.scrolled) { el.dataset.scrolled = "1"; el.scrollIntoView({ block: "start" }); } }}
+      className="group scroll-mt-28 rounded-2xl border bg-card shadow-card open:shadow-lift"
+    >
       <summary className="flex cursor-pointer list-none items-center gap-3 p-4 [&::-webkit-details-marker]:hidden">
         <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-accent font-heading text-lg text-primary">{s.number}</span>
         <span className="min-w-0 flex-1">
@@ -108,8 +114,8 @@ export default function ExtractPage() {
   if (r < 2)
     return (
       <>
-        <PageHeader eyebrow="Step 2" title="Extraction review" description="The screenplay, read into structured records. Anything the model claims that is not in the text is rejected." />
-        {p.source_scenes.length > 0 && (
+        <PageHeader eyebrow="Step 1" title="Extraction review" description="The screenplay, read into structured records. Anything the model claims that is not in the text is rejected." />
+        {(p.job?.state === "running" || p.source_scenes.some((s) => s.extraction || s.error)) && (
           <ul className="mb-6 space-y-2">
             {p.source_scenes.map((s) => (
               <li key={s.number} className="flex items-center gap-3 rounded-xl border bg-card p-3.5 shadow-card">
@@ -128,7 +134,7 @@ export default function ExtractPage() {
   const chars = p.characters.map((c) => ({ id: c.id, name: c.name }));
   return (
     <>
-      <PageHeader eyebrow="Step 2" title="Extraction review" description="Check what was found. Fix a wrong name or merge two records that are the same thing; only the affected scenes are marked for re-generation." />
+      <PageHeader eyebrow="Step 1" title="Extraction review" description="Check what was found. Fix a wrong name or merge two records that are the same thing; only the affected scenes are marked for re-generation." />
 
       <ProblemList p={p} continuityHref={`/projects/${id}/continuity`} />
 

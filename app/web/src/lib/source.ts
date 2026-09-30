@@ -3,7 +3,7 @@ import type { Project, Scene } from "./types";
 export type SourceLine = { speaker: string; text: string };
 
 export const CUE = /^[A-Z][A-Z .'\-]{0,38}(?:\s*\([^)]*\))?$/;
-export const SLUG = /^\s*(?:\d+[.)]?\s+)?(?:INT\.?\/EXT\.?|EXT\.?\/INT\.?|I\/E\.?|INT\.?|EXT\.?)(?=[\s.])/;
+export const SLUG = /^\s*(?:(?:\d+[.)]?\s+)?(?:INT\.?\/EXT\.?|EXT\.?\/INT\.?|I\/E\.?|INT\.?|EXT\.?)(?=[\s.])|scene\s+\d+\b)/i;
 
 /** The same rule the server uses to number source dialogue lines, so "source line 3" means the same thing on both sides. */
 export function parseSourceDialogue(text: string): SourceLine[] {

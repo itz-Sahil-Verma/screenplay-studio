@@ -27,14 +27,14 @@ export default function RewritePage() {
   if (r < 4)
     return (
       <>
-        <PageHeader eyebrow="Step 6" title="Source and adapted, side by side" description="The screenplay rewritten in the chosen language and script, every line traced to its source." />
+        <PageHeader eyebrow="Step 5" title="Source and adapted, side by side" description="The screenplay rewritten in the chosen language and script, every line traced to its source." />
         <EmptyState icon={ScrollText} title="Approve the plan first" description="The rewrite only uses approved decisions and records." action={<Link href={`/projects/${id}/approve`} className={buttonVariants()}>Go to approvals</Link>} />
       </>
     );
   if (p.adapted_scenes.length === 0 && Object.keys(p.rewrite_failed).length === 0)
     return (
       <>
-        <PageHeader eyebrow="Step 6" title="Source and adapted, side by side" description="The screenplay rewritten in the chosen language and script, every line traced to its source." />
+        <PageHeader eyebrow="Step 5" title="Source and adapted, side by side" description="The screenplay rewritten in the chosen language and script, every line traced to its source." />
         <EmptyState icon={ScrollText} title="Ready to rewrite" description="One scene at a time. Every source dialogue line must be adapted, in order, in the chosen script, or the scene is retried."
           action={!demo && <RunButton stage="rewrite" size="lg">Rewrite the screenplay</RunButton>} />
       </>
@@ -48,7 +48,7 @@ export default function RewritePage() {
 
   return (
     <>
-      <PageHeader eyebrow="Step 6" title="Source and adapted, side by side"
+      <PageHeader eyebrow="Step 5" title="Source and adapted, side by side"
         description="Click any adapted line to see the source line, the story events and the decisions behind it. A flag marks a line the model was unsure of."
         actions={<>
           <label className="flex cursor-pointer items-center gap-2 rounded-lg border bg-card px-3 py-2 text-sm font-medium">

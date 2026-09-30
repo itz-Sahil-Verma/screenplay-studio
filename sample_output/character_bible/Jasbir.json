@@ -1,0 +1,60 @@
+{
+  "character_id": "CHAR_JOHN",
+  "name": "Jasbir",
+  "name_native": "ਜਸਬੀਰ",
+  "source_name": "John",
+  "aliases": [
+    "John Thompson"
+  ],
+  "age": null,
+  "role": "Father, farm decision-maker",
+  "physical_description": "Late 50s, strong frame, sun-tanned, lined forehead",
+  "grooming": "Short combed hair, clean-shaven, cracked farmer hands",
+  "personality": "",
+  "speech_register": "Measured, firm; elders’ respect expected",
+  "address_terms": [
+    "putt",
+    "Rani ji",
+    "Rajinder"
+  ],
+  "scenes": [
+    "SC02",
+    "SC03",
+    "SC05"
+  ],
+  "costumes": [
+    "COST_JOHN_01",
+    "COST_JOHN_02"
+  ],
+  "image": {
+    "asset": "ASSET_CHARREF_CHAR_JOHN",
+    "model": "gpt-image-2",
+    "prompt": "Full-body character reference image, head to toe, standing in a neutral relaxed pose facing the camera, plain light-grey studio background, soft even lighting. Subject: Jasbir, Father, farm decision-maker, Majhi Punjabi culture, Amritsar, rural setting. Appearance: Late 50s, strong frame, sun-tanned, lined forehead. Grooming: Short combed hair, clean-shaven, cracked farmer hands. Wearing: Thick kurta-pajama with grey wool blazer. Fabrics: Heathered cotton kurta, wool-blend blazer. Colours: Ivory kurta, white pajama, mid-grey blazer. Footwear: Black plain jutti. Style: photorealistic cinematic film still, natural light, muted realistic colour grade, 35mm lens, no text, no captions, no watermark.",
+    "spec": {
+      "kind": "character_ref",
+      "entity_id": "CHAR_JOHN",
+      "size": "1024x1536",
+      "style": "photorealistic cinematic film still, natural light, muted realistic colour grade, 35mm lens, no text, no captions, no watermark",
+      "culture": "Majhi Punjabi culture, Amritsar, rural setting",
+      "refs": [],
+      "who": {
+        "name": "Jasbir",
+        "age": null,
+        "role": "Father, farm decision-maker",
+        "appearance": "Late 50s, strong frame, sun-tanned, lined forehead",
+        "grooming": "Short combed hair, clean-shaven, cracked farmer hands"
+      },
+      "costume": {
+        "garments": "Thick kurta-pajama with grey wool blazer",
+        "fabrics": "Heathered cotton kurta, wool-blend blazer",
+        "colours": "Ivory kurta, white pajama, mid-grey blazer",
+        "footwear": "Black plain jutti",
+        "grooming": "Clean-shaven"
+      }
+    },
+    "spec_hash": "c63ea3cd4e91ae40",
+    "references": [],
+    "attempts": 1,
+    "seconds": 50.8
+  }
+}

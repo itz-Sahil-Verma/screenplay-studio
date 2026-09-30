@@ -42,5 +42,5 @@ I have not read every line of the generated code line by line; correctness rests
 ## 5. What no person has verified
 - **No native speaker has reviewed** the culture facts or the Gurmukhi. 17 of the 45 facts are marked unverified, and spelling and word-choice mistakes are likely.
 - **Face and clothing consistency in the images** was judged by eye. No automatic measure exists.
-- **The current sample output** was produced with approvals set by a script, not by a person reviewing each decision. It will be replaced by a run that I review and approve myself.
+- **The sample output** (`sample_output/` and the recorded demo) comes from one real run on the sample screenplay. The decisions were accepted or rejected by a person in the app (36 accepted, 2 rejected, 2 continuity findings accepted with a reason). That is a review of the plan, not a check of the Gurmukhi by a native speaker.
 - **Model answers differ between runs.** The same screenplay can produce different names and wording, so the sample is one example, not a fixed result.

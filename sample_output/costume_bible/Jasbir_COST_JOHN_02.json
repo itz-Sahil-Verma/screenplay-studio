@@ -1,0 +1,48 @@
+{
+  "costume_id": "COST_JOHN_02",
+  "character_id": "CHAR_JOHN",
+  "garments": "Same kurta-pajama with blue quilted jacket",
+  "source_garments": "blue jacket",
+  "fabrics": "Cotton kurta, synthetic quilted jacket",
+  "colours": "Ivory-white base, navy blue jacket",
+  "footwear": "Black plain jutti",
+  "jewellery": "",
+  "headwear": "",
+  "grooming": "Clean-shaven",
+  "scenes": [
+    "SC05"
+  ],
+  "change_reason": "Switched outer layer for colder early morning outdoors",
+  "image_note": "own costume sheet",
+  "image": {
+    "asset": "ASSET_COSTUME_COST_JOHN_02",
+    "model": "gpt-image-2",
+    "prompt": "The reference image shows a person. Create a NEW full-body image of exactly the same person (identical face, age, body, hair and facial hair), standing in a neutral pose facing the camera on a plain light-grey studio background, now wearing this costume. Wearing: Same kurta-pajama with blue quilted jacket. Fabrics: Cotton kurta, synthetic quilted jacket. Colours: Ivory-white base, navy blue jacket. Footwear: Black plain jutti. Grooming: Clean-shaven. Style: photorealistic cinematic film still, natural light, muted realistic colour grade, 35mm lens, no text, no captions, no watermark.",
+    "spec": {
+      "kind": "costume_sheet",
+      "entity_id": "COST_JOHN_02",
+      "character_id": "CHAR_JOHN",
+      "size": "1024x1536",
+      "style": "photorealistic cinematic film still, natural light, muted realistic colour grade, 35mm lens, no text, no captions, no watermark",
+      "costume": {
+        "garments": "Same kurta-pajama with blue quilted jacket",
+        "fabrics": "Cotton kurta, synthetic quilted jacket",
+        "colours": "Ivory-white base, navy blue jacket",
+        "footwear": "Black plain jutti",
+        "grooming": "Clean-shaven"
+      },
+      "refs": [
+        {
+          "asset": "ASSET_CHARREF_CHAR_JOHN",
+          "spec_hash": "c63ea3cd4e91ae40"
+        }
+      ]
+    },
+    "spec_hash": "243b3c432ef3d3e5",
+    "references": [
+      "ASSET_CHARREF_CHAR_JOHN"
+    ],
+    "attempts": 1,
+    "seconds": 37.5
+  }
+}

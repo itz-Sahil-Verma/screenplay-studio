@@ -1,0 +1,55 @@
+{
+  "scene_id": "SC03",
+  "image": {
+    "asset": "ASSET_KEYFRAME_SC03",
+    "model": "gpt-image-2",
+    "prompt": "Cinematic keyframe for a film scene, wide establishing composition. Place: Town Lawyer Office. Small room above market shop; steel almirah, case files, wooden desk with green cloth, thermos of tea. Time and light: The next morning. Early winter morning, slight fog lifting over town market; cool air inside the small office, pale sun through window; thermos steam visible; street noises filtered. Action: Light fog lifts over the market; pale sunlight comes through the window into the small office. A green cloth covers the desk, a steel almirah stands with stacks of documents. Steam rises from a thermos. Tarun opens the paper file and slowly flips the pages.. Props visible: documents, bandage. Culture: Majhi Punjabi culture, Amritsar, rural setting. Characters, each must look IDENTICAL to their reference image: reference image 1 is Tarun (Local lawyer in small town), wearing White shirt, black sweater-vest, black blazer, dark trousers; reference image 2 is Jasbir (Father, farm decision-maker), wearing Thick kurta-pajama with grey wool blazer. Style: photorealistic cinematic film still, natural light, muted realistic colour grade, 35mm lens, no text, no captions, no watermark.",
+    "spec": {
+      "kind": "scene_keyframe",
+      "entity_id": "SC03",
+      "size": "1536x1024",
+      "style": "photorealistic cinematic film still, natural light, muted realistic colour grade, 35mm lens, no text, no captions, no watermark",
+      "culture": "Majhi Punjabi culture, Amritsar, rural setting",
+      "place": {
+        "name": "Town Lawyer Office",
+        "description": "Small room above market shop; steel almirah, case files, wooden desk with green cloth, thermos of tea"
+      },
+      "time": "The next morning",
+      "atmosphere": "Early winter morning, slight fog lifting over town market; cool air inside the small office, pale sun through window; thermos steam visible; street noises filtered.",
+      "blocking": "Light fog lifts over the market; pale sunlight comes through the window into the small office. A green cloth covers the desk, a steel almirah stands with stacks of documents. Steam rises from a thermos. Tarun opens the paper file and slowly flips the pages.",
+      "props": "documents, bandage",
+      "pictured": [
+        {
+          "name": "Tarun",
+          "role": "Local lawyer in small town",
+          "wearing": "White shirt, black sweater-vest, black blazer, dark trousers",
+          "image": 1
+        },
+        {
+          "name": "Jasbir",
+          "role": "Father, farm decision-maker",
+          "wearing": "Thick kurta-pajama with grey wool blazer",
+          "image": 2
+        }
+      ],
+      "others": [],
+      "refs": [
+        {
+          "asset": "ASSET_CHARREF_CHAR_LAWYER",
+          "spec_hash": "3d1f1751d3d23dcc"
+        },
+        {
+          "asset": "ASSET_CHARREF_CHAR_JOHN",
+          "spec_hash": "c63ea3cd4e91ae40"
+        }
+      ]
+    },
+    "spec_hash": "d579724ec7f66e57",
+    "references": [
+      "ASSET_CHARREF_CHAR_LAWYER",
+      "ASSET_CHARREF_CHAR_JOHN"
+    ],
+    "attempts": 1,
+    "seconds": 25.5
+  }
+}

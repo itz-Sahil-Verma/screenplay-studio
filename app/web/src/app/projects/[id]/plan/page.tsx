@@ -3,8 +3,10 @@
 import { CheckCheck, Flag, RefreshCw, Sparkles, TriangleAlert } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Chip, EmptyState, PageHeader, Pill, Spinner } from "@/components/domain/bits";
+import { BlockingBanner } from "@/components/domain/blocking-banner";
 import { CompactDecision, DecisionCard } from "@/components/domain/decision-card";
 import { EditPlanButton } from "@/components/domain/edit-plan";
 import { RunButton } from "@/components/domain/run-button";
@@ -15,7 +17,7 @@ import { useAct } from "@/lib/hooks";
 import { counts, rank } from "@/lib/stages";
 import { cn } from "@/lib/utils";
 
-type Filter = "all" | "flagged" | "unreviewed" | "story";
+type Filter = "all" | "unreviewed" | "story";
 const select = "h-9 rounded-lg border border-input bg-card px-2.5 text-sm outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/40";
 
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
@@ -28,12 +30,13 @@ export default function PlanPage() {
   const act = useAct(id);
   const [filter, setFilter] = useState<Filter>("all");
   const [dim, setDim] = useState("all");
+  const [confirm, setConfirm] = useState(false);
   const c = counts(p);
 
   if (!p.plan || !p.plan.entities || rank(p) < 3)
     return (
       <>
-        <PageHeader eyebrow="Step 4" title="Cultural adaptation plan" description="Explained decisions about names, speech, clothing, places and gestures, grounded in a sourced culture pack." />
+        <PageHeader eyebrow="Step 3" title="Cultural adaptation plan" description="Explained decisions about names, speech, clothing, places and gestures, grounded in a sourced culture pack." />
         <EmptyState icon={Sparkles} title="No plan yet" description={rank(p) < 2 ? "Extract and normalize the screenplay first." : "The model will propose the adaptation; you review every decision."}
           action={!demo && rank(p) >= 2 && <RunButton stage="plan" size="lg">Generate the adaptation plan</RunButton>} />
       </>
@@ -52,20 +55,24 @@ export default function PlanPage() {
 
   const shown = p.decisions.filter((d) =>
     (dim === "all" || d.dimension === dim) &&
-    (filter === "all" || (filter === "flagged" && d.uncertain) || (filter === "unreviewed" && d.status === "proposed") || (filter === "story" && d.dimension === "story_world")));
-  const unflagged = p.decisions.filter((d) => d.status === "proposed" && !d.uncertain);
+    (filter === "all" || (filter === "unreviewed" && d.status === "proposed") || (filter === "story" && d.dimension === "story_world")));
+  const toAccept = shown.filter((d) => d.status === "proposed");  // only what is in view, and only what nobody has decided yet
+  const flaggedInView = toAccept.filter((d) => d.uncertain).length;
   const stale = p.plan.stale_scenes;
 
-  const acceptUnflagged = () =>
-    act.mutate({ run: async () => { for (const d of unflagged) await api.reviewDecision(id, d.id, "accepted"); }, ok: () => `Accepted ${unflagged.length} decisions. Flagged ones still need your individual review.` });
+  const acceptAll = () =>
+    act.mutate({ run: async () => { for (const d of toAccept) await api.reviewDecision(id, d.id, "accepted"); }, ok: () => `Accepted ${toAccept.length} decision${toAccept.length > 1 ? "s" : ""}` },
+      { onSuccess: () => setConfirm(false) });
 
-  const FILTERS: [Filter, string, number][] = [["all", "All", c.decisions], ["flagged", "Needs review", c.flagged], ["unreviewed", "Not reviewed yet", c.unreviewed], ["story", "Story changes", p.decisions.filter((d) => d.dimension === "story_world").length]];
+  const FILTERS: [Filter, string, number][] = [["all", "All", c.decisions], ["unreviewed", "To review", c.unreviewed], ["story", "Story changes", p.decisions.filter((d) => d.dimension === "story_world").length]];
 
   return (
     <>
-      <PageHeader eyebrow="Step 4" title="Cultural adaptation plan"
-        description="Every choice the model proposes, with its reason and what it rests on. Pack-backed means it cites facts from the sourced culture pack; flagged means those facts are not yet human-verified."
+      <PageHeader eyebrow="Step 3" title="Cultural adaptation plan"
+        description="Every choice the model proposes, with its reason and what it rests on. Pack-backed means it cites facts from the culture pack. Flagged marks a decision to read with extra care (it relies on an unverified fact, changes the story, or the model was unsure); it stays flagged after you accept it."
         actions={!demo && <Button variant="outline" disabled={act.isPending || p.job?.state === "running"} onClick={() => act.mutate({ run: () => api.replanEntities(id), ok: () => "Re-planning started" })}><RefreshCw aria-hidden /> Regenerate the cast plan</Button>} />
+
+      <BlockingBanner id={id} project={p} />
 
       <div className="mb-6 rounded-2xl border bg-card p-5 shadow-card">
         <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">The world, fixed for every scene</p>
@@ -110,7 +117,11 @@ export default function PlanPage() {
                 <option value="all">All topics</option>{Object.entries(DIMENSION_LABEL).map(([k, v]) => <option key={k} value={k}>{v}</option>)}
               </select>
             </label>
-            {!demo && unflagged.length > 0 && <Button variant="outline" disabled={act.isPending} onClick={acceptUnflagged}>{act.isPending ? <Spinner /> : <CheckCheck aria-hidden />} Accept the {unflagged.length} unflagged</Button>}
+            {!demo && toAccept.length > 0 && (
+              <Button variant="outline" disabled={act.isPending} onClick={() => (flaggedInView > 0 ? setConfirm(true) : acceptAll())}>
+                {act.isPending ? <Spinner /> : <CheckCheck aria-hidden />} Accept all{dim !== "all" ? ` ${DIMENSION_LABEL[dim] ?? dim}` : ""} ({toAccept.length})
+              </Button>
+            )}
           </div>
           {shown.length === 0 ? <EmptyState icon={Flag} title="Nothing matches this filter" /> : (
             <ul className="space-y-3">{shown.map((d) => d.uncertain || d.status === "proposed" ? <DecisionCard key={d.id} d={d} entityName={nameOf(d.entity_id)} /> : <CompactDecision key={d.id} d={d} entityName={nameOf(d.entity_id)} />)}</ul>
@@ -167,6 +178,20 @@ export default function PlanPage() {
           </ul>
         </TabsContent>
       </Tabs>
+      <Dialog open={confirm} onOpenChange={setConfirm}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Accept {toAccept.length} decisions?</DialogTitle>
+            <DialogDescription>
+              {flaggedInView} of them {flaggedInView === 1 ? "is" : "are"} flagged: they rely on an unverified culture fact, change the story, or the model was unsure. Accepting records that you have read them. You can still reopen or edit any decision later.
+            </DialogDescription>
+          </DialogHeader>
+          <DialogFooter>
+            <Button variant="outline" onClick={() => setConfirm(false)}>Cancel</Button>
+            <Button onClick={acceptAll} disabled={act.isPending}>{act.isPending && <Spinner />} Accept all {toAccept.length}</Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
       <p className="mt-6 text-xs text-muted-foreground">Plan by <Chip>{p.plan.model || "model"}</Chip></p>
     </>
   );

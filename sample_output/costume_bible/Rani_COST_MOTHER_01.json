@@ -1,0 +1,49 @@
+{
+  "costume_id": "COST_MOTHER_01",
+  "character_id": "CHAR_MOTHER",
+  "garments": "Salwar kameez with shawl, dupatta kept at home",
+  "source_garments": "",
+  "fabrics": "Brushed cotton kameez, flannel salwar, wool shawl",
+  "colours": "Dusty pink kameez, charcoal salwar, cream shawl, printed dupatta",
+  "footwear": "Soft embroidered jutti",
+  "jewellery": "Simple glass bangles, small studs",
+  "headwear": "",
+  "grooming": "Hair in long braid with paranda at end",
+  "scenes": [
+    "SC01"
+  ],
+  "change_reason": "",
+  "image_note": "first look: this is the character reference image, not generated twice",
+  "image": {
+    "asset": "ASSET_CHARREF_CHAR_MOTHER",
+    "model": "gpt-image-2",
+    "prompt": "Full-body character reference image, head to toe, standing in a neutral relaxed pose facing the camera, plain light-grey studio background, soft even lighting. Subject: Rani, Mother at home managing household, Majhi Punjabi culture, Amritsar, rural setting. Appearance: Mid-50s, medium build, kind face, faint lines. Grooming: Oiled braid, simple bindi-less forehead, tidy hands. Wearing: Salwar kameez with shawl, dupatta kept at home. Fabrics: Brushed cotton kameez, flannel salwar, wool shawl. Colours: Dusty pink kameez, charcoal salwar, cream shawl, printed dupatta. Footwear: Soft embroidered jutti. Jewellery: Simple glass bangles, small studs. Style: photorealistic cinematic film still, natural light, muted realistic colour grade, 35mm lens, no text, no captions, no watermark.",
+    "spec": {
+      "kind": "character_ref",
+      "entity_id": "CHAR_MOTHER",
+      "size": "1024x1536",
+      "style": "photorealistic cinematic film still, natural light, muted realistic colour grade, 35mm lens, no text, no captions, no watermark",
+      "culture": "Majhi Punjabi culture, Amritsar, rural setting",
+      "refs": [],
+      "who": {
+        "name": "Rani",
+        "age": null,
+        "role": "Mother at home managing household",
+        "appearance": "Mid-50s, medium build, kind face, faint lines",
+        "grooming": "Oiled braid, simple bindi-less forehead, tidy hands"
+      },
+      "costume": {
+        "garments": "Salwar kameez with shawl, dupatta kept at home",
+        "fabrics": "Brushed cotton kameez, flannel salwar, wool shawl",
+        "colours": "Dusty pink kameez, charcoal salwar, cream shawl, printed dupatta",
+        "footwear": "Soft embroidered jutti",
+        "jewellery": "Simple glass bangles, small studs",
+        "grooming": "Hair in long braid with paranda at end"
+      }
+    },
+    "spec_hash": "079697ce4bd8f5ef",
+    "references": [],
+    "attempts": 2,
+    "seconds": 17.5
+  }
+}

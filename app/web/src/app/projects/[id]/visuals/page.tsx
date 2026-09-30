@@ -98,7 +98,7 @@ export default function VisualsPage() {
 
   return (
     <>
-      <PageHeader eyebrow="Step 7" title="Visual pack" description="A character bible, a costume bible and one keyframe per scene, all generated from the approved records so the same person and the same clothes look the same everywhere." />
+      <PageHeader eyebrow="Step 6" title="Visual pack" description="A character bible, a costume bible and one keyframe per scene, all generated from the approved records so the same person and the same clothes look the same everywhere." />
       <div className={cn("mb-8 flex flex-wrap items-center gap-3 rounded-2xl border p-4 text-sm", open ? "border-info-line bg-info-soft text-info" : "bg-card text-muted-foreground shadow-card")}>
         {open ? <LockOpen className="size-5 shrink-0" aria-hidden /> : <Lock className="size-5 shrink-0" aria-hidden />}
         <p className="min-w-0 flex-1">{open

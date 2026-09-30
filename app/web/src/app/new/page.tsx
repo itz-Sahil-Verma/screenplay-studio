@@ -58,7 +58,7 @@ export default function NewAdaptation() {
       if (mode === "upload" && file) form.set("file", file);
       else form.set("text", text);
       const created = await api.create(form);
-      toast.success(`Uploaded: ${created.scenes} scenes found${created.problems.length ? `, ${created.problems.length} note(s)` : ""}`);
+      toast.success(`Screenplay uploaded${created.problems.length ? ` (${created.problems.length} note${created.problems.length > 1 ? "s" : ""})` : ""}. Run the analysis to read it.`);
       router.push(`/projects/${created.id}`);
     } catch (err) {
       setError(errorMessage(err));
@@ -76,7 +76,7 @@ export default function NewAdaptation() {
   return (
     <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6">
       <PageHeader eyebrow="New adaptation" title="Choose a screenplay and an exact culture" description="Be specific: the dialect and region decide the names, speech, clothing and setting the model is grounded on." />
-      <form onSubmit={submit} className="grid gap-6 lg:grid-cols-[1.35fr_1fr]">
+      <form onSubmit={submit} className="grid items-start gap-6 lg:grid-cols-[1.35fr_1fr]">
         <section className="rounded-2xl border bg-card p-5 shadow-card sm:p-6">
           <div className="mb-4 flex items-center justify-between gap-3">
             <h2 className="text-lg font-medium">1. Screenplay</h2>
@@ -91,8 +91,8 @@ export default function NewAdaptation() {
             ))}
           </div>
           {mode === "paste" ? (
-            <Field label="Screenplay text" htmlFor="text" hint="Scenes start with a heading such as “INT. KITCHEN - DAY”. 3 to 5 scenes work best.">
-              <Textarea id="text" value={text} onChange={(e) => setText(e.target.value)} rows={16} placeholder={"INT. FAMILY HOME - KITCHEN - MORNING\n\nMEERA (58) stirs a pot..."} className="screenplay min-h-72 text-[13px]" />
+            <Field label="Screenplay text" htmlFor="text" hint="Scenes start with a heading such as “INT. KITCHEN - DAY” or “Scene 1 – Kitchen”. 3 to 5 scenes work best.">
+              <Textarea id="text" value={text} onChange={(e) => setText(e.target.value)} rows={16} placeholder={"INT. FAMILY HOME - KITCHEN - MORNING\n\nMEERA (58) stirs a pot..."} className="screenplay max-h-[26rem] min-h-72 overflow-y-auto text-[13px]" />
             </Field>
           ) : (
             <Field label="TXT, DOCX or PDF" htmlFor="file" hint="Scanned PDFs without text cannot be read.">
@@ -106,7 +106,7 @@ export default function NewAdaptation() {
           )}
         </section>
 
-        <section className="space-y-5 rounded-2xl border bg-card p-5 shadow-card sm:p-6">
+        <section className="flex flex-col gap-5 rounded-2xl border bg-card p-5 shadow-card sm:p-6">
           <h2 className="text-lg font-medium">2. Culture</h2>
           {packsError && <p className="rounded-lg border border-danger-line bg-danger-soft p-3 text-sm text-danger">{errorMessage(packsError)}</p>}
           <Field label="Culture and dialect" htmlFor="pack">
@@ -128,14 +128,15 @@ export default function NewAdaptation() {
           {pack && pack.avoid_mixing_with.length > 0 && (
             <p className="flex flex-wrap items-center gap-1 rounded-xl bg-paper p-3.5 text-xs text-muted-foreground">Kept apart from: {pack.avoid_mixing_with.map((a) => <Chip key={a}>{a}</Chip>)}</p>
           )}
+          <div className="space-y-3 border-t pt-5">
+            {error && <p role="alert" className="flex items-start gap-2 rounded-lg border border-danger-line bg-danger-soft p-3 text-sm text-danger"><AlertCircle className="mt-0.5 size-4 shrink-0" aria-hidden />{error}</p>}
+            <Button type="submit" size="lg" className="h-11 w-full text-[15px]" disabled={!ready || busy}>
+              {busy && <Loader2 className="animate-spin" aria-hidden />} Upload and continue
+            </Button>
+            {!ready && <p className="text-center text-xs text-muted-foreground">Add a screenplay and choose a culture to continue.</p>}
+          </div>
         </section>
 
-        <div className="lg:col-span-2">
-          {error && <p role="alert" className="mb-3 flex items-start gap-2 rounded-lg border border-danger-line bg-danger-soft p-3 text-sm text-danger"><AlertCircle className="mt-0.5 size-4 shrink-0" aria-hidden />{error}</p>}
-          <Button type="submit" size="lg" className="h-11 px-6 text-[15px]" disabled={!ready || busy}>
-            {busy && <Loader2 className="animate-spin" aria-hidden />} Upload and continue
-          </Button>
-        </div>
       </form>
     </div>
   );

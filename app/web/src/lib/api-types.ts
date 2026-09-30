@@ -1275,6 +1275,11 @@ export interface components {
             decisions: number;
             /** Flagged Decisions */
             flagged_decisions: number;
+            /**
+             * Unreviewed Decisions
+             * @default 0
+             */
+            unreviewed_decisions: number;
             job?: components["schemas"]["JobInfo"] | null;
         };
         /**

@@ -20,7 +20,7 @@ export default function ContinuityPage() {
   if (!p.continuity_checked || rank(p) < 2)
     return (
       <>
-        <PageHeader eyebrow="Step 3" title="Continuity report" description="Contradictions found by code, before anything is generated." />
+        <PageHeader eyebrow="Step 2" title="Continuity report" description="Contradictions found by code, before anything is generated." />
         <EmptyState icon={ShieldCheck} title="Not checked yet" description="Normalize the extraction first; the check runs on the merged records."
           action={!demo && <RunButton stage={rank(p) === 0 ? "extract" : "normalize"} size="lg">{rank(p) === 0 ? "Extract scenes" : "Normalize and check continuity"}</RunButton>} />
       </>
@@ -28,7 +28,7 @@ export default function ContinuityPage() {
 
   return (
     <>
-      <PageHeader eyebrow="Step 3" title="Continuity report"
+      <PageHeader eyebrow="Step 2" title="Continuity report"
         description="Found by plain code, not by the model, so the same records always give the same findings. Each lists every scene it touches. Blocking findings must be fixed or accepted with a reason before you can approve."
         actions={<>
           <Button variant="outline" onClick={() => download("continuity_report.md", continuityReport(p), "text/markdown")}><Download aria-hidden /> Download report</Button>

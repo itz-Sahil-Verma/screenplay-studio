@@ -3,13 +3,14 @@
 import { useQuery } from "@tanstack/react-query";
 import { BadgeCheck, CheckCircle2, CircleAlert, LockOpen, ScrollText, Shirt, UserRound, Undo2 } from "lucide-react";
 import Link from "next/link";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
-import { PageHeader, Pill, Spinner } from "@/components/domain/bits";
+import { PageHeader, Pill, Section, Spinner } from "@/components/domain/bits";
+import { WarningCard } from "@/components/domain/warning-card";
 import { useWorkspace } from "@/components/domain/workspace";
 import { api } from "@/lib/api";
 import { useAct } from "@/lib/hooks";
-import { rank } from "@/lib/stages";
+import { rank, warningNumber } from "@/lib/stages";
 import type { ApprovalKey } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
@@ -71,7 +72,7 @@ export default function ApprovePage() {
 
   return (
     <>
-      <PageHeader eyebrow="Step 5" title="Approval gates" description="Nothing expensive or hard to undo happens until you approve. Each gate lists exactly what stands in the way; any later edit closes them again." />
+      <PageHeader eyebrow="Step 4" title="Approval gates" description="Nothing expensive or hard to undo happens until you approve. Each gate lists exactly what stands in the way; any later edit closes them again." />
       {r < 3 ? (
         <p className="rounded-2xl border border-dashed bg-card/60 p-8 text-center text-muted-foreground">Approvals open once the adaptation plan exists. <Link href={`/projects/${id}`} className="font-semibold text-primary underline underline-offset-2">Go to the overview</Link>.</p>
       ) : (
@@ -85,9 +86,15 @@ export default function ApprovePage() {
                   gatesDone && p.blocking_warning_ids.length ? `All three gates are approved, but ${p.blocking_warning_ids.length} blocking continuity finding(s) are unresolved. Fix them or accept them with a reason.` :
                     `${Object.values(p.approval).filter(Boolean).length} of 3 approved. All three, plus no unresolved blocking continuity finding, open the next step.`}
               </p>
-              {gatesDone && !approvedAll && p.blocking_warning_ids.length > 0 && <Link href={`/projects/${id}/continuity`} className={buttonVariants({ size: "sm", variant: "outline" }) + " mt-3 bg-card"}>Open the continuity report</Link>}
             </div>
           </div>
+          {!approvedAll && p.blocking_warning_ids.length > 0 && (
+            <Section title={`Findings that block approval (${p.blocking_warning_ids.length})`} description="Contradictions in the screenplay itself. Accept each one with a reason, or fix the screenplay and upload it again. Cultural decisions do not clear them.">
+              <ul className="space-y-3">
+                {p.warnings.filter((w) => p.blocking_warning_ids.includes(w.id)).map((w) => <WarningCard key={w.id} w={w} n={warningNumber(p, w.id)} />)}
+              </ul>
+            </Section>
+          )}
           <ul className="grid gap-4 lg:grid-cols-3">{GATES.map((g) => <Gate key={g.key} g={g} />)}</ul>
         </>
       )}

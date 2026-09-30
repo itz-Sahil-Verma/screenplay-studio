@@ -10,7 +10,8 @@ from dataclasses import dataclass
 _SLUG = re.compile(
     r"^\s*(?:\d+[.)]?\s+)?(?:INT\.?/EXT\.?|EXT\.?/INT\.?|I/E\.?|INT\.?|EXT\.?)\s+\S.*$"
 )
-_SCENE_WORD = re.compile(r"^\s*SCENE\s+\d+\b.*$")
+# "Scene 1 – Bus Station", "SCENE 2: Family House", "Scene 3. Hall" (any case): a plain-language heading with a number
+_SCENE_WORD = re.compile(r"^\s*SCENE\s+\d+\b.*$", re.IGNORECASE)
 
 EXPECTED_SCENES = (3, 5)  # from the brief; outside this we warn, we do not fail
 

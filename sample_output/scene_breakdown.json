@@ -1,0 +1,1748 @@
+{
+  "project": {
+    "id": "1f73d665a9ef",
+    "source_file": "pasted.txt",
+    "culture": {
+      "pack_id": "majhi_punjabi",
+      "region": "Amritsar",
+      "setting": "rural",
+      "output_script": "gurmukhi"
+    }
+  },
+  "scenes": [
+    {
+      "scene_id": "SC01",
+      "number": 1,
+      "int_ext": "INT",
+      "location_id": "LOC_BUS_STATION",
+      "sub_location": "",
+      "time": "",
+      "day": "",
+      "weather": "",
+      "mood": "",
+      "summary": "Michael Thompson arrives at the bus station carrying a brown folder containing the property deed. His mother calls to confirm he has it and reminds him that Uncle Robert needs to see it before tomorrow. Michael places the folder back in his backpack.",
+      "dramatic_purpose": "",
+      "source_text": "Title: The Missing Deed\n\nScene 1 – Bus Station\n\nMICHAEL THOMPSON (29) gets off a bus carrying a brown folder.\n\nHis mother calls.\n\nMOTHER\nDid you bring the property deed?\n\nMICHAEL\nIt's right here.\n\nMOTHER\nGood. Uncle Robert needs to see it before tomorrow.\n\nMichael places the folder back in his backpack.",
+      "characters": [
+        "CHAR_MICHAEL",
+        "CHAR_MOTHER"
+      ],
+      "entrances": [
+        "CHAR_MICHAEL"
+      ],
+      "exits": [],
+      "costumes": {
+        "CHAR_MICHAEL": "COST_MICHAEL_01",
+        "CHAR_MOTHER": "COST_MOTHER_01"
+      },
+      "props_in": [
+        "PROP_BROWN_FOLDER",
+        "PROP_BACKPACK"
+      ],
+      "props_out": [
+        "PROP_BROWN_FOLDER",
+        "PROP_BACKPACK"
+      ],
+      "prop_holder_start": {
+        "PROP_BROWN_FOLDER": "CHAR_MICHAEL",
+        "PROP_BACKPACK": "CHAR_MICHAEL"
+      },
+      "prop_holder_end": {
+        "PROP_BROWN_FOLDER": "CHAR_MICHAEL",
+        "PROP_BACKPACK": "CHAR_MICHAEL"
+      },
+      "state_changes": [
+        {
+          "kind": "prop_gain",
+          "character_id": "CHAR_MICHAEL",
+          "item": "PROP_BROWN_FOLDER",
+          "to_character_id": null,
+          "note": ""
+        },
+        {
+          "kind": "prop_transfer",
+          "character_id": "CHAR_MICHAEL",
+          "item": "PROP_BROWN_FOLDER",
+          "to_character_id": null,
+          "note": "Michael places the folder back in his backpack."
+        },
+        {
+          "kind": "knowledge_gain",
+          "character_id": "CHAR_MOTHER",
+          "item": "Michael has the property deed",
+          "to_character_id": null,
+          "note": ""
+        },
+        {
+          "kind": "knowledge_gain",
+          "character_id": "CHAR_MICHAEL",
+          "item": "Uncle Robert needs to see the property deed before tomorrow",
+          "to_character_id": null,
+          "note": ""
+        }
+      ],
+      "production": {
+        "set_dressing": [],
+        "food": [],
+        "vehicles": [],
+        "animals": [],
+        "extras": [],
+        "rituals": [],
+        "gestures": [],
+        "sound_music": []
+      },
+      "emotional_change": "",
+      "continuity_warnings": [
+        "PROP_NOT_SHOWN|PROP_BACKPACK|SC01,SC02"
+      ],
+      "states": {
+        "CHAR_MICHAEL": {
+          "costume_id": "COST_MICHAEL_01",
+          "carrying": [
+            "PROP_BROWN_FOLDER",
+            "PROP_BACKPACK"
+          ],
+          "injuries": [],
+          "knows": [
+            "Uncle Robert needs to see the property deed before tomorrow"
+          ]
+        },
+        "CHAR_MOTHER": {
+          "costume_id": "COST_MOTHER_01",
+          "carrying": [],
+          "injuries": [],
+          "knows": [
+            "Michael has the property deed"
+          ]
+        }
+      }
+    },
+    {
+      "scene_id": "SC02",
+      "number": 2,
+      "int_ext": "INT",
+      "location_id": "LOC_FAMILY_HOUSE",
+      "sub_location": "",
+      "time": "",
+      "day": "",
+      "weather": "",
+      "mood": "",
+      "summary": "Michael arrives home to find his father John Thompson at the dining table with a brown folder. They discuss a dispute over farm ownership. Later, Uncle Robert arrives and a heated family meeting occurs around the table. The brown folder is central to the discussion and is slid onto a chair by Michael. After the argument ends, Michael picks up the folder and leaves the room.",
+      "dramatic_purpose": "",
+      "source_text": "Scene 2 – Family House\n\nMichael arrives home.\n\nHis father JOHN THOMPSON sits at the dining table.\n\nThe brown folder is placed in the center.\n\nJOHN\nYour uncle thinks part of the farm belongs to him.\n\nMICHAEL\nWhat does the deed say?\n\nJOHN\nThat's what we're trying to find out.\n\nMichael opens the folder and looks through several documents.\n\nThat evening, UNCLE ROBERT arrives and a family meeting takes place around the table.\n\nMichael slides the folder onto the chair beside him.\n\nRobert argues with John.\n\nROBERT\nThose documents were hidden for years.\n\nJOHN\nBecause they weren't relevant.\n\nThe argument grows louder.\n\nThe folder remains on the chair near Michael.\n\nWhen the meeting ends, Michael picks it up and leaves the room.",
+      "characters": [
+        "CHAR_MICHAEL",
+        "CHAR_JOHN",
+        "CHAR_ROBERT"
+      ],
+      "entrances": [
+        "CHAR_MICHAEL",
+        "CHAR_ROBERT"
+      ],
+      "exits": [],
+      "costumes": {
+        "CHAR_MICHAEL": "COST_MICHAEL_01",
+        "CHAR_JOHN": "COST_JOHN_01",
+        "CHAR_ROBERT": "COST_ROBERT_01"
+      },
+      "props_in": [],
+      "props_out": [
+        "PROP_BROWN_FOLDER"
+      ],
+      "prop_holder_start": {},
+      "prop_holder_end": {
+        "PROP_BROWN_FOLDER": "CHAR_MICHAEL"
+      },
+      "state_changes": [
+        {
+          "kind": "prop_gain",
+          "character_id": "CHAR_MICHAEL",
+          "item": "PROP_BROWN_FOLDER",
+          "to_character_id": null,
+          "note": ""
+        }
+      ],
+      "production": {
+        "set_dressing": [
+          "dining table"
+        ],
+        "food": [],
+        "vehicles": [],
+        "animals": [],
+        "extras": [],
+        "rituals": [],
+        "gestures": [],
+        "sound_music": []
+      },
+      "emotional_change": "",
+      "continuity_warnings": [
+        "PROP_NOT_SHOWN|PROP_BACKPACK|SC01,SC02"
+      ],
+      "states": {
+        "CHAR_MICHAEL": {
+          "costume_id": "COST_MICHAEL_01",
+          "carrying": [
+            "PROP_BROWN_FOLDER"
+          ],
+          "injuries": [],
+          "knows": [
+            "Uncle Robert needs to see the property deed before tomorrow"
+          ]
+        },
+        "CHAR_JOHN": {
+          "costume_id": "COST_JOHN_01",
+          "carrying": [],
+          "injuries": [],
+          "knows": []
+        },
+        "CHAR_ROBERT": {
+          "costume_id": "COST_ROBERT_01",
+          "carrying": [],
+          "injuries": [],
+          "knows": []
+        }
+      }
+    },
+    {
+      "scene_id": "SC03",
+      "number": 3,
+      "int_ext": "INT",
+      "location_id": "LOC_LAWYER_OFFICE",
+      "sub_location": "",
+      "time": "The next morning",
+      "day": "",
+      "weather": "",
+      "mood": "",
+      "summary": "The lawyer examines documents and finds several pages missing. John reacts by hitting his arm on the desk, causing a cut. The lawyer gives John a bandage which he uses to wrap the wound. The folder remains on the desk.",
+      "dramatic_purpose": "",
+      "source_text": "Scene 3 – Lawyer Office\n\nThe next morning.\n\nThe lawyer examines the documents.\n\nJohn wears a gray jacket.\n\nLAWYER\nSeveral pages are missing.\n\nEveryone looks shocked.\n\nJohn stands suddenly and hits his arm against a desk.\n\nA cut appears on his forearm.\n\nThe lawyer hands him a bandage.\n\nJohn wraps the wound.\n\nThe folder remains on the desk.",
+      "characters": [
+        "CHAR_LAWYER",
+        "CHAR_JOHN"
+      ],
+      "entrances": [],
+      "exits": [],
+      "costumes": {
+        "CHAR_LAWYER": "COST_LAWYER_01",
+        "CHAR_JOHN": "COST_JOHN_01"
+      },
+      "props_in": [
+        "PROP_DOCUMENTS",
+        "PROP_BANDAGE",
+        "PROP_BROWN_FOLDER"
+      ],
+      "props_out": [
+        "PROP_DOCUMENTS",
+        "PROP_BANDAGE"
+      ],
+      "prop_holder_start": {
+        "PROP_DOCUMENTS": "CHAR_LAWYER",
+        "PROP_BANDAGE": "CHAR_LAWYER"
+      },
+      "prop_holder_end": {
+        "PROP_DOCUMENTS": "CHAR_LAWYER",
+        "PROP_BANDAGE": "CHAR_JOHN"
+      },
+      "state_changes": [
+        {
+          "kind": "knowledge_gain",
+          "character_id": "CHAR_LAWYER",
+          "item": "Several pages are missing",
+          "to_character_id": null,
+          "note": ""
+        },
+        {
+          "kind": "injury_gain",
+          "character_id": "CHAR_JOHN",
+          "item": "cut on forearm",
+          "to_character_id": null,
+          "note": ""
+        },
+        {
+          "kind": "prop_transfer",
+          "character_id": "CHAR_LAWYER",
+          "item": "PROP_BANDAGE",
+          "to_character_id": "CHAR_JOHN",
+          "note": ""
+        }
+      ],
+      "production": {
+        "set_dressing": [],
+        "food": [],
+        "vehicles": [],
+        "animals": [],
+        "extras": [],
+        "rituals": [],
+        "gestures": [],
+        "sound_music": []
+      },
+      "emotional_change": "",
+      "continuity_warnings": [
+        "COSTUME_CHANGE_NO_REASON|CHAR_JOHN|SC03,SC04,SC05",
+        "INJURY_ACTIVE|CHAR_JOHN|SC03,SC05"
+      ],
+      "states": {
+        "CHAR_LAWYER": {
+          "costume_id": "COST_LAWYER_01",
+          "carrying": [
+            "PROP_DOCUMENTS"
+          ],
+          "injuries": [],
+          "knows": [
+            "Several pages are missing"
+          ]
+        },
+        "CHAR_JOHN": {
+          "costume_id": "COST_JOHN_01",
+          "carrying": [
+            "PROP_BANDAGE"
+          ],
+          "injuries": [
+            "cut on forearm"
+          ],
+          "knows": []
+        }
+      }
+    },
+    {
+      "scene_id": "SC04",
+      "number": 4,
+      "int_ext": "INT",
+      "location_id": "LOC_COUNTY_FAIR",
+      "sub_location": "",
+      "time": "",
+      "day": "",
+      "weather": "",
+      "mood": "",
+      "summary": "Michael and Robert talk privately at the county fair. Michael accidentally drops a brown folder which falls beneath a food stall. Robert searches and retrieves the folder, warning Michael that he almost lost the most important thing. Michael laughs.",
+      "dramatic_purpose": "To show the importance of the brown folder and the relationship dynamic between Michael and Robert.",
+      "source_text": "Scene 4 – County Fair\n\nMichael and Robert talk privately.\n\nThe brown folder slips from Michael's hands.\n\nIt falls beneath a food stall.\n\nAfter searching, Robert retrieves it.\n\nROBERT\nYou almost lost the most important thing here.\n\nMichael laughs.",
+      "characters": [
+        "CHAR_MICHAEL",
+        "CHAR_ROBERT"
+      ],
+      "entrances": [],
+      "exits": [],
+      "costumes": {
+        "CHAR_MICHAEL": "COST_MICHAEL_01",
+        "CHAR_ROBERT": "COST_ROBERT_01"
+      },
+      "props_in": [
+        "PROP_BROWN_FOLDER"
+      ],
+      "props_out": [
+        "PROP_BROWN_FOLDER"
+      ],
+      "prop_holder_start": {
+        "PROP_BROWN_FOLDER": "CHAR_MICHAEL"
+      },
+      "prop_holder_end": {
+        "PROP_BROWN_FOLDER": "CHAR_ROBERT"
+      },
+      "state_changes": [
+        {
+          "kind": "prop_transfer",
+          "character_id": "CHAR_MICHAEL",
+          "item": "PROP_BROWN_FOLDER",
+          "to_character_id": "CHAR_ROBERT",
+          "note": ""
+        },
+        {
+          "kind": "knowledge_gain",
+          "character_id": "CHAR_ROBERT",
+          "item": "Michael almost lost the most important thing here",
+          "to_character_id": null,
+          "note": ""
+        }
+      ],
+      "production": {
+        "set_dressing": [],
+        "food": [],
+        "vehicles": [],
+        "animals": [],
+        "extras": [],
+        "rituals": [],
+        "gestures": [],
+        "sound_music": []
+      },
+      "emotional_change": "",
+      "continuity_warnings": [
+        "COSTUME_CHANGE_NO_REASON|CHAR_JOHN|SC03,SC04,SC05",
+        "PROP_HOLDER_MISMATCH|PROP_BROWN_FOLDER|SC04,SC05"
+      ],
+      "states": {
+        "CHAR_MICHAEL": {
+          "costume_id": "COST_MICHAEL_01",
+          "carrying": [],
+          "injuries": [],
+          "knows": [
+            "Uncle Robert needs to see the property deed before tomorrow"
+          ]
+        },
+        "CHAR_ROBERT": {
+          "costume_id": "COST_ROBERT_01",
+          "carrying": [
+            "PROP_BROWN_FOLDER"
+          ],
+          "injuries": [],
+          "knows": [
+            "Michael almost lost the most important thing here"
+          ]
+        }
+      }
+    },
+    {
+      "scene_id": "SC05",
+      "number": 5,
+      "int_ext": "INT",
+      "location_id": "LOC_FAMILY_HOUSE",
+      "sub_location": "",
+      "time": "Next Morning",
+      "day": "",
+      "weather": "",
+      "mood": "",
+      "summary": "John enters wearing a blue jacket. The bandage he had is gone and the folder is missing. Michael asks about the deed, but John is confused. Robert enters carrying photocopies and says he found the missing pages. Michael looks around and notes the original folder is nowhere to be found.",
+      "dramatic_purpose": "",
+      "source_text": "Scene 5 – Family House (Next Morning)\n\nJohn enters.\n\nHe now wears a blue jacket.\n\nThe bandage is gone.\n\nThe folder is missing.\n\nMICHAEL\nWhere's the deed?\n\nJOHN\nWhat deed?\n\nEveryone looks confused.\n\nRobert enters carrying photocopies.\n\nROBERT\nI found the missing pages.\n\nMichael looks around.\n\nThe original folder is nowhere to be found.",
+      "characters": [
+        "CHAR_JOHN",
+        "CHAR_MICHAEL",
+        "CHAR_ROBERT"
+      ],
+      "entrances": [
+        "CHAR_JOHN",
+        "CHAR_ROBERT"
+      ],
+      "exits": [],
+      "costumes": {
+        "CHAR_JOHN": "COST_JOHN_02",
+        "CHAR_MICHAEL": "COST_MICHAEL_01",
+        "CHAR_ROBERT": "COST_ROBERT_01"
+      },
+      "props_in": [
+        "PROP_BANDAGE",
+        "PROP_BROWN_FOLDER"
+      ],
+      "props_out": [
+        "PROP_PHOTOCOPIES"
+      ],
+      "prop_holder_start": {
+        "PROP_BANDAGE": "CHAR_JOHN",
+        "PROP_BROWN_FOLDER": "CHAR_JOHN"
+      },
+      "prop_holder_end": {
+        "PROP_PHOTOCOPIES": "CHAR_ROBERT"
+      },
+      "state_changes": [
+        {
+          "kind": "costume_change",
+          "character_id": "CHAR_JOHN",
+          "item": "blue jacket",
+          "to_character_id": null,
+          "note": ""
+        },
+        {
+          "kind": "prop_loss",
+          "character_id": "CHAR_JOHN",
+          "item": "PROP_BANDAGE",
+          "to_character_id": null,
+          "note": "The bandage is gone at the start of the scene."
+        },
+        {
+          "kind": "prop_loss",
+          "character_id": "CHAR_JOHN",
+          "item": "PROP_BROWN_FOLDER",
+          "to_character_id": null,
+          "note": "The folder is missing at the start and nowhere to be found at the end."
+        },
+        {
+          "kind": "prop_gain",
+          "character_id": "CHAR_ROBERT",
+          "item": "PROP_PHOTOCOPIES",
+          "to_character_id": null,
+          "note": "Robert enters carrying photocopies."
+        },
+        {
+          "kind": "knowledge_gain",
+          "character_id": "CHAR_MICHAEL",
+          "item": "The original folder is nowhere to be found",
+          "to_character_id": null,
+          "note": ""
+        }
+      ],
+      "production": {
+        "set_dressing": [],
+        "food": [],
+        "vehicles": [],
+        "animals": [],
+        "extras": [],
+        "rituals": [],
+        "gestures": [],
+        "sound_music": []
+      },
+      "emotional_change": "",
+      "continuity_warnings": [
+        "COSTUME_CHANGE_NO_REASON|CHAR_JOHN|SC03,SC04,SC05",
+        "PROP_HOLDER_MISMATCH|PROP_BROWN_FOLDER|SC04,SC05",
+        "INJURY_ACTIVE|CHAR_JOHN|SC03,SC05"
+      ],
+      "states": {
+        "CHAR_JOHN": {
+          "costume_id": "COST_JOHN_02",
+          "carrying": [
+            "PROP_BANDAGE",
+            "PROP_BROWN_FOLDER"
+          ],
+          "injuries": [
+            "cut on forearm"
+          ],
+          "knows": []
+        },
+        "CHAR_MICHAEL": {
+          "costume_id": "COST_MICHAEL_01",
+          "carrying": [],
+          "injuries": [],
+          "knows": [
+            "Uncle Robert needs to see the property deed before tomorrow",
+            "The original folder is nowhere to be found"
+          ]
+        },
+        "CHAR_ROBERT": {
+          "costume_id": "COST_ROBERT_01",
+          "carrying": [
+            "PROP_PHOTOCOPIES"
+          ],
+          "injuries": [],
+          "knows": [
+            "Michael almost lost the most important thing here"
+          ]
+        }
+      }
+    }
+  ],
+  "characters": [
+    {
+      "id": "CHAR_MICHAEL",
+      "name": "Michael",
+      "aliases": [
+        "Michael Thompson"
+      ],
+      "age": 29,
+      "role": "",
+      "relationships": [],
+      "relationship_notes": [],
+      "personality": "",
+      "dialect": "",
+      "emotional_state": "confused",
+      "physical_description": "29, medium build, wheatish, alert eyes, quick smile",
+      "adapted_name": "Manveer",
+      "adapted_name_native": "ਮਨਵੀਰ",
+      "role_adapted": "Younger son returning from city with deed",
+      "speech_register": "Informal with peers; respectful Punjabi to elders (tusi, ji)",
+      "address_terms": [
+        "Bapu ji",
+        "Chacha ji",
+        "Ma ji"
+      ],
+      "grooming": "Short hair, light stubble, clean nails",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC04",
+        "SC05"
+      ],
+      "approved": true
+    },
+    {
+      "id": "CHAR_MOTHER",
+      "name": "Mother",
+      "aliases": [],
+      "age": null,
+      "role": "",
+      "relationships": [],
+      "relationship_notes": [],
+      "personality": "",
+      "dialect": "",
+      "emotional_state": "",
+      "physical_description": "Mid-50s, medium build, kind face, faint lines",
+      "adapted_name": "Rani",
+      "adapted_name_native": "ਰਾਣੀ",
+      "role_adapted": "Mother at home managing household",
+      "speech_register": "Warm, gentle; uses tusi to elders/guests, tu to son",
+      "address_terms": [
+        "putt",
+        "Veer ji",
+        "Bapu ji"
+      ],
+      "grooming": "Oiled braid, simple bindi-less forehead, tidy hands",
+      "scene_ids": [
+        "SC01"
+      ],
+      "approved": true
+    },
+    {
+      "id": "CHAR_JOHN",
+      "name": "John",
+      "aliases": [
+        "John Thompson"
+      ],
+      "age": null,
+      "role": "",
+      "relationships": [],
+      "relationship_notes": [],
+      "personality": "",
+      "dialect": "",
+      "emotional_state": "shocked",
+      "physical_description": "Late 50s, strong frame, sun-tanned, lined forehead",
+      "adapted_name": "Jasbir",
+      "adapted_name_native": "ਜਸਬੀਰ",
+      "role_adapted": "Father, farm decision-maker",
+      "speech_register": "Measured, firm; elders’ respect expected",
+      "address_terms": [
+        "putt",
+        "Rani ji",
+        "Rajinder"
+      ],
+      "grooming": "Short combed hair, clean-shaven, cracked farmer hands",
+      "scene_ids": [
+        "SC02",
+        "SC03",
+        "SC05"
+      ],
+      "approved": true
+    },
+    {
+      "id": "CHAR_ROBERT",
+      "name": "Robert",
+      "aliases": [
+        "Uncle Robert"
+      ],
+      "age": null,
+      "role": "",
+      "relationships": [],
+      "relationship_notes": [],
+      "personality": "",
+      "dialect": "",
+      "emotional_state": "",
+      "physical_description": "Early 50s, lean, expressive eyes, quick stride",
+      "adapted_name": "Rajinder",
+      "adapted_name_native": "ਰਜਿੰਦਰ",
+      "role_adapted": "Paternal younger uncle (Chacha), mediator",
+      "speech_register": "Affectionate with nephew, firm with brother",
+      "address_terms": [
+        "Manveer",
+        "Jasbir",
+        "Bhen ji"
+      ],
+      "grooming": "Salt-pepper hair, trimmed moustache, clean hands",
+      "scene_ids": [
+        "SC02",
+        "SC04",
+        "SC05"
+      ],
+      "approved": true
+    },
+    {
+      "id": "CHAR_LAWYER",
+      "name": "Lawyer",
+      "aliases": [],
+      "age": null,
+      "role": "",
+      "relationships": [],
+      "relationship_notes": [],
+      "personality": "",
+      "dialect": "",
+      "emotional_state": "",
+      "physical_description": "Early 40s, average build, spectacles, calm gaze",
+      "adapted_name": "Tarun",
+      "adapted_name_native": "ਤਰੁਣ",
+      "role_adapted": "Local lawyer in small town",
+      "speech_register": "Formal Punjabi with legal terms; polite tusi",
+      "address_terms": [
+        "Jasbir ji",
+        "Manveer ji",
+        "Rani ji"
+      ],
+      "grooming": "Side-parted hair, clean-shaven, tidy desk manner",
+      "scene_ids": [
+        "SC03"
+      ],
+      "approved": true
+    }
+  ],
+  "locations": [
+    {
+      "id": "LOC_BUS_STATION",
+      "name": "Bus Station",
+      "adapted_name": "Amritsar Rural Bus Adda",
+      "adapted_name_native": "ਅੰਮ੍ਰਿਤਸਰ ਪਿੰਡਾਂ ਵਾਲਾ ਬੱਸ ਅੱਡਾ",
+      "sub_locations": [],
+      "description": "Open-air bus adda with tin-roof shade, chai stall, loud conductors, tractors parked nearby; winter fog lifting",
+      "scene_ids": [
+        "SC01"
+      ]
+    },
+    {
+      "id": "LOC_FAMILY_HOUSE",
+      "name": "Family House",
+      "adapted_name": "Ancestral House Courtyard",
+      "adapted_name_native": "ਪੁਰਖਿਆਂ ਦਾ ਘਰ – ਵਿਹੜਾ",
+      "sub_locations": [],
+      "description": "Brick-walled house around a vehra; manjas, a brass lota, low dining table; smoky winter sun; kitchen near chulha",
+      "scene_ids": [
+        "SC02",
+        "SC05"
+      ]
+    },
+    {
+      "id": "LOC_LAWYER_OFFICE",
+      "name": "Lawyer Office",
+      "adapted_name": "Town Lawyer Office",
+      "adapted_name_native": "ਕਸਬੇ ਦਾ ਵਕੀਲ ਦਫ਼ਤਰ",
+      "sub_locations": [],
+      "description": "Small room above market shop; steel almirah, case files, wooden desk with green cloth, thermos of tea",
+      "scene_ids": [
+        "SC03"
+      ]
+    },
+    {
+      "id": "LOC_COUNTY_FAIR",
+      "name": "County Fair",
+      "adapted_name": "Pind Mela Grounds",
+      "adapted_name_native": "ਪਿੰਡ ਮੇਲੇ ਦਾ ਮੈਦਾਨ",
+      "sub_locations": [],
+      "description": "Seasonal fair with food stalls (jalebi, chaat), toy sellers, loudspeakers, ferris ride; dry grass underfoot",
+      "scene_ids": [
+        "SC04"
+      ]
+    }
+  ],
+  "props": [
+    {
+      "id": "PROP_BROWN_FOLDER",
+      "name": "brown folder",
+      "adapted_name": "brown folder",
+      "adapted_name_native": "ਭੂਰਾ ਫੋਲਡਰ",
+      "aliases": [
+        "folder"
+      ],
+      "description": "Worn office folder with deed papers, corner dog-eared",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ]
+    },
+    {
+      "id": "PROP_BACKPACK",
+      "name": "backpack",
+      "adapted_name": "backpack",
+      "adapted_name_native": "ਬੈਕਪੈਕ",
+      "aliases": [],
+      "description": "City-style canvas backpack with one broken zip tag",
+      "scene_ids": [
+        "SC01"
+      ]
+    },
+    {
+      "id": "PROP_DOCUMENTS",
+      "name": "documents",
+      "adapted_name": "documents",
+      "adapted_name_native": "ਦਸਤਾਵੇਜ਼",
+      "aliases": [],
+      "description": "Property papers; some pages missing, stamped",
+      "scene_ids": [
+        "SC03"
+      ]
+    },
+    {
+      "id": "PROP_BANDAGE",
+      "name": "bandage",
+      "adapted_name": "bandage",
+      "adapted_name_native": "ਪੱਟੀ",
+      "aliases": [],
+      "description": "Clean gauze roll with small safety pin",
+      "scene_ids": [
+        "SC03",
+        "SC05"
+      ]
+    },
+    {
+      "id": "PROP_PHOTOCOPIES",
+      "name": "photocopies",
+      "adapted_name": "photocopies",
+      "adapted_name_native": "ਫੋਟੋਕਾਪੀਆਂ",
+      "aliases": [],
+      "description": "Fresh xerox set of the missing pages, slightly skewed",
+      "scene_ids": [
+        "SC05"
+      ]
+    }
+  ],
+  "costumes": [
+    {
+      "id": "COST_MICHAEL_01",
+      "character_id": "CHAR_MICHAEL",
+      "source_garments": "",
+      "garments": "Wool-blend kurta, straight pajama, quilted sleeveless jacket, muffler",
+      "fabrics": "Cotton-wool kurta, polyester quilted jacket, acrylic muffler",
+      "colours": "Slate kurta, off-white pajama, olive jacket, maroon-grey muffler",
+      "footwear": "Brown leather jutti",
+      "jewellery": "Thin steel kada-style bracelet (plain, non-religious fashion)",
+      "headwear": "",
+      "grooming": "Light stubble, short hair",
+      "scene_ids": [
+        "SC01",
+        "SC02",
+        "SC04",
+        "SC05"
+      ],
+      "change_reason": "",
+      "approved": true
+    },
+    {
+      "id": "COST_MOTHER_01",
+      "character_id": "CHAR_MOTHER",
+      "source_garments": "",
+      "garments": "Salwar kameez with shawl, dupatta kept at home",
+      "fabrics": "Brushed cotton kameez, flannel salwar, wool shawl",
+      "colours": "Dusty pink kameez, charcoal salwar, cream shawl, printed dupatta",
+      "footwear": "Soft embroidered jutti",
+      "jewellery": "Simple glass bangles, small studs",
+      "headwear": "",
+      "grooming": "Hair in long braid with paranda at end",
+      "scene_ids": [
+        "SC01"
+      ],
+      "change_reason": "",
+      "approved": true
+    },
+    {
+      "id": "COST_JOHN_01",
+      "character_id": "CHAR_JOHN",
+      "source_garments": "gray jacket",
+      "garments": "Thick kurta-pajama with grey wool blazer",
+      "fabrics": "Heathered cotton kurta, wool-blend blazer",
+      "colours": "Ivory kurta, white pajama, mid-grey blazer",
+      "footwear": "Black plain jutti",
+      "jewellery": "",
+      "headwear": "",
+      "grooming": "Clean-shaven",
+      "scene_ids": [
+        "SC02",
+        "SC03"
+      ],
+      "change_reason": "",
+      "approved": true
+    },
+    {
+      "id": "COST_JOHN_02",
+      "character_id": "CHAR_JOHN",
+      "source_garments": "blue jacket",
+      "garments": "Same kurta-pajama with blue quilted jacket",
+      "fabrics": "Cotton kurta, synthetic quilted jacket",
+      "colours": "Ivory-white base, navy blue jacket",
+      "footwear": "Black plain jutti",
+      "jewellery": "",
+      "headwear": "",
+      "grooming": "Clean-shaven",
+      "scene_ids": [
+        "SC05"
+      ],
+      "change_reason": "Switched outer layer for colder early morning outdoors",
+      "approved": true
+    },
+    {
+      "id": "COST_ROBERT_01",
+      "character_id": "CHAR_ROBERT",
+      "source_garments": "",
+      "garments": "Wool kurta-pajama with tweed waistcoat, light shawl",
+      "fabrics": "Wool-cotton kurta, tweed waistcoat, lambswool shawl",
+      "colours": "Taupe kurta, cream pajama, brown waistcoat, beige shawl",
+      "footwear": "Tan jutti",
+      "jewellery": "",
+      "headwear": "",
+      "grooming": "Trim moustache",
+      "scene_ids": [
+        "SC02",
+        "SC04",
+        "SC05"
+      ],
+      "change_reason": "",
+      "approved": true
+    },
+    {
+      "id": "COST_LAWYER_01",
+      "character_id": "CHAR_LAWYER",
+      "source_garments": "",
+      "garments": "White shirt, black sweater-vest, black blazer, dark trousers",
+      "fabrics": "Cotton shirt, wool-blend knit, poly-wool blazer",
+      "colours": "White, black, charcoal",
+      "footwear": "Polished black lace-up shoes",
+      "jewellery": "",
+      "headwear": "",
+      "grooming": "Neat hair, spectacles",
+      "scene_ids": [
+        "SC03"
+      ],
+      "change_reason": "",
+      "approved": true
+    }
+  ],
+  "continuity_warnings": [
+    {
+      "id": "COSTUME_CHANGE_NO_REASON|CHAR_JOHN|SC03,SC04,SC05",
+      "code": "COSTUME_CHANGE_NO_REASON",
+      "severity": "error",
+      "message": "John wears gray jacket in SC03 but blue jacket in SC05, and the story gives no reason",
+      "entity_id": "CHAR_JOHN",
+      "affected_scene_ids": [
+        "SC03",
+        "SC04",
+        "SC05"
+      ],
+      "acknowledged": true,
+      "ack_note": "Enough time passes that changing clothes is natural (a new day, a new place)"
+    },
+    {
+      "id": "PROP_HOLDER_MISMATCH|PROP_BROWN_FOLDER|SC04,SC05",
+      "code": "PROP_HOLDER_MISMATCH",
+      "severity": "error",
+      "message": "the brown folder: SC04 ends with Robert holding it, but SC05 starts with John holding it, and nothing explains the handover",
+      "entity_id": "PROP_BROWN_FOLDER",
+      "affected_scene_ids": [
+        "SC04",
+        "SC05"
+      ],
+      "acknowledged": true,
+      "ack_note": "The handover happens off-screen between the scenes"
+    },
+    {
+      "id": "PROP_NOT_SHOWN|PROP_BACKPACK|SC01,SC02",
+      "code": "PROP_NOT_SHOWN",
+      "severity": "warning",
+      "message": "Michael has the backpack at the end of SC01 and is in SC02, but the backpack is not mentioned there",
+      "entity_id": "PROP_BACKPACK",
+      "affected_scene_ids": [
+        "SC01",
+        "SC02"
+      ],
+      "acknowledged": false,
+      "ack_note": ""
+    },
+    {
+      "id": "INJURY_ACTIVE|CHAR_JOHN|SC03,SC05",
+      "code": "INJURY_ACTIVE",
+      "severity": "info",
+      "message": "John gets 'cut on forearm' in SC03 and it is never healed, so it must stay visible in SC05",
+      "entity_id": "CHAR_JOHN",
+      "affected_scene_ids": [
+        "SC03",
+        "SC05"
+      ],
+      "acknowledged": false,
+      "ack_note": ""
+    }
+  ],
+  "adaptation_decisions": [
+    {
+      "id": "DEC001",
+      "dimension": "visual_world",
+      "source_scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ],
+      "entity_id": null,
+      "original": "Unspecified season and era",
+      "adapted": "Early winter, present-day rural Amritsar",
+      "reason": "Jackets in source suit Punjab winters; supports outdoor mela and morning chill",
+      "basis": "pack",
+      "fact_ids": [
+        "F001"
+      ],
+      "uncertain": false,
+      "uncertain_reason": "",
+      "status": "accepted",
+      "reviewer_note": ""
+    },
+    {
+      "id": "DEC002",
+      "dimension": "visual_world",
+      "source_scene_ids": [
+        "SC01"
+      ],
+      "entity_id": "LOC_BUS_STATION",
+      "original": "Bus Station (generic)",
+      "adapted": "Amritsar rural bus adda with chai stall and tractor parking",
+      "reason": "Rural transport hubs look like open addas; matches setting",
+      "basis": "judgment",
+      "fact_ids": [],
+      "uncertain": false,
+      "uncertain_reason": "",
+      "status": "accepted",
+      "reviewer_note": ""
+    },
+    {
+      "id": "DEC003",
+      "dimension": "visual_world",
+      "source_scene_ids": [
+        "SC04"
+      ],
+      "entity_id": "LOC_COUNTY_FAIR",
+      "original": "County Fair",
+      "adapted": "Pind mela with local food stalls and rides",
+      "reason": "Rural Majha fairs are seasonal melas with stalls and rides",
+      "basis": "judgment",
+      "fact_ids": [],
+      "uncertain": false,
+      "uncertain_reason": "",
+      "status": "accepted",
+      "reviewer_note": ""
+    },
+    {
+      "id": "DEC004",
+      "dimension": "character",
+      "source_scene_ids": [
+        "SC02",
+        "SC04",
+        "SC05"
+      ],
+      "entity_id": "CHAR_ROBERT",
+      "original": "Uncle (unspecified side)",
+      "adapted": "Paternal younger uncle (Chacha)",
+      "reason": "Punjabi kinship uses specific paternal/maternal terms; chacha fits family dynamic",
+      "basis": "pack",
+      "fact_ids": [
+        "F021",
+        "F023"
+      ],
+      "uncertain": false,
+      "uncertain_reason": "",
+      "status": "accepted",
+      "reviewer_note": ""
+    },
+    {
+      "id": "DEC005",
+      "dimension": "verbal",
+      "source_scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ],
+      "entity_id": null,
+      "original": "Unspecified greeting style",
+      "adapted": "Sat Sri Akal with joined palms on arrival/leave",
+      "reason": "Everyday greeting in Majha households and public",
+      "basis": "pack",
+      "fact_ids": [
+        "F010"
+      ],
+      "uncertain": false,
+      "uncertain_reason": "",
+      "status": "rejected",
+      "reviewer_note": ""
+    },
+    {
+      "id": "DEC006",
+      "dimension": "verbal",
+      "source_scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ],
+      "entity_id": null,
+      "original": "Unspecified address style",
+      "adapted": "Use tusi to elders/strangers, tu among peers; add ji to elders",
+      "reason": "Majhi norm for respect and hierarchy",
+      "basis": "pack",
+      "fact_ids": [
+        "F012",
+        "F016",
+        "F028"
+      ],
+      "uncertain": true,
+      "uncertain_reason": "the model marked it uncertain; relies on flagged pack fact(s) F028",
+      "status": "accepted",
+      "reviewer_note": ""
+    },
+    {
+      "id": "DEC007",
+      "dimension": "non_verbal",
+      "source_scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ],
+      "entity_id": null,
+      "original": "Unspecified",
+      "adapted": "Nephew touches Chacha ji’s knees; hands joined when leaving elders",
+      "reason": "Common respect gestures in Punjabi families",
+      "basis": "pack",
+      "fact_ids": [
+        "F013",
+        "F017"
+      ],
+      "uncertain": false,
+      "uncertain_reason": "",
+      "status": "rejected",
+      "reviewer_note": ""
+    },
+    {
+      "id": "DEC008",
+      "dimension": "story_world",
+      "source_scene_ids": [
+        "SC02",
+        "SC03"
+      ],
+      "entity_id": "COST_JOHN_01",
+      "original": "Gray jacket then blue jacket later without reason",
+      "adapted": "Grey blazer indoors; blue quilted jacket next cold morning",
+      "reason": "Explains color change by temperature and time",
+      "basis": "judgment",
+      "fact_ids": [],
+      "uncertain": true,
+      "uncertain_reason": "changes or adds story events: the reviewer must confirm the story is preserved",
+      "status": "accepted",
+      "reviewer_note": ""
+    },
+    {
+      "id": "DEC009",
+      "dimension": "story_world",
+      "source_scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ],
+      "entity_id": "PROP_BROWN_FOLDER",
+      "original": "Robert holds folder at end SC04; John has it at start SC05",
+      "adapted": "Off-screen early-morning handover from Rajinder to Jasbir before SC05",
+      "reason": "Maintains continuity of custody without altering plot",
+      "basis": "judgment",
+      "fact_ids": [],
+      "uncertain": true,
+      "uncertain_reason": "changes or adds story events: the reviewer must confirm the story is preserved",
+      "status": "accepted",
+      "reviewer_note": ""
+    },
+    {
+      "id": "DEC010",
+      "dimension": "story_world",
+      "source_scene_ids": [
+        "SC01"
+      ],
+      "entity_id": "PROP_BACKPACK",
+      "original": "Backpack present in SC01, absent in SC02",
+      "adapted": "Manveer drops backpack in his room before dining table scene",
+      "reason": "Explains absence naturally on arrival home",
+      "basis": "judgment",
+      "fact_ids": [],
+      "uncertain": true,
+      "uncertain_reason": "changes or adds story events: the reviewer must confirm the story is preserved",
+      "status": "accepted",
+      "reviewer_note": ""
+    },
+    {
+      "id": "DEC011",
+      "dimension": "verbal",
+      "source_scene_ids": [
+        "SC01",
+        "SC02",
+        "SC03",
+        "SC04",
+        "SC05"
+      ],
+      "entity_id": null,
+      "original": "Folder/backpack terms",
+      "adapted": "Use common Punjabi with English loans for ‘folder’, ‘backpack’",
+      "reason": "Everyday speech mixes such words locally",
+      "basis": "pack",
+      "fact_ids": [
+        "F060"
+      ],
+      "uncertain": true,
+      "uncertain_reason": "the model marked it uncertain; relies on flagged pack fact(s) F060",
+      "status": "accepted",
+      "reviewer_note": ""
+    },
+    {
+      "id": "DEC012",
+      "dimension": "visual_world",
+      "source_scene_ids": [
+        "SC02",
+        "SC05"
+      ],
+      "entity_id": "LOC_FAMILY_HOUSE",
+      "original": "Family House (generic)",
+      "adapted": "Vehra-centric home with manjas; winter kitchen near chulha",
+      "reason": "Typical rural Majha architecture and interiors",
+      "basis": "pack",
+      "fact_ids": [
+        "F030",
+        "F033",
+        "F034"
+      ],
+      "uncertain": true,
+      "uncertain_reason": "the model marked it uncertain; relies on flagged pack fact(s) F034",
+      "status": "accepted",
+      "reviewer_note": ""
+    },
+    {
+      "id": "DEC013",
+      "dimension": "verbal",
+      "source_scene_ids": [
+        "SC01"
+      ],
+      "entity_id": "CHAR_MOTHER",
+      "original": "Mother calls without greeting.",
+      "adapted": "Mother greets first: 'Sat Sri Akal' and then asks about the deed.",
+      "reason": "Everyday greeting is expected on arrival; frames respect before business.",
+      "basis": "pack",
+      "fact_ids": [
+        "F010",
+        "F012",
+        "F016"
+      ],
+      "uncertain": false,
+      "uncertain_reason": "",
+      "status": "accepted",
+      "reviewer_note": ""
+    },
+    {
+      "id": "DEC014",
+      "dimension": "verbal",
+      "source_scene_ids": [
+        "SC01"
+      ],
+      "entity_id": "CHAR_ROBERT",
+      "original": "Good. Uncle Robert needs to see it before tomorrow.",
+      "adapted": "Good. 'Chacha ji' needs to see it before tomorrow.",
+      "reason": "Use specific paternal kin term with 'ji' for respect; avoid first name.",
+      "basis": "pack",
+      "fact_ids": [
+        "F021",
+        "F016",
+        "F023"
+      ],
+      "uncertain": false,
+      "uncertain_reason": "",
+      "status": "accepted",
+      "reviewer_note": ""
+    },
+    {
+      "id": "DEC015",
+      "dimension": "verbal",
+      "source_scene_ids": [
+        "SC01"
+      ],
+      "entity_id": "CHAR_MICHAEL",
+      "original": "MICHAEL: It's right here.",
+      "adapted": "Manveer: 'Ma ji, ēvẽ… it's right here.' Uses respectful 'tusi/ji' to elder.",
+      "reason": "Son addresses mother with 'Ma ji' and respectful register; Majhi phrasing.",
+      "basis": "pack",
+      "fact_ids": [
+        "F028",
+        "F002"
+      ],
+      "uncertain": true,
+      "uncertain_reason": "relies on flagged pack fact(s) F028",
+      "status": "accepted",
+      "reviewer_note": ""
+    },
+    {
+      "id": "DEC016",
+      "dimension": "non_verbal",
+      "source_scene_ids": [
+        "SC01"
+      ],
+      "entity_id": "PROP_BROWN_FOLDER",
+      "original": "He shows the folder casually.",
+      "adapted": "He presents and receives the folder with both hands.",
+      "reason": "Showing care and respect in giving/receiving, especially in public.",
+      "basis": "pack",
+      "fact_ids": [
+        "F014"
+      ],
+      "uncertain": false,
+      "uncertain_reason": "",
+      "status": "accepted",
+      "reviewer_note": ""
+    },
+    {
+      "id": "DEC017",
+      "dimension": "story_world",
+      "source_scene_ids": [
+        "SC01"
+      ],
+      "entity_id": "LOC_BUS_STATION",
+      "original": "No hospitality shown at bus station.",
+      "adapted": "Mother immediately steers him to chai stall; they speak over hot tea.",
+      "reason": "Visitors are offered tea at once; chai is the basic gesture.",
+      "basis": "pack",
+      "fact_ids": [
+        "F055",
+        "F062"
+      ],
+      "uncertain": true,
+      "uncertain_reason": "changes or adds story events: the reviewer must confirm the story is preserved; relies on flagged pack fact(s) F055, F062",
+      "status": "accepted",
+      "reviewer_note": ""
+    },
+    {
+      "id": "DEC018",
+      "dimension": "verbal",
+      "source_scene_ids": [
+        "SC02"
+      ],
+      "entity_id": "CHAR_MICHAEL",
+      "original": "MICHAEL: What does the deed say?",
+      "adapted": "Manveer: Bapu ji, tusi daso, deed ‘ch ki likheā?",
+      "reason": "Use respectful tusi and kin term with ji; keep a light English legal word code-switch.",
+      "basis": "pack",
+      "fact_ids": [
+        "F028",
+        "F012",
+        "F016",
+        "F060"
+      ],
+      "uncertain": true,
+      "uncertain_reason": "the model marked it uncertain; relies on flagged pack fact(s) F028, F060",
+      "status": "accepted",
+      "reviewer_note": ""
+    },
+    {
+      "id": "DEC019",
+      "dimension": "verbal",
+      "source_scene_ids": [
+        "SC02"
+      ],
+      "entity_id": "CHAR_ROBERT",
+      "original": "ROBERT: Those documents were hidden for years.",
+      "adapted": "Rajinder: Jasbir ji, oh dastāvēz sālã tõ sambhāl ke rakkhe hoye ne.",
+      "reason": "Address elder brother with ji; Majhi diction; third-person plural ‘ne’ acceptable.",
+      "basis": "pack",
+      "fact_ids": [
+        "F012",
+        "F016",
+        "F005"
+      ],
+      "uncertain": true,
+      "uncertain_reason": "the model marked it uncertain; relies on flagged pack fact(s) F005",
+      "status": "accepted",
+      "reviewer_note": ""
+    },
+    {
+      "id": "DEC020",
+      "dimension": "non_verbal",
+      "source_scene_ids": [
+        "SC02"
+      ],
+      "entity_id": "LOC_FAMILY_HOUSE",
+      "original": "Michael arrives home. His father sits at the dining table.",
+      "adapted": "Manveer enters vehra, greets with Sat Sri Akal, touches feet; they sit on manja/low chairs around a low table.",
+      "reason": "Courtyard seating and respect gestures fit rural Majha homes.",
+      "basis": "pack",
+      "fact_ids": [
+        "F030",
+        "F033",
+        "F010",
+        "F013"
+      ],
+      "uncertain": false,
+      "uncertain_reason": "",
+      "status": "accepted",
+      "reviewer_note": ""
+    },
+    {
+      "id": "DEC021",
+      "dimension": "visual_world",
+      "source_scene_ids": [
+        "SC02"
+      ],
+      "entity_id": "LOC_FAMILY_HOUSE",
+      "original": "That evening, a family meeting takes place around the table.",
+      "adapted": "Chilly evening in the vehra; dim tube-light, chulha smoke drifting; shawls on shoulders during the meeting.",
+      "reason": "Matches early-winter light and warmth practices in rural Amritsar.",
+      "basis": "pack",
+      "fact_ids": [
+        "F030"
+      ],
+      "uncertain": false,
+      "uncertain_reason": "",
+      "status": "accepted",
+      "reviewer_note": ""
+    },
+    {
+      "id": "DEC022",
+      "dimension": "story_world",
+      "source_scene_ids": [
+        "SC02"
+      ],
+      "entity_id": "LOC_FAMILY_HOUSE",
+      "original": "Family meeting; folder on chair; Michael picks it up and leaves.",
+      "adapted": "Tea is served before and during the heated talk; folder stays on the chair near Manveer until he stands, bows, and takes it.",
+      "reason": "Hospitality norms and departure respect without altering plot beats.",
+      "basis": "pack",
+      "fact_ids": [
+        "F055",
+        "F062",
+        "F017"
+      ],
+      "uncertain": true,
+      "uncertain_reason": "changes or adds story events: the reviewer must confirm the story is preserved; relies on flagged pack fact(s) F055, F062",
+      "status": "accepted",
+      "reviewer_note": ""
+    },
+    {
+      "id": "DEC023",
+      "dimension": "verbal",
+      "source_scene_ids": [
+        "SC03"
+      ],
+      "entity_id": "SC03",
+      "original": "Simple hello or no marked greeting.",
+      "adapted": "Exchange Sat Sri Akal with joined palms on entry and exit.",
+      "reason": "This is the everyday greeting in the region and office/visit context.",
+      "basis": "pack",
+      "fact_ids": [
+        "F010"
+      ],
+      "uncertain": false,
+      "uncertain_reason": "",
+      "status": "accepted",
+      "reviewer_note": ""
+    },
+    {
+      "id": "DEC024",
+      "dimension": "verbal",
+      "source_scene_ids": [
+        "SC03"
+      ],
+      "entity_id": "CHAR_JOHN",
+      "original": "First-name address and generic you.",
+      "adapted": "Both use tusi and add ji (e.g., Jasbir ji, Tarun ji).",
+      "reason": "Shows mutual respect, fits elder-professional interaction norms.",
+      "basis": "pack",
+      "fact_ids": [
+        "F012",
+        "F016",
+        "F028"
+      ],
+      "uncertain": true,
+      "uncertain_reason": "relies on flagged pack fact(s) F028",
+      "status": "accepted",
+      "reviewer_note": ""
+    },
+    {
+      "id": "DEC025",
+      "dimension": "non_verbal",
+      "source_scene_ids": [
+        "SC03"
+      ],
+      "entity_id": "PROP_BANDAGE",
+      "original": "Lawyer casually hands over bandage.",
+      "adapted": "Lawyer offers bandage with both hands; Jasbir receives with both hands.",
+      "reason": "Objects are respectfully given/received with both hands.",
+      "basis": "pack",
+      "fact_ids": [
+        "F014"
+      ],
+      "uncertain": false,
+      "uncertain_reason": "",
+      "status": "accepted",
+      "reviewer_note": ""
+    },
+    {
+      "id": "DEC026",
+      "dimension": "story_world",
+      "source_scene_ids": [
+        "SC03"
+      ],
+      "entity_id": "LOC_LAWYER_OFFICE",
+      "original": "Unspecified season/light.",
+      "adapted": "Cool December morning; fog lifting; pale sunlight; thermos steam visible.",
+      "reason": "Matches Majha winter and the office description.",
+      "basis": "pack",
+      "fact_ids": [
+        "F001"
+      ],
+      "uncertain": true,
+      "uncertain_reason": "changes or adds story events: the reviewer must confirm the story is preserved",
+      "status": "accepted",
+      "reviewer_note": ""
+    },
+    {
+      "id": "DEC027",
+      "dimension": "verbal",
+      "source_scene_ids": [
+        "SC03"
+      ],
+      "entity_id": "SC03",
+      "original": "Pure Punjabi without borrowings.",
+      "adapted": "Formal Punjabi with light English legal terms (e.g., deed, page) in flow.",
+      "reason": "Everyday speech mixes English/Hindi-Urdu, especially for legal items.",
+      "basis": "pack",
+      "fact_ids": [
+        "F060"
+      ],
+      "uncertain": true,
+      "uncertain_reason": "the model marked it uncertain; relies on flagged pack fact(s) F060",
+      "status": "accepted",
+      "reviewer_note": ""
+    },
+    {
+      "id": "DEC028",
+      "dimension": "non_verbal",
+      "source_scene_ids": [
+        "SC03"
+      ],
+      "entity_id": "SC03",
+      "original": "Guest sits immediately.",
+      "adapted": "Jasbir waits; sits only after lawyer offers a chair.",
+      "reason": "Deference to host/professional in local etiquette.",
+      "basis": "judgment",
+      "fact_ids": [],
+      "uncertain": false,
+      "uncertain_reason": "",
+      "status": "accepted",
+      "reviewer_note": ""
+    },
+    {
+      "id": "DEC029",
+      "dimension": "verbal",
+      "source_scene_ids": [
+        "SC04"
+      ],
+      "entity_id": "CHAR_MICHAEL",
+      "original": "Michael and Robert talk privately.",
+      "adapted": "Manveer greets as “Chacha ji, tusi ik gal suno…”; Rajinder: “haan putt, dass.”",
+      "reason": "Use kinship + ji and respectful tusi for elder; elder uses affectionate putt; greet with Sat Sri Akal.",
+      "basis": "pack",
+      "fact_ids": [
+        "F016",
+        "F012",
+        "F021",
+        "F028",
+        "F027",
+        "F010"
+      ],
+      "uncertain": true,
+      "uncertain_reason": "relies on flagged pack fact(s) F027, F028",
+      "status": "accepted",
+      "reviewer_note": ""
+    },
+    {
+      "id": "DEC030",
+      "dimension": "verbal",
+      "source_scene_ids": [
+        "SC04"
+      ],
+      "entity_id": "CHAR_ROBERT",
+      "original": "ROBERT: You almost lost the most important thing here.",
+      "adapted": "Rajinder, lightly teasing yet firm: “Putt, ēvẽ beparvāh na ho. Eh sab toh zarūrī gallāṅ ne—folder vi thalle nikal giā sī.”",
+      "reason": "Keep admonition, add gentle peer-family humour; Majhi adverbs; small code-switch with 'folder'.",
+      "basis": "pack",
+      "fact_ids": [
+        "F061",
+        "F002",
+        "F060"
+      ],
+      "uncertain": true,
+      "uncertain_reason": "the model marked it uncertain; relies on flagged pack fact(s) F060, F061",
+      "status": "accepted",
+      "reviewer_note": ""
+    },
+    {
+      "id": "DEC031",
+      "dimension": "non_verbal",
+      "source_scene_ids": [
+        "SC04"
+      ],
+      "entity_id": "PROP_BROWN_FOLDER",
+      "original": "The brown folder slips from Michael's hands. After searching, Robert retrieves it.",
+      "adapted": "Manveer fumbles; both crouch. Rajinder picks it and returns it with both hands; Manveer receives with both hands, slight nod.",
+      "reason": "Respectful give/receive is with both hands, especially with elder-kin.",
+      "basis": "pack",
+      "fact_ids": [
+        "F014"
+      ],
+      "uncertain": false,
+      "uncertain_reason": "",
+      "status": "accepted",
+      "reviewer_note": ""
+    },
+    {
+      "id": "DEC032",
+      "dimension": "visual_world",
+      "source_scene_ids": [
+        "SC04"
+      ],
+      "entity_id": "LOC_COUNTY_FAIR",
+      "original": "County fair, unspecified time/weather.",
+      "adapted": "December pind mela: cool, clear late-afternoon sun, light breeze, dry grass; people in shawls; warm food steam visible.",
+      "reason": "Matches early winter Amritsar conditions and rural fair look.",
+      "basis": "judgment",
+      "fact_ids": [],
+      "uncertain": false,
+      "uncertain_reason": "",
+      "status": "accepted",
+      "reviewer_note": ""
+    },
+    {
+      "id": "DEC033",
+      "dimension": "story_world",
+      "source_scene_ids": [
+        "SC04"
+      ],
+      "entity_id": "LOC_COUNTY_FAIR",
+      "original": "Food stalls (generic).",
+      "adapted": "Stalls sell Amritsari kulcha, jalebi, chaat; hot chah served; dhol and loudspeaker ambience.",
+      "reason": "Use Majha-specific foods and typical mela sounds.",
+      "basis": "pack",
+      "fact_ids": [
+        "F053",
+        "F055"
+      ],
+      "uncertain": true,
+      "uncertain_reason": "changes or adds story events: the reviewer must confirm the story is preserved; relies on flagged pack fact(s) F055",
+      "status": "accepted",
+      "reviewer_note": ""
+    },
+    {
+      "id": "DEC034",
+      "dimension": "verbal",
+      "source_scene_ids": [
+        "SC05"
+      ],
+      "entity_id": null,
+      "original": "Michael: “Where’s the deed?” John: (deflects) Robert: “I found the missing pages.”",
+      "adapted": "Manveer says “Bapu ji, dastawej kithhe ne?” to father; calls uncle “Chacha ji”. Elders reply “putt”.",
+      "reason": "Kinship + ji and respectful ‘tusi’ to elders fit Majhi norms and preserve power dynamics.",
+      "basis": "pack",
+      "fact_ids": [
+        "F012",
+        "F016",
+        "F020",
+        "F021",
+        "F028"
+      ],
+      "uncertain": true,
+      "uncertain_reason": "relies on flagged pack fact(s) F028",
+      "status": "accepted",
+      "reviewer_note": ""
+    },
+    {
+      "id": "DEC035",
+      "dimension": "non_verbal",
+      "source_scene_ids": [
+        "SC05"
+      ],
+      "entity_id": null,
+      "original": "No specified greeting on entry.",
+      "adapted": "Manveer enters with joined palms, says Sat Sri Akal, and touches father’s knees/feet.",
+      "reason": "This is a typical respectful morning greeting between generations in Majha.",
+      "basis": "pack",
+      "fact_ids": [
+        "F010",
+        "F013"
+      ],
+      "uncertain": false,
+      "uncertain_reason": "",
+      "status": "accepted",
+      "reviewer_note": ""
+    },
+    {
+      "id": "DEC036",
+      "dimension": "non_verbal",
+      "source_scene_ids": [
+        "SC05"
+      ],
+      "entity_id": null,
+      "original": "Robert hands over photocopies.",
+      "adapted": "Photocopies are given and received with both hands, slight nod.",
+      "reason": "Using both hands signals respect when exchanging important items.",
+      "basis": "pack",
+      "fact_ids": [
+        "F014"
+      ],
+      "uncertain": false,
+      "uncertain_reason": "",
+      "status": "accepted",
+      "reviewer_note": ""
+    },
+    {
+      "id": "DEC037",
+      "dimension": "story_world",
+      "source_scene_ids": [
+        "SC05"
+      ],
+      "entity_id": null,
+      "original": "No food or drink shown.",
+      "adapted": "Tea is served at once; simple winter breakfast of paratha with white butter and a little jaggery.",
+      "reason": "Immediate tea and urging to eat are basic hospitality; winter foods fit the season.",
+      "basis": "pack",
+      "fact_ids": [
+        "F055",
+        "F062",
+        "F050",
+        "F054"
+      ],
+      "uncertain": true,
+      "uncertain_reason": "changes or adds story events: the reviewer must confirm the story is preserved; relies on flagged pack fact(s) F054, F055, F062",
+      "status": "accepted",
+      "reviewer_note": ""
+    },
+    {
+      "id": "DEC038",
+      "dimension": "verbal",
+      "source_scene_ids": [
+        "SC05"
+      ],
+      "entity_id": null,
+      "original": "Plain lines without borrowed terms.",
+      "adapted": "Allow light code-switch: “file”, “copy”, “missing” amid Punjabi lines.",
+      "reason": "Everyday Punjabi mixes common English terms, especially for office items.",
+      "basis": "pack",
+      "fact_ids": [
+        "F060"
+      ],
+      "uncertain": true,
+      "uncertain_reason": "the model marked it uncertain; relies on flagged pack fact(s) F060",
+      "status": "accepted",
+      "reviewer_note": ""
+    }
+  ],
+  "normalization_log": [
+    "MERGED characters ['Michael Thompson', 'Michael'] (proposed by model: Both refer to Michael Thompson appearing in different scenes; no evidence they appear together.)",
+    "MERGED props ['brown folder', 'folder'] (proposed by model)",
+    "CHAR_MICHAEL: merged names/aliases ['Michael', 'Michael Thompson']",
+    "CHAR_JOHN: merged names/aliases ['John', 'John Thompson']",
+    "CHAR_ROBERT: merged names/aliases ['Robert', 'Uncle Robert']",
+    "CHAR_MICHAEL (Michael): no costume described in the source; a placeholder COST_MICHAEL_01 was created (the adaptation plan will define it)",
+    "CHAR_MOTHER (Mother): no costume described in the source; a placeholder COST_MOTHER_01 was created (the adaptation plan will define it)",
+    "CHAR_JOHN (John) has 2 costumes: COST_JOHN_01='gray jacket' in ['SC02', 'SC03'] [no story reason given for the change], COST_JOHN_02='blue jacket' in ['SC05'] [no story reason given for the change]",
+    "CHAR_ROBERT (Robert): no costume described in the source; a placeholder COST_ROBERT_01 was created (the adaptation plan will define it)",
+    "CHAR_LAWYER (Lawyer): no costume described in the source; a placeholder COST_LAWYER_01 was created (the adaptation plan will define it)",
+    "scene 1: no INT/EXT found in heading or extraction; defaulted to INT",
+    "scene 2: no INT/EXT found in heading or extraction; defaulted to INT",
+    "scene 2: event prop_loss refers to unknown character ''; skipped",
+    "scene 2: event prop_transfer refers to unknown character ''; skipped",
+    "scene 3: no INT/EXT found in heading or extraction; defaulted to INT",
+    "scene 3: event kind 'emotional_change' is not valid; event skipped",
+    "scene 4: no INT/EXT found in heading or extraction; defaulted to INT",
+    "scene 5: no INT/EXT found in heading or extraction; defaulted to INT"
+  ],
+  "manual_edits": []
+}

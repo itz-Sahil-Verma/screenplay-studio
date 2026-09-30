@@ -1,0 +1,48 @@
+{
+  "costume_id": "COST_LAWYER_01",
+  "character_id": "CHAR_LAWYER",
+  "garments": "White shirt, black sweater-vest, black blazer, dark trousers",
+  "source_garments": "",
+  "fabrics": "Cotton shirt, wool-blend knit, poly-wool blazer",
+  "colours": "White, black, charcoal",
+  "footwear": "Polished black lace-up shoes",
+  "jewellery": "",
+  "headwear": "",
+  "grooming": "Neat hair, spectacles",
+  "scenes": [
+    "SC03"
+  ],
+  "change_reason": "",
+  "image_note": "first look: this is the character reference image, not generated twice",
+  "image": {
+    "asset": "ASSET_CHARREF_CHAR_LAWYER",
+    "model": "gpt-image-2",
+    "prompt": "Full-body character reference image, head to toe, standing in a neutral relaxed pose facing the camera, plain light-grey studio background, soft even lighting. Subject: Tarun, Local lawyer in small town, Majhi Punjabi culture, Amritsar, rural setting. Appearance: Early 40s, average build, spectacles, calm gaze. Grooming: Side-parted hair, clean-shaven, tidy desk manner. Wearing: White shirt, black sweater-vest, black blazer, dark trousers. Fabrics: Cotton shirt, wool-blend knit, poly-wool blazer. Colours: White, black, charcoal. Footwear: Polished black lace-up shoes. Style: photorealistic cinematic film still, natural light, muted realistic colour grade, 35mm lens, no text, no captions, no watermark.",
+    "spec": {
+      "kind": "character_ref",
+      "entity_id": "CHAR_LAWYER",
+      "size": "1024x1536",
+      "style": "photorealistic cinematic film still, natural light, muted realistic colour grade, 35mm lens, no text, no captions, no watermark",
+      "culture": "Majhi Punjabi culture, Amritsar, rural setting",
+      "refs": [],
+      "who": {
+        "name": "Tarun",
+        "age": null,
+        "role": "Local lawyer in small town",
+        "appearance": "Early 40s, average build, spectacles, calm gaze",
+        "grooming": "Side-parted hair, clean-shaven, tidy desk manner"
+      },
+      "costume": {
+        "garments": "White shirt, black sweater-vest, black blazer, dark trousers",
+        "fabrics": "Cotton shirt, wool-blend knit, poly-wool blazer",
+        "colours": "White, black, charcoal",
+        "footwear": "Polished black lace-up shoes",
+        "grooming": "Neat hair, spectacles"
+      }
+    },
+    "spec_hash": "3d1f1751d3d23dcc",
+    "references": [],
+    "attempts": 1,
+    "seconds": 52.5
+  }
+}

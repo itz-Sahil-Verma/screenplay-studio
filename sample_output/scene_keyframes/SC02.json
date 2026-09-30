@@ -1,0 +1,66 @@
+{
+  "scene_id": "SC02",
+  "image": {
+    "asset": "ASSET_KEYFRAME_SC02",
+    "model": "gpt-image-2",
+    "prompt": "Cinematic keyframe for a film scene, wide establishing composition. Place: Ancestral House Courtyard. Brick-walled house around a vehra; manjas, a brass lota, low dining table; smoky winter sun; kitchen near chulha. Time and light: Early winter evening in the vehra; cool air, faint fog, chulha smoke; dim tube-light and a weak bulb glow; brick walls hold the day’s warmth. Action: A chilly, misty evening. The courtyard holds brick warmth. Smoke curls from the kitchen chulha. Manjas and low chairs are set around a low table with a brass lota. A dim tube-light and a weak bulb glow. Manveer enters the courtyard and joins his palms.. Props visible: brown folder. Culture: Majhi Punjabi culture, Amritsar, rural setting. Characters, each must look IDENTICAL to their reference image: reference image 1 is Manveer (Younger son returning from city with deed), wearing Wool-blend kurta, straight pajama, quilted sleeveless jacket, muffler; reference image 2 is Jasbir (Father, farm decision-maker), wearing Thick kurta-pajama with grey wool blazer; reference image 3 is Rajinder (Paternal younger uncle (Chacha), mediator), wearing Wool kurta-pajama with tweed waistcoat, light shawl. Style: photorealistic cinematic film still, natural light, muted realistic colour grade, 35mm lens, no text, no captions, no watermark.",
+    "spec": {
+      "kind": "scene_keyframe",
+      "entity_id": "SC02",
+      "size": "1536x1024",
+      "style": "photorealistic cinematic film still, natural light, muted realistic colour grade, 35mm lens, no text, no captions, no watermark",
+      "culture": "Majhi Punjabi culture, Amritsar, rural setting",
+      "place": {
+        "name": "Ancestral House Courtyard",
+        "description": "Brick-walled house around a vehra; manjas, a brass lota, low dining table; smoky winter sun; kitchen near chulha"
+      },
+      "time": "",
+      "atmosphere": "Early winter evening in the vehra; cool air, faint fog, chulha smoke; dim tube-light and a weak bulb glow; brick walls hold the day’s warmth.",
+      "blocking": "A chilly, misty evening. The courtyard holds brick warmth. Smoke curls from the kitchen chulha. Manjas and low chairs are set around a low table with a brass lota. A dim tube-light and a weak bulb glow. Manveer enters the courtyard and joins his palms.",
+      "props": "brown folder",
+      "pictured": [
+        {
+          "name": "Manveer",
+          "role": "Younger son returning from city with deed",
+          "wearing": "Wool-blend kurta, straight pajama, quilted sleeveless jacket, muffler",
+          "image": 1
+        },
+        {
+          "name": "Jasbir",
+          "role": "Father, farm decision-maker",
+          "wearing": "Thick kurta-pajama with grey wool blazer",
+          "image": 2
+        },
+        {
+          "name": "Rajinder",
+          "role": "Paternal younger uncle (Chacha), mediator",
+          "wearing": "Wool kurta-pajama with tweed waistcoat, light shawl",
+          "image": 3
+        }
+      ],
+      "others": [],
+      "refs": [
+        {
+          "asset": "ASSET_CHARREF_CHAR_MICHAEL",
+          "spec_hash": "0d62594f4caaaf10"
+        },
+        {
+          "asset": "ASSET_CHARREF_CHAR_JOHN",
+          "spec_hash": "c63ea3cd4e91ae40"
+        },
+        {
+          "asset": "ASSET_CHARREF_CHAR_ROBERT",
+          "spec_hash": "8cc1153e84484481"
+        }
+      ]
+    },
+    "spec_hash": "841dc172b311fd92",
+    "references": [
+      "ASSET_CHARREF_CHAR_MICHAEL",
+      "ASSET_CHARREF_CHAR_JOHN",
+      "ASSET_CHARREF_CHAR_ROBERT"
+    ],
+    "attempts": 1,
+    "seconds": 31.4
+  }
+}

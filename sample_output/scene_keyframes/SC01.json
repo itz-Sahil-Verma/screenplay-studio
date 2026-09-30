@@ -1,0 +1,55 @@
+{
+  "scene_id": "SC01",
+  "image": {
+    "asset": "ASSET_KEYFRAME_SC01",
+    "model": "gpt-image-2",
+    "prompt": "Cinematic keyframe for a film scene, wide establishing composition. Place: Amritsar Rural Bus Adda. Open-air bus adda with tin-roof shade, chai stall, loud conductors, tractors parked nearby; winter fog lifting. Time and light: Early winter morning at Amritsar rural bus adda; thin fog lifting, cool air, pale sun; tin-roof drip sounds; chai steam visible. Action: In light fog, Manveer gets off the bus holding a brown folder and a backpack on his shoulder. Manveer joins palms and touches Rani’s feet to take blessings.. Props visible: brown folder, backpack. Culture: Majhi Punjabi culture, Amritsar, rural setting. Characters, each must look IDENTICAL to their reference image: reference image 1 is Manveer (Younger son returning from city with deed), wearing Wool-blend kurta, straight pajama, quilted sleeveless jacket, muffler; reference image 2 is Rani (Mother at home managing household), wearing Salwar kameez with shawl, dupatta kept at home. Style: photorealistic cinematic film still, natural light, muted realistic colour grade, 35mm lens, no text, no captions, no watermark.",
+    "spec": {
+      "kind": "scene_keyframe",
+      "entity_id": "SC01",
+      "size": "1536x1024",
+      "style": "photorealistic cinematic film still, natural light, muted realistic colour grade, 35mm lens, no text, no captions, no watermark",
+      "culture": "Majhi Punjabi culture, Amritsar, rural setting",
+      "place": {
+        "name": "Amritsar Rural Bus Adda",
+        "description": "Open-air bus adda with tin-roof shade, chai stall, loud conductors, tractors parked nearby; winter fog lifting"
+      },
+      "time": "",
+      "atmosphere": "Early winter morning at Amritsar rural bus adda; thin fog lifting, cool air, pale sun; tin-roof drip sounds; chai steam visible.",
+      "blocking": "In light fog, Manveer gets off the bus holding a brown folder and a backpack on his shoulder. Manveer joins palms and touches Rani’s feet to take blessings.",
+      "props": "brown folder, backpack",
+      "pictured": [
+        {
+          "name": "Manveer",
+          "role": "Younger son returning from city with deed",
+          "wearing": "Wool-blend kurta, straight pajama, quilted sleeveless jacket, muffler",
+          "image": 1
+        },
+        {
+          "name": "Rani",
+          "role": "Mother at home managing household",
+          "wearing": "Salwar kameez with shawl, dupatta kept at home",
+          "image": 2
+        }
+      ],
+      "others": [],
+      "refs": [
+        {
+          "asset": "ASSET_CHARREF_CHAR_MICHAEL",
+          "spec_hash": "0d62594f4caaaf10"
+        },
+        {
+          "asset": "ASSET_CHARREF_CHAR_MOTHER",
+          "spec_hash": "079697ce4bd8f5ef"
+        }
+      ]
+    },
+    "spec_hash": "b84714dc2723c510",
+    "references": [
+      "ASSET_CHARREF_CHAR_MICHAEL",
+      "ASSET_CHARREF_CHAR_MOTHER"
+    ],
+    "attempts": 2,
+    "seconds": 30.9
+  }
+}

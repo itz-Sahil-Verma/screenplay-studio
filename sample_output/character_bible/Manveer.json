@@ -1,0 +1,61 @@
+{
+  "character_id": "CHAR_MICHAEL",
+  "name": "Manveer",
+  "name_native": "ਮਨਵੀਰ",
+  "source_name": "Michael",
+  "aliases": [
+    "Michael Thompson"
+  ],
+  "age": 29,
+  "role": "Younger son returning from city with deed",
+  "physical_description": "29, medium build, wheatish, alert eyes, quick smile",
+  "grooming": "Short hair, light stubble, clean nails",
+  "personality": "",
+  "speech_register": "Informal with peers; respectful Punjabi to elders (tusi, ji)",
+  "address_terms": [
+    "Bapu ji",
+    "Chacha ji",
+    "Ma ji"
+  ],
+  "scenes": [
+    "SC01",
+    "SC02",
+    "SC04",
+    "SC05"
+  ],
+  "costumes": [
+    "COST_MICHAEL_01"
+  ],
+  "image": {
+    "asset": "ASSET_CHARREF_CHAR_MICHAEL",
+    "model": "gpt-image-2",
+    "prompt": "Full-body character reference image, head to toe, standing in a neutral relaxed pose facing the camera, plain light-grey studio background, soft even lighting. Subject: Manveer, 29 Younger son returning from city with deed, Majhi Punjabi culture, Amritsar, rural setting. Appearance: 29, medium build, wheatish, alert eyes, quick smile. Grooming: Short hair, light stubble, clean nails. Wearing: Wool-blend kurta, straight pajama, quilted sleeveless jacket, muffler. Fabrics: Cotton-wool kurta, polyester quilted jacket, acrylic muffler. Colours: Slate kurta, off-white pajama, olive jacket, maroon-grey muffler. Footwear: Brown leather jutti. Jewellery: Thin steel kada-style bracelet (plain, non-religious fashion). Style: photorealistic cinematic film still, natural light, muted realistic colour grade, 35mm lens, no text, no captions, no watermark.",
+    "spec": {
+      "kind": "character_ref",
+      "entity_id": "CHAR_MICHAEL",
+      "size": "1024x1536",
+      "style": "photorealistic cinematic film still, natural light, muted realistic colour grade, 35mm lens, no text, no captions, no watermark",
+      "culture": "Majhi Punjabi culture, Amritsar, rural setting",
+      "refs": [],
+      "who": {
+        "name": "Manveer",
+        "age": 29,
+        "role": "Younger son returning from city with deed",
+        "appearance": "29, medium build, wheatish, alert eyes, quick smile",
+        "grooming": "Short hair, light stubble, clean nails"
+      },
+      "costume": {
+        "garments": "Wool-blend kurta, straight pajama, quilted sleeveless jacket, muffler",
+        "fabrics": "Cotton-wool kurta, polyester quilted jacket, acrylic muffler",
+        "colours": "Slate kurta, off-white pajama, olive jacket, maroon-grey muffler",
+        "footwear": "Brown leather jutti",
+        "jewellery": "Thin steel kada-style bracelet (plain, non-religious fashion)",
+        "grooming": "Light stubble, short hair"
+      }
+    },
+    "spec_hash": "0d62594f4caaaf10",
+    "references": [],
+    "attempts": 1,
+    "seconds": 22.4
+  }
+}

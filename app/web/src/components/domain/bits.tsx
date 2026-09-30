@@ -34,7 +34,7 @@ export function StatusBadge({ status }: { status: string }) {
 }
 
 export const FlagBadge = ({ reason }: { reason?: string }) => (
-  <Pill tone="warning" icon={Flag} title={reason}>Needs review</Pill>
+  <Pill tone="warning" icon={Flag} title={reason}>Flagged</Pill>
 );
 
 export const BasisBadge = ({ basis }: { basis: string }) =>

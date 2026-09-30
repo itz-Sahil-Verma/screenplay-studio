@@ -74,6 +74,7 @@ class ProjectSummary(BaseModel):
     characters: int
     decisions: int
     flagged_decisions: int
+    unreviewed_decisions: int = 0  # decisions nobody has accepted, edited or rejected yet
     job: JobInfo | None = None
 
 
@@ -171,6 +172,7 @@ def list_projects():
             id=p.id, source_filename=p.source_filename, status=p.status.value, created_at=p.created_at.isoformat(),
             culture=pack.culture if pack else "", region=sel.region if sel else "", scenes=len(p.source_scenes),
             characters=len(p.characters), decisions=len(p.decisions), flagged_decisions=sum(d.uncertain for d in p.decisions),
+            unreviewed_decisions=sum(d.status.value == "proposed" for d in p.decisions),
             job=deps.JOBS.get(p.id)))
     return sorted(out, key=lambda s: s.created_at, reverse=True)
 
